@@ -18,6 +18,27 @@ section {
   padding: 50px 0;
 }
 
+.text-custom-primary {
+  color: #2da3e3 !important;
+}
+
+.bg-custom-primary {
+  background-color: #2da3e3 !important;
+}
+
+.service-card {
+  color: #828282 !important;
+}
+
+.service-card:hover {
+  background-color: #2da3e3 !important;
+  color: #ffffff !important;
+}
+
+p {
+  text-align: justify !important;
+}
+
 .footer {
   border-top: 1px solid #2da3e3;
   margin: 60px 0 !important;

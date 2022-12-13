@@ -1,5 +1,5 @@
 import React from "react";
-import { TelephoneFill } from "react-bootstrap-icons";
+import { GeoAltFill, TelephoneFill } from "react-bootstrap-icons";
 import IDTALogo from "../assets/img/idta-logo.png";
 
 const Footer = () => {
@@ -121,9 +121,9 @@ const Footer = () => {
                 className="text-decoration-none text-secondary footer-link a-hover"
                 href="https://goo.gl/maps/zvJd7KM1Uv5oyqB38"
               >
-                <i className="bi bi-geo-alt-fill text-primary"></i>
-                Industrial Digital Twin Association e. V. Lyoner Straße 18 60528
-                Frankfurt am Main Germany
+                <GeoAltFill />
+                &nbsp;Industrial Digital Twin Association e. V. Lyoner Straße 18
+                60528 Frankfurt am Main Germany
               </a>
               <br />
               <a
