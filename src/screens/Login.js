@@ -13,18 +13,18 @@ const Login = () => {
         <div className="card-body">
           <h1 className="text-center">Login</h1>
           <hr />
-          <div class="mb-3">
+          <div className="mb-3">
             <input
               type="text"
-              class="form-control bg-transparent shadow-none border-top-0 border-start-0 border-end-0 p-2"
+              className="form-control bg-transparent shadow-none border-top-0 border-start-0 border-end-0 p-2"
               placeholder="Username"
               required
             />
           </div>
-          <div class="mb-3">
+          <div className="mb-3">
             <input
               type="password"
-              class="form-control bg-transparent shadow-none border-top-0 border-start-0 border-end-0 p-2"
+              className="form-control bg-transparent shadow-none border-top-0 border-start-0 border-end-0 p-2"
               placeholder="Password"
               required
             />

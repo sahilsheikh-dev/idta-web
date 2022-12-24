@@ -4,27 +4,7 @@ import { List } from "react-bootstrap-icons";
 import "../../assets/js/navbar.js";
 // import IDTALogo from "../../assets/img/idta-logo.png";
 
-const Navbar = ({
-  heroSection,
-  aboutSection,
-  membershipSection,
-  servicesSection,
-  educationSection,
-  careersSection,
-  joinusSection,
-}) => {
-  const scrollHandler = (sectionName) => {
-    // const currentSection = document.getElementById(sectionName);
-    scrollTo(sectionName);
-  };
-
-  const scrollTo = (ele) => {
-    ele.scrollIntoView({
-      behavior: "smooth",
-      block: "start",
-    });
-  };
-
+const Navbar = () => {
   return (
     <Container>
       <nav
@@ -58,9 +38,6 @@ const Navbar = ({
                   id="heroSection"
                   className="nav-link text-light nav-active text-decoration-none"
                   href="/"
-                  onClick={() => {
-                    scrollHandler(heroSection);
-                  }}
                 >
                   Home
                 </a>
@@ -69,10 +46,7 @@ const Navbar = ({
                 <a
                   id="aboutSection"
                   className="nav-link text-light text-decoration-none"
-                  href="/"
-                  onClick={() => {
-                    scrollHandler(aboutSection);
-                  }}
+                  href="/about"
                 >
                   About
                 </a>
@@ -81,10 +55,7 @@ const Navbar = ({
                 <a
                   id="membershipSection"
                   className="nav-link text-light text-decoration-none"
-                  href="/"
-                  onClick={() => {
-                    scrollHandler(membershipSection);
-                  }}
+                  href="/membership"
                 >
                   Membership Benefits
                 </a>
@@ -93,10 +64,7 @@ const Navbar = ({
                 <a
                   id="servicesSection"
                   className="nav-link text-light text-decoration-none"
-                  href="/"
-                  onClick={() => {
-                    scrollHandler(servicesSection);
-                  }}
+                  href="/service"
                 >
                   Services
                 </a>
@@ -105,10 +73,7 @@ const Navbar = ({
                 <a
                   id="educationSection"
                   className="nav-link text-light text-decoration-none"
-                  href="/"
-                  onClick={() => {
-                    scrollHandler(educationSection);
-                  }}
+                  href="/education"
                 >
                   Education
                 </a>
@@ -117,10 +82,7 @@ const Navbar = ({
                 <a
                   id="careersSection"
                   className="nav-link text-light text-decoration-none"
-                  href="/"
-                  onClick={() => {
-                    scrollHandler(careersSection);
-                  }}
+                  href="/career"
                 >
                   Careers
                 </a>
@@ -129,10 +91,7 @@ const Navbar = ({
                 <a
                   id="joinusSection"
                   className="nav-link text-light text-decoration-none"
-                  href="/"
-                  onClick={() => {
-                    scrollHandler(joinusSection);
-                  }}
+                  href="/joinus"
                 >
                   Join Us
                 </a>
