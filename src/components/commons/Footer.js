@@ -1,6 +1,6 @@
 import React from "react";
 import { GeoAltFill, TelephoneFill } from "react-bootstrap-icons";
-import IDTALogo from "../assets/img/idta-logo.png";
+import IDTALogo from "../../assets/img/idta-logo.png";
 
 const Footer = () => {
   return (

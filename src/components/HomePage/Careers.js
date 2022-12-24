@@ -36,9 +36,14 @@ const Careers = () => {
                         Commericial Dental Laboratories
                       </h4>
                       <p className="my-0">
-                        Lorem Ipsum is simply dummy text of the printing and
-                        typesetting industry. Lorem Ipsum has been the
-                        industry's standard dummy text ever since 1500s.
+                        These laboratories are where most dental technician
+                        work, either as employees or with experience, running
+                        their own Laboratories. The laboratories, which ranges
+                        from single handed organization through to large
+                        companies, receive prescriptions from dentists and carry
+                        out work required. They also repair or modify
+                        appliances. A large laboratory deals with a wide variety
+                        of work and may offer the opportunity to specialize.
                       </p>
                     </div>
                   </div>
@@ -57,9 +62,12 @@ const Careers = () => {
                     <div className="text-start">
                       <h4 className="text-light">Dental Clinics</h4>
                       <p className="my-0">
-                        Lorem Ipsum is simply dummy text of the printing and
-                        typesetting industry. Lorem Ipsum has been the
-                        industry's standard dummy text ever since 1500s.
+                        A few dental clinics may employ their own dental
+                        technician to carry out work on the premises, thought
+                        most practices use commercial laboratories.In a Dental
+                        clinic the dental technician would deal with quite a
+                        wide range of work, often specializing to meet the needs
+                        to the particular practice.
                       </p>
                     </div>
                   </div>

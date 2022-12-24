@@ -1,12 +1,26 @@
 import React from "react";
 import { Container } from "react-bootstrap";
+import MembershipLogo from "../../assets/img/membership.jpg";
 
 const Membership = () => {
   return (
     <Container>
-      <section className="membership" id="membership" style={{ minHeight: "80vh" }}>
+      <section
+        className="membership"
+        id="membership"
+        style={{ minHeight: "80vh" }}
+      >
         <div className="row">
-          <div className="col-md-6 col-lg-6 col-xl-6 d-flex align-items-center p-2 p-md-5 p-lg-5 p-xl-5">
+          <div className="col-md-4 col-lg-4 col-xl-4 mb-5 d-flex align-items-center">
+            <div className="text-center mx-auto">
+              <img
+                className="img-fluid w-100 mx-auto"
+                src={MembershipLogo}
+                alt="logo"
+              />
+            </div>
+          </div>
+          <div className="col-md-8 col-lg-8 col-xl-8 d-flex align-items-center p-2 p-md-5 p-lg-5 p-xl-5">
             <div>
               <h1 className="fw-bold">
                 <span className="text-custom-primary">Membership </span>
@@ -33,13 +47,7 @@ const Membership = () => {
                   Classes.
                 </li>
               </ul>
-            </div>
-          </div>
-          <div className="col-md-6 col-lg-6 col-xl-6 d-flex align-items-center">
-            <div className="text-start">
-              <h4 className="text-light mt-2 mt-md-5 mt-lg-5 mt-xl-5">
-                Communication,
-              </h4>
+              <h4 className="text-light mt-2">Communication,</h4>
               <p className="text-secondary mt-3">
                 Dental Technology is in exciting times with the rapid
                 developments of digital dental technology. We regularly

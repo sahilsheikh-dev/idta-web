@@ -1,14 +1,46 @@
 import React from "react";
 import { Container } from "react-bootstrap";
-import IDTALogo from "../assets/img/idta-logo.png";
+import IDTALogo from "../../assets/img/idta-logo.png";
 
 const About = () => {
   return (
     <Container>
-      <section className="about" id="about">
+      <section className="about section" id="about">
         <div className="row">
           <div className="col-md-6 col-lg-6 col-xl-6 mb-5 d-flex align-items-center">
-            <img className="img-fluid mx-auto" src={IDTALogo} alt="logo" />
+            <div className="text-center">
+              <div className="flip-card">
+                <div className="flip-card-inner">
+                  <div className="flip-card-front">
+                    <img
+                      src={IDTALogo}
+                      alt="Avatar"
+                      style={{
+                        width: "300px",
+                        height: "300px",
+                      }}
+                    />
+                  </div>
+                  <div className="flip-card-back">
+                    <img
+                      src={IDTALogo}
+                      alt="Avatar"
+                      style={{
+                        width: "300px",
+                        height: "300px",
+                      }}
+                    />
+                  </div>
+                </div>
+              </div>
+              <button
+                className="btn btn-secondary border-0 mx-2 px-4 py-2 mt-5 shadow-none btn-lg"
+                data-bs-toggle="modal"
+                data-bs-target="#exampleModal"
+              >
+                Register Now
+              </button>
+            </div>
           </div>
           <div className="col-md-6 col-lg-6 col-xl-6 d-flex align-items-center">
             <div style={{ textAlign: "justify" }}>
@@ -33,14 +65,6 @@ const About = () => {
                 educated and compliant. Currently the IDTA has 200+ members and
                 500+ socially connected members.
               </p>
-              <a
-                href="#joinus"
-                className="btn btn-secondary border-0 mx-2 ms-0 px-4 py-2 mb-5 shadow-none"
-                data-bs-toggle="modal"
-                data-bs-target="#exampleModal"
-              >
-                Register Now
-              </a>
 
               <div
                 className="modal fade"

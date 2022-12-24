@@ -1,6 +1,6 @@
 import React from "react";
 import { Container } from "react-bootstrap";
-import serviceJson from "../assets/jsonData/ServiceData.json";
+import serviceJson from "../../assets/jsonData/ServiceData.json";
 
 const Services = () => {
   const serviceData = serviceJson;
@@ -21,7 +21,7 @@ const Services = () => {
               </p>
             </div>
           </div>
-          <div className="col-md-6 col-lg-6 col-xl-6 mb-5 d-flex align-items-center">
+          <div className="col-md-12 col-lg-12 col-xl-12 mb-5 d-flex align-items-center">
             <div className="row">
               {serviceData.map((serviceItem, index) => (
                 <div
@@ -34,7 +34,7 @@ const Services = () => {
                       src={serviceItem.logoImg}
                       alt="logo"
                     />
-                    <p className="my-0">{serviceItem.title}</p>
+                    <p className="my-0 text-start">{serviceItem.title}</p>
                   </div>
                 </div>
               ))}
