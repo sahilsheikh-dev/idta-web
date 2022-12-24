@@ -2,9 +2,10 @@ import React from "react";
 import { Container } from "react-bootstrap";
 import { List } from "react-bootstrap-icons";
 import "../../assets/js/navbar.js";
-// import IDTALogo from "../../assets/img/idta-logo.png";
 
 const Navbar = () => {
+  const currentUrl = window.location.href;
+  const pageName = currentUrl.substring(currentUrl.lastIndexOf("/") + 1);
   return (
     <Container>
       <nav
@@ -35,8 +36,9 @@ const Navbar = () => {
             <ul className="navbar-nav ms-auto mb-2 mb-lg-0" id="mainNav">
               <li className="nav-item mx-3">
                 <a
-                  id="heroSection"
-                  className="nav-link text-light nav-active text-decoration-none"
+                  className={
+                    pageName === "" ? "nav-link nav-item-active" : "nav-link"
+                  }
                   href="/"
                 >
                   Home
@@ -44,8 +46,11 @@ const Navbar = () => {
               </li>
               <li className="nav-item mx-3">
                 <a
-                  id="aboutSection"
-                  className="nav-link text-light text-decoration-none"
+                  className={
+                    pageName === "about"
+                      ? "nav-link nav-item-active"
+                      : "nav-link"
+                  }
                   href="/about"
                 >
                   About
@@ -53,8 +58,11 @@ const Navbar = () => {
               </li>
               <li className="nav-item mx-3">
                 <a
-                  id="membershipSection"
-                  className="nav-link text-light text-decoration-none"
+                  className={
+                    pageName === "membership"
+                      ? "nav-link nav-item-active"
+                      : "nav-link"
+                  }
                   href="/membership"
                 >
                   Membership Benefits
@@ -62,8 +70,11 @@ const Navbar = () => {
               </li>
               <li className="nav-item mx-3">
                 <a
-                  id="servicesSection"
-                  className="nav-link text-light text-decoration-none"
+                  className={
+                    pageName === "service"
+                      ? "nav-link nav-item-active"
+                      : "nav-link"
+                  }
                   href="/service"
                 >
                   Services
@@ -71,8 +82,11 @@ const Navbar = () => {
               </li>
               <li className="nav-item mx-3">
                 <a
-                  id="educationSection"
-                  className="nav-link text-light text-decoration-none"
+                  className={
+                    pageName === "education"
+                      ? "nav-link nav-item-active"
+                      : "nav-link"
+                  }
                   href="/education"
                 >
                   Education
@@ -80,8 +94,11 @@ const Navbar = () => {
               </li>
               <li className="nav-item mx-3">
                 <a
-                  id="careersSection"
-                  className="nav-link text-light text-decoration-none"
+                  className={
+                    pageName === "career"
+                      ? "nav-link nav-item-active"
+                      : "nav-link"
+                  }
                   href="/career"
                 >
                   Careers
@@ -89,15 +106,25 @@ const Navbar = () => {
               </li>
               <li className="nav-item mx-3">
                 <a
-                  id="joinusSection"
-                  className="nav-link text-light text-decoration-none"
+                  className={
+                    pageName === "joinus"
+                      ? "nav-link nav-item-active"
+                      : "nav-link"
+                  }
                   href="/joinus"
                 >
                   Join Us
                 </a>
               </li>
               <li className="nav-item mx-3">
-                <a className="nav-link text-light" href="/login">
+                <a
+                  className={
+                    pageName === "login"
+                      ? "nav-link nav-item-active"
+                      : "nav-link"
+                  }
+                  href="/login"
+                >
                   Login
                 </a>
               </li>

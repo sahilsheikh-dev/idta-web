@@ -4,9 +4,14 @@ body {
 }
 
 .nav-item-active {
-  padding-bottom: 5px;
-  border-bottom: 2px solid #2da3e3;
-  width: fit-content;
+  padding-bottom: 5px !important;
+  border-bottom: 2px solid #2da3e3 !important;
+  width: fit-content !important;
+}
+
+.nav-item a {
+  color: #ffffff !important;
+  text-decoration: none !important;
 }
 
 .nav-item a:hover {
