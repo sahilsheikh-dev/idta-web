@@ -11,6 +11,7 @@ import Services from "./screens/Services";
 import Education from "./screens/Education";
 import Careers from "./screens/Careers";
 import JoinUs from "./screens/JoinUs";
+import MemberForm from "./screens/MemberForm";
 
 function App() {
   return (
@@ -25,8 +26,10 @@ function App() {
         <Route path="/joinus" element={<JoinUs />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<SignUp />} />
-        <Route path="/dashboard/:userID" element={<Dashboard />} />
+        <Route path="/dashboard" element={<Dashboard />} />
+        {/* <Route path="/dashboard/:userID" element={<Dashboard />} /> */}
         <Route path="/course/:courseID" element={<CourseInfo />} />
+        <Route path="/membershipform/:membershipIndex" element={<MemberForm />} />
       </Routes>
     </BrowserRouter>
   );

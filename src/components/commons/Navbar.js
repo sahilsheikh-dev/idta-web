@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Container } from "react-bootstrap";
 import { List } from "react-bootstrap-icons";
 import "../../assets/js/navbar.js";
@@ -6,6 +6,23 @@ import "../../assets/js/navbar.js";
 const Navbar = () => {
   const currentUrl = window.location.href;
   const pageName = currentUrl.substring(currentUrl.lastIndexOf("/") + 1);
+  const [userID, setUserID] = useState("");
+
+  const logout = () => {
+    localStorage.clear("currentUser");
+  };
+
+  useEffect(() => {
+    if (
+      localStorage.getItem("currentUser") === null ||
+      localStorage.getItem("currentUser") === ""
+    ) {
+      setUserID("");
+    } else {
+      setUserID(localStorage.getItem("currentUser"));
+    }
+  }, []);
+
   return (
     <Container>
       <nav
@@ -116,18 +133,26 @@ const Navbar = () => {
                   Join Us
                 </a>
               </li>
-              <li className="nav-item mx-3">
-                <a
-                  className={
-                    pageName === "login"
-                      ? "nav-link nav-item-active"
-                      : "nav-link"
-                  }
-                  href="/login"
-                >
-                  Login
-                </a>
-              </li>
+              {userID === "" || userID === null ? (
+                <li className="nav-item mx-3">
+                  <a
+                    className={
+                      pageName === "login"
+                        ? "nav-link nav-item-active"
+                        : "nav-link"
+                    }
+                    href="/login"
+                  >
+                    Login
+                  </a>
+                </li>
+              ) : (
+                <li className="nav-item mx-3">
+                  <a className={"nav-link"} href="/" onClick={logout()}>
+                    Logout
+                  </a>
+                </li>
+              )}
             </ul>
           </div>
         </div>

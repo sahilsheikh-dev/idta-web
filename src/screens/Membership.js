@@ -1,8 +1,10 @@
 import React from "react";
 import { Container } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import MembershipLogo from "../assets/img/membership.jpg";
 import Footer from "../components/commons/Footer";
 import Navbar from "../components/commons/Navbar";
+import MembershipData from "../assets/jsonData/MembershipData.json";
 
 const Membership = () => {
   return (
@@ -44,76 +46,104 @@ const Membership = () => {
                 <hr />
                 <h1 className="fw-bold">Membership Packages</h1>
                 <div className="row">
-                  <div className="col-md-6 col-lg-6 col-xl-6 p-2 m-0">
-                    <div
-                      className="card card-body"
-                      style={{ background: "#de8333" }}
+                  {MembershipData.map((membershipItem, index) => (
+                    <div className="col-md-6 col-lg-6 col-xl-6 p-2 m-0">
+                      <Link
+                        className="text-decoration-none text-light"
+                        to={"/membershipform/" + index}
+                      >
+                        <div
+                          className="card card-body"
+                          style={{ background: membershipItem.color }}
+                        >
+                          <div className="my-0 d-flex align-items-center">
+                            <div className="text-start">
+                              <h4 className="text-light">
+                                {membershipItem.title}
+                              </h4>
+                              <h6 className="text-light">
+                                Rs {membershipItem.amount} +GST
+                              </h6>
+                              <p className="my-0">
+                                {membershipItem.description}
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </Link>
+                    </div>
+                  ))}
+
+                  {/* <div className="col-md-6 col-lg-6 col-xl-6 p-2 m-0">
+                    <Link
+                      className="text-decoration-none text-light"
+                      to={"/membershipform/2000"}
                     >
-                      <div className="my-0 d-flex align-items-center">
-                        <div className="text-start">
-                          <h4 className="text-light">Dental Technician</h4>
-                          <h6 className="text-light">Rs 1500 +GST</h6>
-                          <p className="my-0">
-                            A Dental technician who is Registered or
-                            non-registered experienced in dental laboratory.
-                          </p>
+                      <div
+                        className="card card-body"
+                        style={{ background: "#525bc2" }}
+                      >
+                        <div className="my-0 d-flex align-items-center">
+                          <div className="text-start">
+                            <h4 className="text-light">
+                              Laboratory Membership
+                            </h4>
+                            <h6 className="text-light">Rs 2000 +GST</h6>
+                            <p className="my-0">
+                              A Dental laboratory whose services are exclusively
+                              available to member of the dental profession.
+                            </p>
+                          </div>
                         </div>
                       </div>
-                    </div>
+                    </Link>
                   </div>
                   <div className="col-md-6 col-lg-6 col-xl-6 p-2 m-0">
-                    <div
-                      className="card card-body"
-                      style={{ background: "#525bc2" }}
+                    <Link
+                      className="text-decoration-none text-light"
+                      to={"/membershipform/2000"}
                     >
-                      <div className="my-0 d-flex align-items-center">
-                        <div className="text-start">
-                          <h4 className="text-light">Laboratory Membership</h4>
-                          <h6 className="text-light">Rs 2000 +GST</h6>
-                          <p className="my-0">
-                            A Dental laboratory whose services are exclusively
-                            available to member of the dental profession.
-                          </p>
+                      <div
+                        className="card card-body"
+                        style={{ background: "#ff0080" }}
+                      >
+                        <div className="my-0 d-flex align-items-center">
+                          <div className="text-start">
+                            <h4 className="text-light">Associate Membership</h4>
+                            <h6 className="text-light">Rs 2000 +GST</h6>
+                            <p className="my-0">
+                              An Associate member small include a Dental
+                              laboratory supplier, a manufacturer representative
+                              or Dental Technology instructor who does not
+                              qualify for "Technician Membership.
+                            </p>
+                          </div>
                         </div>
                       </div>
-                    </div>
+                    </Link>
                   </div>
                   <div className="col-md-6 col-lg-6 col-xl-6 p-2 m-0">
-                    <div
-                      className="card card-body"
-                      style={{ background: "#ff0080" }}
+                    <Link
+                      className="text-decoration-none text-light"
+                      to={"/membershipform/1000"}
                     >
-                      <div className="my-0 d-flex align-items-center">
-                        <div className="text-start">
-                          <h4 className="text-light">Associate Membership</h4>
-                          <h6 className="text-light">Rs 2000 +GST</h6>
-                          <p className="my-0">
-                            An Associate member small include a Dental
-                            laboratory supplier, a manufacturer representative
-                            or Dental Technology instructor who does not qualify
-                            for "Technician Membership.
-                          </p>
+                      <div
+                        className="card card-body"
+                        style={{ background: "#37bd6e" }}
+                      >
+                        <div className="my-0 d-flex align-items-center">
+                          <div className="text-start">
+                            <h4 className="text-light">Student Membership</h4>
+                            <h6 className="text-light">Rs 1000 +GST</h6>
+                            <p className="my-0">
+                              A Dental technician student in a Dental collage or
+                              in a institute can be registered as IDTA Member.
+                            </p>
+                          </div>
                         </div>
                       </div>
-                    </div>
-                  </div>
-                  <div className="col-md-6 col-lg-6 col-xl-6 p-2 m-0">
-                    <div
-                      className="card card-body"
-                      style={{ background: "#37bd6e" }}
-                    >
-                      <div className="my-0 d-flex align-items-center">
-                        <div className="text-start">
-                          <h4 className="text-light">Student Membership</h4>
-                          <h6 className="text-light">Rs 1000 +GST</h6>
-                          <p className="my-0">
-                            A Dental technician student in a Dental collage or
-                            in a institute can be registered as IDTA Member.
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+                    </Link>
+                  </div> */}
                 </div>
               </div>
             </div>
