@@ -11,41 +11,43 @@ const Hero = () => {
         style={{ minHeight: "80vh" }}
       >
         <div className="row mt-5">
-          <div className="col-md-6 col-lg-6 col-xl-6 mb-5 d-flex align-items-center">
-            <div className="text-center">
-              <div className="flip-card">
-                <div className="flip-card-inner">
-                  <div className="flip-card-front">
-                    <img
-                      src={IDTALogo}
-                      alt="Avatar"
-                      style={{
-                        width: "300px",
-                        height: "300px",
-                      }}
-                    />
-                  </div>
-                  <div className="flip-card-back">
-                    <img
-                      src={IDTALogo}
-                      alt="Avatar"
-                      style={{
-                        width: "300px",
-                        height: "300px",
-                      }}
-                    />
+        <div className="col-md-6 col-lg-6 col-xl-6 mb-5 d-flex align-items-center">
+              <div className="text-center w-100">
+                <div className="flip-card mx-auto">
+                  <div className="flip-card-inner">
+                    <div className="flip-card-front">
+                      <img
+                        className="mx-auto w-100"
+                        src={IDTALogo}
+                        alt="Avatar"
+                        style={{
+                          maxWidth: "300px",
+                          maxHeight: "300px",
+                        }}
+                      />
+                    </div>
+                    <div className="flip-card-back">
+                      <img
+                        className="mx-auto w-100"
+                        src={IDTALogo}
+                        alt="Avatar"
+                        style={{
+                          maxWidth: "300px",
+                          maxHeight: "300px",
+                        }}
+                      />
+                    </div>
                   </div>
                 </div>
+                <button
+                  className="btn btn-secondary border-0 mx-auto px-4 py-2 mt-5 shadow-none btn-lg"
+                  data-bs-toggle="modal"
+                  data-bs-target="#exampleModal"
+                >
+                  Contact Us Now
+                </button>
               </div>
-              <button
-                className="btn btn-secondary border-0 mx-2 px-4 py-2 mt-5 shadow-none btn-lg"
-                data-bs-toggle="modal"
-                data-bs-target="#exampleModal"
-              >
-                Contact Us Now
-              </button>
             </div>
-          </div>
           <div className="col-md-6 col-lg-6 col-xl-6 d-flex align-items-center">
             <div>
               <h1 className="fw-bold">Welcome to IDTA,</h1>
@@ -55,11 +57,6 @@ const Hero = () => {
                   fontSize: "22px",
                 }}
               >
-                {/* <span className="text-light">
-                  {"("}
-                  Indian Dental Technician Association
-                  {")"}
-                </span>{" "} */}
                 The Indian Dental Technician Association is a Pvt.Organization
                 for Dental Laboratory’s and Dental Technicians in India and we
                 are committed to keeping member in touch with what is going in

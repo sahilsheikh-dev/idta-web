@@ -61,6 +61,34 @@ const Education = () => {
                 </div>
               </div>
             </div>
+            <div className="col-12">
+              <h1 className="fw-bold">Continuing Professional Development</h1>
+              <ul>
+                <li>
+                  CPD can involve either formal and structured or informal and
+                  self-directed learning.
+                </li>
+                <li>
+                  Verifiable CPD is a learning and development programme thats
+                  been approved by the IDTA.{" "}
+                </li>
+                <li>
+                  The Organisers of the learning programme or course will
+                  generally seek this approval, and provide you with a
+                  verification number and a Certificate of Attendance.
+                </li>
+                <li>
+                  Learning and development programme providers Eg. Dental firms,
+                  dental supply companies, advertise their courses as being CPD
+                  verified, however the number of hours should be allocated and
+                  confirmed prior to undertaking the course.{" "}
+                </li>
+                <li>
+                  Following the learning programme or course, You will receive a
+                  Certificate of Attendance which contains the CPD number.
+                </li>
+              </ul>
+            </div>
           </div>
         </section>
       </Container>

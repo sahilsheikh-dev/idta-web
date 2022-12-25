@@ -26,10 +26,7 @@ const Membership = () => {
             </div>
             <div className="col-md-8 col-lg-8 col-xl-8 d-flex align-items-center p-2 p-md-5 p-lg-5 p-xl-5">
               <div>
-                <h1 className="fw-bold">
-                  <span className="text-custom-primary">Membership </span>
-                  Benefits
-                </h1>
+                <h1 className="fw-bold">Membership</h1>
                 <p className="text-secondary mt-3">
                   The IDTA represent the best Interest of all Indian Dental
                   technicians with one voice whether qualified or in training
@@ -44,34 +41,117 @@ const Membership = () => {
                   various National initiatives, consultations, Campaigns and
                   activities.
                 </p>
-                <h4 className="text-light">Discounts</h4>
-                <ul className="text-secondary">
-                  <li>Members gets discounts on Dental Laboratory Products.</li>
-                  <li>
-                    Members gets discounts on CPD Courses, Hands on, and Online
-                    Classes.
-                  </li>
-                </ul>
-                <h4 className="text-light mt-2">Communication,</h4>
-                <p className="text-secondary mt-3">
-                  Dental Technology is in exciting times with the rapid
-                  developments of digital dental technology. We regularly
-                  communicate to the IDTA membership through our F-mall
-                  newsletter, social media and the IDTA website (Launching soon)
-                  to highlight important information and keep members up to date
-                  with what is going on in dental technology.
-                </p>
-                <h4 className="text-light mt-2">Support,</h4>
-                <p className="text-secondary mt-3">
-                  Being part of the IDTA community gives members access to a
-                  wealth of information, advice sheets and guidance documents on
-                  a variety of topics within the members area of the IDTA
-                  website including; regulatory Updates and requirements,
-                  technical, templates and business management. Not only that,
-                  the IDTA office and support team are there to Help you with
-                  your enquiries.
-                </p>
+                <hr />
+                <h1 className="fw-bold">Membership Packages</h1>
+                <div className="row">
+                  <div className="col-md-6 col-lg-6 col-xl-6 p-2 m-0">
+                    <div
+                      className="card card-body"
+                      style={{ background: "#de8333" }}
+                    >
+                      <div className="my-0 d-flex align-items-center">
+                        <div className="text-start">
+                          <h4 className="text-light">Dental Technician</h4>
+                          <h6 className="text-light">Rs 1500 +GST</h6>
+                          <p className="my-0">
+                            A Dental technician who is Registered or
+                            non-registered experienced in dental laboratory.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="col-md-6 col-lg-6 col-xl-6 p-2 m-0">
+                    <div
+                      className="card card-body"
+                      style={{ background: "#525bc2" }}
+                    >
+                      <div className="my-0 d-flex align-items-center">
+                        <div className="text-start">
+                          <h4 className="text-light">Laboratory Membership</h4>
+                          <h6 className="text-light">Rs 2000 +GST</h6>
+                          <p className="my-0">
+                            A Dental laboratory whose services are exclusively
+                            available to member of the dental profession.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="col-md-6 col-lg-6 col-xl-6 p-2 m-0">
+                    <div
+                      className="card card-body"
+                      style={{ background: "#ff0080" }}
+                    >
+                      <div className="my-0 d-flex align-items-center">
+                        <div className="text-start">
+                          <h4 className="text-light">Associate Membership</h4>
+                          <h6 className="text-light">Rs 2000 +GST</h6>
+                          <p className="my-0">
+                            An Associate member small include a Dental
+                            laboratory supplier, a manufacturer representative
+                            or Dental Technology instructor who does not qualify
+                            for "Technician Membership.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="col-md-6 col-lg-6 col-xl-6 p-2 m-0">
+                    <div
+                      className="card card-body"
+                      style={{ background: "#37bd6e" }}
+                    >
+                      <div className="my-0 d-flex align-items-center">
+                        <div className="text-start">
+                          <h4 className="text-light">Student Membership</h4>
+                          <h6 className="text-light">Rs 1000 +GST</h6>
+                          <p className="my-0">
+                            A Dental technician student in a Dental collage or
+                            in a institute can be registered as IDTA Member.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
+            </div>
+            <div>
+              <h4 className="text-light">Membership Benefits</h4>
+              <ul className="text-secondary">
+                <li>Members gets discounts on Dental Laboratory Products.</li>
+                <li>
+                  Members gets discounts on CPD Courses, Hands on, and Online
+                  Classes.
+                </li>
+                <li>Members get discounts on health insurances.</li>
+              </ul>
+              <h4 className="text-light mt-2">Terms and Conditions</h4>
+              <ul className="text-secondary">
+                <li>
+                  All members of the I.D.T.A agree to the I.D.T.A Membership
+                  Terms and Conditions.
+                </li>
+                <li>
+                  Membership is only open to individuals based in india only.
+                </li>
+                <li>
+                  Membership payments are non-refundable. The subscription is
+                  valid for 12 months from the date of registration. Members can
+                  manage their membership subscription including annual fee
+                  payments in their membership account by logging in.
+                </li>
+                <li>
+                  Professional indemnity insurance, exclusive to I.D.T.A.
+                  members only, is an optional opportunity to apply for
+                  professional indemnity at a special discounted premium rate
+                  through a third-party partner. The indemnity is not included
+                  in the price of the I.D.T.A membership. If your I.D.T.A.
+                  membership expires your professional indemnity insurance will
+                  no longer be valid and a claim cannot be made.
+                </li>
+              </ul>
             </div>
           </div>
         </section>

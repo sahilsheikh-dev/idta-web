@@ -1,10 +1,27 @@
-import React from "react";
+import React, { useState } from "react";
 import { Container } from "react-bootstrap";
 import IDTALogo from "../assets/img/idta-logo.png";
 import Footer from "../components/commons/Footer";
 import Navbar from "../components/commons/Navbar";
 
 const About = () => {
+  const [currentTab, setCurrentTab] = useState("vision");
+
+  const visionClicked = () => {
+    setCurrentTab("vision");
+    console.log(currentTab);
+  };
+
+  const missionClicked = () => {
+    setCurrentTab("mission");
+    console.log(currentTab);
+  };
+
+  const goalClicked = () => {
+    setCurrentTab("goal");
+    console.log(currentTab);
+  };
+
   return (
     <div>
       <Navbar />
@@ -12,33 +29,35 @@ const About = () => {
         <section className="about pt-5 mt-5 section" id="about">
           <div className="row mt-5">
             <div className="col-md-6 col-lg-6 col-xl-6 mb-5 d-flex align-items-center">
-              <div className="text-center">
-                <div className="flip-card">
+              <div className="text-center w-100">
+                <div className="flip-card mx-auto">
                   <div className="flip-card-inner">
                     <div className="flip-card-front">
                       <img
+                        className="mx-auto w-100"
                         src={IDTALogo}
                         alt="Avatar"
                         style={{
-                          width: "300px",
-                          height: "300px",
+                          maxWidth: "300px",
+                          maxHeight: "300px",
                         }}
                       />
                     </div>
                     <div className="flip-card-back">
                       <img
+                        className="mx-auto w-100"
                         src={IDTALogo}
                         alt="Avatar"
                         style={{
-                          width: "300px",
-                          height: "300px",
+                          maxWidth: "300px",
+                          maxHeight: "300px",
                         }}
                       />
                     </div>
                   </div>
                 </div>
                 <button
-                  className="btn btn-secondary border-0 mx-2 px-4 py-2 mt-5 shadow-none btn-lg"
+                  className="btn btn-secondary border-0 mx-auto px-4 py-2 mt-5 shadow-none btn-lg"
                   data-bs-toggle="modal"
                   data-bs-target="#exampleModal"
                 >
@@ -50,26 +69,156 @@ const About = () => {
               <div style={{ textAlign: "justify" }}>
                 <h1 className="fw-bold">Who We Are</h1>
                 <p className="text-secondary mt-0">
-                  Welcome, Indian Dental Technician Association (I.D.T.A) The
-                  I.D.T.A. is a leading professional body for Dental Technician
-                  in India. Run by Dental Technicians for dental Technicians.Our
-                  team are committed to advancing within dental technology for
-                  the benefit of the oral healthcare of the nation. We represent
-                  individual dental technician,providing lifelong learning
-                  ,advice,guidance and support to our members and raise
-                  awareness of the key issues affecting the dental technology
-                  profession. By joining the I.D.T.A you will have added your
-                  voice to the dental technician profession within India. The
-                  LD.T.A plays a pivotal role in driving standard for the
-                  provision of quality oral healthcare. The Indian Dental
-                  Technician Association is a Pvt. Organization for Dental
-                  Laboratory's and Dental Technicians in India and we are
-                  committed to keeping member in touch with what is going in
-                  Dental Technology and the wider dental arena as well as
-                  facilitating our members with the tools they need to stay
-                  educated and compliant. Currently the IDTA has 200+ members
-                  and 500+ socially connected members.
+                  The IDTA is focused on advancing dental technology and
+                  ensuring a prosperous future is secured for dental
+                  technicians. We are seeking professional and enthusiastic
+                  people to join our team by representing each State. If this
+                  interests you, please contact us.
                 </p>
+                <hr />
+
+                <div
+                  className="text-center mx-auto w-100"
+                  style={{ display: "inline-flex" }}
+                >
+                  <button
+                    type="button"
+                    onClick={visionClicked}
+                    className="btn text-light text-center mx-auto w-100 fw-bold border-0"
+                    style={
+                      currentTab === "vision"
+                        ? {
+                            fontSize: "24px",
+                            textDecoration: "underline",
+                            textDecorationColor: "#2da3e3",
+                          }
+                        : { fontSize: "24px" }
+                    }
+                  >
+                    Vision
+                  </button>
+                  &nbsp;&nbsp;
+                  <button
+                    type="button"
+                    onClick={missionClicked}
+                    className="btn text-light text-center mx-auto w-100 fw-bold border-0"
+                    style={
+                      currentTab === "mission"
+                        ? {
+                            fontSize: "24px",
+                            textDecoration: "underline",
+                            textDecorationColor: "#2da3e3",
+                          }
+                        : { fontSize: "24px" }
+                    }
+                  >
+                    Mission
+                  </button>
+                  &nbsp;&nbsp;
+                  <button
+                    type="button"
+                    onClick={goalClicked}
+                    className="btn text-light text-center mx-auto w-100 fw-bold border-0"
+                    style={
+                      currentTab === "goal"
+                        ? {
+                            fontSize: "24px",
+                            textDecoration: "underline",
+                            textDecorationColor: "#2da3e3",
+                          }
+                        : { fontSize: "24px" }
+                    }
+                  >
+                    Goal
+                  </button>
+                </div>
+
+                <div className="w-100 mt-3 card card-body bg-dark">
+                  {currentTab === "vision" ? (
+                    <>
+                      <ul>
+                        <li>
+                          To advance standard with Dental Technology for the
+                          benefit of the oral healthcare of the nation.
+                        </li>
+                        <li>
+                          Providing advice guidance and support to members.
+                        </li>
+                        <li>
+                          Raising awareness and promoting and exchange to view
+                          to key issues aff.
+                        </li>
+                      </ul>
+                      <p>
+                        The goal of the "Indian Dental Technician Association"
+                        is to upload and improve the standards of dental
+                        Technology providing state-of-the-art technological and
+                        managerial education, providing a format for
+                        professional and ethical growth, and creating lasting
+                        fraternal relationships.
+                      </p>
+                    </>
+                  ) : (
+                    ""
+                  )}
+                  {currentTab === "mission" ? (
+                    <>
+                      <ul>
+                        <li>
+                          remaining essentially unchanged. It was popularised in
+                          the 1960s with the release of Letraset sheets
+                          containing
+                        </li>
+                        <li>
+                          Lorem Ipsum passages, and more recently with desktop
+                        </li>
+                        <li>
+                          publishing software like Aldus PageMaker including
+                          versions of Lorem Ipsum.
+                        </li>
+                      </ul>
+                      <p>
+                        remaining essentially unchanged. It was popularised in
+                        the 1960s with the release of Letraset sheets containing
+                        Lorem Ipsum passages, and more recently with desktop
+                        publishing software like Aldus PageMaker including
+                        versions of Lorem Ipsum.
+                      </p>
+                    </>
+                  ) : (
+                    ""
+                  )}
+                  {currentTab === "goal" ? (
+                    <>
+                      <ul>
+                        <li>
+                          Lorem Ipsum is simply dummy text of the printing and
+                          typesetting industry. Lorem Ipsum has been the
+                        </li>
+                        <li>
+                          industry's standard dummy text ever since the 1500s,
+                          when an unknown printer took a galley of type and
+                        </li>
+                        <li>
+                          scrambled it to make a type specimen book. It has
+                          survived not only five centuries, but also the leap
+                          into
+                        </li>
+                      </ul>
+                      <p>
+                        Lorem Ipsum is simply dummy text of the printing and
+                        typesetting industry. Lorem Ipsum has been the
+                        industry's standard dummy text ever since the 1500s,
+                        when an unknown printer took a galley of type and
+                        scrambled it to make a type specimen book. It has
+                        survived not only five centuries, but also the leap into
+                        electronic typesetting,
+                      </p>
+                    </>
+                  ) : (
+                    ""
+                  )}
+                </div>
 
                 <div
                   className="modal fade"
@@ -166,6 +315,56 @@ const About = () => {
                   </div>
                 </div>
               </div>
+            </div>
+            <div className="col-12 mt-5">
+              <h1>IDTA Future Projects</h1>
+              <ul>
+                <li>
+                  {" "}
+                  Our primary aim is to support the professional development of
+                  dental technician and students.
+                </li>
+                <li>
+                  We are planning to open semi-autonomous branches in all over
+                  the india. Technician can access to technical knowledge in the
+                  form of exclusive online, resources, journals and
+                  master-classes.
+                </li>
+                <li>
+                  I.D.T.A will support with career development, lifelong
+                  learning, CPD requirements and training.
+                </li>
+                <li>
+                  Access to exclusive discounted packages plus free CPD and
+                  24-hour helpline for all members.
+                </li>
+                <li>
+                  To mix and gain support from other experienced dental
+                  technologists. I.D.T.A. is going to run by Dental technician
+                  for dental technicians.
+                </li>
+                <li>
+                  To promote your profession in society and raise awareness of
+                  key points.
+                </li>
+              </ul>
+            </div>
+            <div className="col-12 mt-5">
+              <h1>Key Objectives</h1>
+              <ul>
+                <li>
+                  Develop and support members, and the dental technology
+                  profession.
+                </li>
+                <li>Encourage and promote education, including CPD.</li>
+                <li>Forge links with other organisations.</li>
+                <li>
+                  Promote views to relevant external organisation. Adopt and
+                  share best practice.
+                </li>
+                <li>Provide benefits and employment opportunities.</li>
+                <li>Develop and maintain roles and reponsibilities.</li>
+              </ul>
             </div>
           </div>
         </section>

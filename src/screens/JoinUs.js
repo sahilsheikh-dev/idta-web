@@ -37,79 +37,142 @@ const JoinUs = () => {
                   provide a range of online CPD courses. Members receive the
                   IDTA newsletter. We offer peer review advice and support.
                 </p>
+                <button
+                  className="btn btn-secondary border-0 mx-auto px-4 py-2 mt-5 shadow-none btn-lg"
+                  data-bs-toggle="modal"
+                  data-bs-target="#exampleModal"
+                >
+                  Contact Us Now
+                </button>
               </div>
             </div>
             <div className="col-md-6 col-lg-6 col-xl-6 d-flex align-items-center">
-              <div className="row">
-                <div className="col-md-6 col-lg-6 col-xl-6 p-2 m-0">
-                  <div
-                    className="card card-body"
-                    style={{ background: "#de8333" }}
-                  >
-                    <div className="my-0 d-flex align-items-center">
-                      <div className="text-start">
-                        <h4 className="text-light">Dental Technician</h4>
-                        <h6 className="text-light">Rs 1500 +GST</h6>
-                        <p className="my-0">
-                          A Dental technician who is Registered or
-                          non-registered experienced in dental laboratory.
-                        </p>
-                      </div>
-                    </div>
+              <div>
+                <h1 className="fw-bold">Reasons to join I.D.T.A</h1>
+                <ul>
+                  <li>
+                    An Organisation dedicated to the interest of dental
+                    laboratory owners and technicians.
+                  </li>
+                  <li>
+                    Established and run by Dental Technicians for Dental
+                    Technician and Laboratorys Owners.
+                  </li>
+                  <li>
+                    Expert support and guidance for every aspect of your
+                    business, from starting up and day-to-day operations to
+                    employment issues and representing your view.
+                  </li>
+                  <li>Committed to raising standards for the industry.</li>
+                  <li>
+                    Actively promotes I.D.T.A Member Laboratories to the Indian
+                    Dentists.{" "}
+                  </li>
+                  <li>An annual exhibition dedicated to dental technology.</li>
+                  <li>
+                    Regular journal and information bulletins give you briefings
+                    on current events and product developments.
+                  </li>
+                  <li>
+                    Specially negotiated money-saving deals designed to maximise
+                    your budgets.
+                  </li>
+                  <li>
+                    We provide an annual conference, significantly discounted
+                    for members.
+                  </li>
+                  <li>We Also provide a range of online CPD courses.</li>
+                  <li>Members receive the IDTA newsletter.</li>
+                  <li>We offer peer review advice and support.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div
+            className="modal fade"
+            id="exampleModal"
+            tabIndex="-1"
+            aria-labelledby="exampleModalLabel"
+            aria-hidden="true"
+          >
+            <div className="modal-dialog modal-dialog-centered">
+              <div
+                className="modal-content"
+                style={{
+                  background: "#000000",
+                  border: "1px solid #ffffff",
+                }}
+              >
+                <div
+                  className="modal-header"
+                  style={{
+                    borderBottom: "none",
+                  }}
+                >
+                  <h1 className="modal-title fs-5" id="exampleModalLabel">
+                    Register With Us
+                  </h1>
+                  <button
+                    type="button"
+                    className="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div className="modal-body">
+                  <h5 className="text-secondary mb-3">Laboratory Details</h5>
+                  <div className="mb-3">
+                    <input
+                      type="text"
+                      className="form-control bg-transparent shadow-none border-top-0 border-start-0 border-end-0 p-2"
+                      placeholder="Lab Name"
+                    />
+                  </div>
+                  <div className="mb-3">
+                    <input
+                      type="tel"
+                      className="form-control bg-transparent shadow-none border-top-0 border-start-0 border-end-0 p-2"
+                      placeholder="Contact Number"
+                    />
+                  </div>
+                  <div className="mb-3">
+                    <input
+                      type="email"
+                      className="form-control bg-transparent shadow-none border-top-0 border-start-0 border-end-0 p-2"
+                      placeholder="Email"
+                    />
+                  </div>
+                  <div className="mb-3">
+                    <input
+                      type="text"
+                      className="form-control bg-transparent shadow-none border-top-0 border-start-0 border-end-0 p-2"
+                      placeholder="Website"
+                    />
+                  </div>
+                  <div className="mb-3">
+                    <input
+                      type="text"
+                      className="form-control bg-transparent shadow-none border-top-0 border-start-0 border-end-0 p-2"
+                      placeholder="Full Name of Lab Owner(s)"
+                    />
                   </div>
                 </div>
-                <div className="col-md-6 col-lg-6 col-xl-6 p-2 m-0">
-                  <div
-                    className="card card-body"
-                    style={{ background: "#525bc2" }}
+                <div
+                  className="modal-footer"
+                  style={{
+                    borderTop: "none",
+                  }}
+                >
+                  <button
+                    type="button"
+                    className="btn btn-secondary btn-sm"
+                    data-bs-dismiss="modal"
                   >
-                    <div className="my-0 d-flex align-items-center">
-                      <div className="text-start">
-                        <h4 className="text-light">Laboratory Membership</h4>
-                        <h6 className="text-light">Rs 2000 +GST</h6>
-                        <p className="my-0">
-                          A Dental laboratory whose services are exclusively
-                          available to member of the dental profession.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="col-md-6 col-lg-6 col-xl-6 p-2 m-0">
-                  <div
-                    className="card card-body"
-                    style={{ background: "#ff0080" }}
-                  >
-                    <div className="my-0 d-flex align-items-center">
-                      <div className="text-start">
-                        <h4 className="text-light">Associate Membership</h4>
-                        <h6 className="text-light">Rs 2000 +GST</h6>
-                        <p className="my-0">
-                          An Associate member small include a Dental laboratory
-                          supplier, a manufacturer representative or Dental
-                          Technology instructor who does not qualify for
-                          "Technician Membership.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="col-md-6 col-lg-6 col-xl-6 p-2 m-0">
-                  <div
-                    className="card card-body"
-                    style={{ background: "#37bd6e" }}
-                  >
-                    <div className="my-0 d-flex align-items-center">
-                      <div className="text-start">
-                        <h4 className="text-light">Student Membership</h4>
-                        <h6 className="text-light">Rs 1000 +GST</h6>
-                        <p className="my-0">
-                          A Dental technician student in a Dental collage or in
-                          a institute can be registered as IDTA Member.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
+                    Close
+                  </button>
+                  <button type="button" className="btn btn-primary btn-sm">
+                    Submit
+                  </button>
                 </div>
               </div>
             </div>
