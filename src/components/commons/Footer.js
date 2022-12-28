@@ -5,7 +5,7 @@ import IDTALogo from "../../assets/img/idta-logo.png";
 const Footer = () => {
   return (
     <>
-      <footer className="footer navbar">
+      <footer className="footer navbar mt-0">
         <div className="container w-100">
           <div className="row my-0 w-100">
             <div className="col-md-3 col-lg-3 col-xl-3 text-start offset-md-2 offset-lg-2 offset-xl-2 mb-5">

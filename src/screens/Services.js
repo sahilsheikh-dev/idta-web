@@ -1,5 +1,5 @@
 import React from "react";
-import { Container } from "react-bootstrap";
+// import { Container } from "react-bootstrap";
 import serviceJson from "../assets/jsonData/ServiceData.json";
 import Footer from "../components/commons/Footer";
 import Navbar from "../components/commons/Navbar";
@@ -10,102 +10,142 @@ const Services = () => {
   return (
     <div>
       <Navbar />
-      <Container>
-        <section
-          className="services pt-5 mt-5"
-          id="services"
-          style={{ minHeight: "80vh" }}
-        >
-          <div className="row mt-5">
-            <div className="col-md-6 col-lg-6 col-xl-6 d-flex align-items-center p-2 p-md-5 p-lg-5 p-xl-5">
-              <div>
-                <h1 className="fw-bold">
-                  <span className="text-custom-primary">Exclusive</span>{" "}
-                  Services
-                </h1>
-              </div>
-            </div>
-            <div className="col-md-12 col-lg-12 col-xl-12 mb-5 d-flex align-items-center">
-              <div className="row">
-                {serviceData.map((serviceItem, index) => (
-                  <div
-                    className="col-6 col-md-3 col-lg-3 col-xl-3 my-2"
-                    key={index}
-                  >
-                    <div className="card card-body bg-dark text-center service-card">
-                      <img
-                        className="img-fluid mx-auto w-100"
-                        src={serviceItem.logoImg}
-                        alt="logo"
-                      />
-                      <p className="my-0 text-start">{serviceItem.title}</p>
+      <section className="pt-4 section pb-0 mb-0">
+        <div className="row mt-5 m-0 pb-0 mb-0">
+          <div
+            className="col-12 mb-0 mb-md-0 mb-lg-0 mb-xl-0 d-flex align-items-center p-0"
+            style={{
+              background: "#193A67",
+            }}
+          >
+            <div className="text-start h-100 w-100 d-flex align-items-center">
+              <div className="container py-5">
+                <h1 className="fw-bold">Exclusive Services</h1>
+                <div className="row">
+                  {serviceData.map((serviceItem, index) => (
+                    <div
+                      className="col-6 col-md-2 col-lg-2 col-xl-2 my-2"
+                      key={index}
+                    >
+                      <div
+                        className="card card-body bg-light text-dark text-center service-card h-100 d-flex align-items-center"
+                        style={{
+                          minHeight: "50px",
+                          borderRadius: "0",
+                        }}
+                      >
+                        <p className="my-0 fw-bold text-center">
+                          {serviceItem.title}
+                        </p>
+                      </div>
                     </div>
-                  </div>
-                ))}
+                  ))}
+                </div>
               </div>
             </div>
           </div>
-          <div>
-            <h1 className="fw-bold">
-              <span className="text-custom-primary">Communicate</span>
-            </h1>
-            <p className="text-secondary mt-3">
-              Dental Technology is in exciting times with the rapid developments
-              of digital dental technology. We regularly communicate to the
-              I.D.T.A membership through our E-mail newsletter, social media and
-              the I.D.T.A. website (Launching soon) to highlight important
-              information and keep members up to date with what is going on in
-              dental technology.
-            </p>
+          <div
+            className="col-md-6 col-lg-6 col-xl-6 d-flex align-items-center p-2 p-md-5 p-lg-5 p-xl-5"
+            style={{
+              background: "#FFFFFF",
+            }}
+          >
+            <div className="container py-5 text-dark">
+              <h1 className="fw-bold">Communicate</h1>
+              <p
+                className="mt-3"
+                style={{
+                  fontSize: "22px",
+                }}
+              >
+                Dental Technology is in exciting times with the rapid
+                developments of digital dental technology. We regularly
+                communicate to the I.D.T.A membership through our E-mail
+                newsletter, social media and the I.D.T.A. website (Launching
+                soon) to highlight important information and keep members up to
+                date with what is going on in dental technology.
+              </p>
+            </div>
           </div>
-          <div>
-            <h1 className="fw-bold">
-              <span className="text-custom-primary">Support</span>
-            </h1>
-            <p className="text-secondary mt-3">
-              Being part of the I.D.T.A. community gives members access to a
-              wealth of information, advice sheets and guidance documents on a
-              variety of topics within the members area of the I.D.T.A. website
-              including; regulatory updates and requirements, technical,
-              templates and business management. Not only that, the I.D.T.A.
-              office and support team are there to help you with your enquiries.
-            </p>
+          <div
+            className="col-md-6 col-lg-6 col-xl-6 d-flex align-items-center p-2 p-md-5 p-lg-5 p-xl-5"
+            style={{
+              background: "#ffffff",
+            }}
+          >
+            <div className="container py-5 text-dark">
+              <h1 className="fw-bold">Support</h1>
+              <p
+                className="mt-3"
+                style={{
+                  fontSize: "22px",
+                }}
+              >
+                Being part of the I.D.T.A. community gives members access to a
+                wealth of information, advice sheets and guidance documents on a
+                variety of topics within the members area of the I.D.T.A.
+                website including; regulatory updates and requirements,
+                technical, templates and business management. Not only that, the
+                I.D.T.A. office and support team are there to help you with your
+                enquiries.
+              </p>
+            </div>
           </div>
-          <div>
-            <h1 className="fw-bold">
-              <span className="text-custom-primary">Support</span>
-            </h1>
-            <ul className="text-secondary mt-3">
-              <li>
+          <div
+            className="col-md-6 col-lg-6 col-xl-6 d-flex align-items-center p-2 p-md-5 p-lg-5 p-xl-5"
+            style={{
+              background: "#193A67",
+            }}
+          >
+            <div className="container py-5">
+              <h1 className="fw-bold">Support</h1>
+              <p className="mt-3">
                 IDTA work with students to provide a seamless transaction from
                 Universities, Colleges & Institutes into the profession ensuring
                 a well trained fully supported work forces into the future.
-              </li>
-              <li>
+                <br />
                 Stay connected to those in the market to buy or sale practice
                 and equipments.
-              </li>
-              <li>Mentoring programmes.</li>
-              <li>
+                <br />
+                Mentoring programmes.
+                <br />
                 We connect with you the leader in the profession, so, you can
                 meet, learn and share ideas with them.
-              </li>
-              <li>An open form for you to share your thoughts. </li>
-              <li>Group study, group study with other association. </li>
-              <li>
+                <br />
+                An open form for you to share your thoughts.
+                <br />
+                Group study, group study with other association.
+                <br />
                 Annual conferences. Our annual conference provide world class
                 CPD, great social events and the chance to connect with expert
                 with 1st Class Speakers and time to catch with colleagues.
-              </li>
-              <li>
+                <br />
                 Collected and shared, so, you can stay on top of the latest
                 research and news from across the profession, saving your time,
                 so, you can focus on what's important for your patient.
-              </li>
-            </ul>
+              </p>
+            </div>
           </div>
-        </section>
-      </Container>
+          <div
+            className="col-md-6 col-lg-6 col-xl-6 my-0 p-0 my-0"
+            style={{
+              background: "#193A67",
+            }}
+          >
+            <img
+              className="img-fluid w-100 h-100 py-0 my-0"
+              src="https://images.pexels.com/photos/2467506/pexels-photo-2467506.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+              alt="logo"
+              style={{
+                maxWidth: "100%",
+                maxHeight: "100%",
+                objectFit: "cover",
+                objectPosition: "center",
+              }}
+            />
+          </div>
+        </div>
+      </section>
       <Footer />
     </div>
   );

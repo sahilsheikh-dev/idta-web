@@ -29,7 +29,10 @@ function App() {
         <Route path="/dashboard" element={<Dashboard />} />
         {/* <Route path="/dashboard/:userID" element={<Dashboard />} /> */}
         <Route path="/course/:courseID" element={<CourseInfo />} />
-        <Route path="/membershipform/:membershipIndex" element={<MemberForm />} />
+        <Route
+          path="/membershipform/:membershipIndex"
+          element={<MemberForm />}
+        />
       </Routes>
     </BrowserRouter>
   );

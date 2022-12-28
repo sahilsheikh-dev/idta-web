@@ -54,7 +54,9 @@ const Navbar = () => {
               <li className="nav-item mx-3">
                 <a
                   className={
-                    pageName === "" ? "nav-link nav-item-active" : "nav-link"
+                    pageName === ""
+                      ? "nav-link nav-a-hover nav-item-active"
+                      : "nav-link nav-a-hover"
                   }
                   href="/"
                 >
@@ -65,8 +67,8 @@ const Navbar = () => {
                 <a
                   className={
                     pageName === "about"
-                      ? "nav-link nav-item-active"
-                      : "nav-link"
+                      ? "nav-link nav-a-hover nav-item-active"
+                      : "nav-link nav-a-hover"
                   }
                   href="/about"
                 >
@@ -77,8 +79,8 @@ const Navbar = () => {
                 <a
                   className={
                     pageName === "membership"
-                      ? "nav-link nav-item-active"
-                      : "nav-link"
+                      ? "nav-link nav-a-hover nav-item-active"
+                      : "nav-link nav-a-hover"
                   }
                   href="/membership"
                 >
@@ -89,8 +91,8 @@ const Navbar = () => {
                 <a
                   className={
                     pageName === "service"
-                      ? "nav-link nav-item-active"
-                      : "nav-link"
+                      ? "nav-link nav-a-hover nav-item-active"
+                      : "nav-link nav-a-hover"
                   }
                   href="/service"
                 >
@@ -101,8 +103,8 @@ const Navbar = () => {
                 <a
                   className={
                     pageName === "education"
-                      ? "nav-link nav-item-active"
-                      : "nav-link"
+                      ? "nav-link nav-a-hover nav-item-active"
+                      : "nav-link nav-a-hover"
                   }
                   href="/education"
                 >
@@ -113,8 +115,8 @@ const Navbar = () => {
                 <a
                   className={
                     pageName === "career"
-                      ? "nav-link nav-item-active"
-                      : "nav-link"
+                      ? "nav-link nav-a-hover nav-item-active"
+                      : "nav-link nav-a-hover"
                   }
                   href="/career"
                 >
@@ -125,8 +127,8 @@ const Navbar = () => {
                 <a
                   className={
                     pageName === "joinus"
-                      ? "nav-link nav-item-active"
-                      : "nav-link"
+                      ? "btn btn-success border-0 mx-auto px-2 shadow-none btn-lg fw-bold nav-link nav-item-active text-light"
+                      : "btn btn-success border-0 mx-auto px-2 shadow-none btn-lg fw-bold nav-link text-light"
                   }
                   href="/joinus"
                 >
@@ -138,9 +140,10 @@ const Navbar = () => {
                   <a
                     className={
                       pageName === "login"
-                        ? "nav-link nav-item-active"
-                        : "nav-link"
+                        ? "btn border-0 mx-auto px-4 shadow-none btn-lg fw-bold nav-link nav-item-active text-decoration-none text-light"
+                        : "btn border-0 mx-auto px-4 shadow-none btn-lg fw-bold nav-link text-decoration-none text-light"
                     }
+                    style={{ background: "#193A67" }}
                     href="/login"
                   >
                     Login
@@ -148,7 +151,14 @@ const Navbar = () => {
                 </li>
               ) : (
                 <li className="nav-item mx-3">
-                  <a className={"nav-link"} href="/" onClick={logout()}>
+                  <a
+                    className={
+                      "btn border-0 mx-auto px-4 shadow-none btn-lg fw-bold nav-link text-decoration-none text-light"
+                    }
+                    style={{ background: "#193A67" }}
+                    href="/"
+                    onClick={logout()}
+                  >
                     Logout
                   </a>
                 </li>

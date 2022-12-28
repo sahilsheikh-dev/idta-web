@@ -25,7 +25,7 @@ const CourseInfo = () => {
         <section className="about pt-5 mt-5 section" id="about">
           <div className="row mt-5">
             <h1 className="fw-bold">{courseSrc.title}</h1>
-            <h6>{courseSrc.description}</h6>
+            <p>{courseSrc.description}</p>
             <hr />
             <div className="row">
               <div className="col-md-8 col-lg-8 col-xl-8">
