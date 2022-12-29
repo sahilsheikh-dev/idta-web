@@ -49,174 +49,196 @@ const About = () => {
             <div className="container py-5">
               <h3 className="fw-bold text-success">WHO IS THE IDTA?</h3>
               <h1 className="fw-bold">MORE ABOUT US</h1>
+              <p className="text-light mt-0">
+                The IDTA is focused on advancing dental technology and ensuring
+                a prosperous future is secured for dental technicians.
+                <br />
+                We are seeking professional and enthusiastic people to join our
+                team by representing each State. If this interests you, please
+                contact us.
+              </p>
             </div>
           </div>
           <div
-            className="col-md-6 col-lg-6 col-xl-6 my-0 d-flex align-items-center p-2 p-md-5 p-lg-5 p-xl-5 my-0"
+            className="col-12 my-0 d-flex align-items-center p-2 p-md-5 p-lg-5 p-xl-5 my-0"
             style={{
               background: "#090909",
             }}
           >
             <div className="container py-0 my-0">
-              <h1 className="fw-bold text-light">ABOUT IDTA</h1>
-              <p className="text-light mt-0">
-                The IDTA is focused on advancing dental technology and ensuring
-                a prosperous future is secured for dental technicians. We are
-                seeking professional and enthusiastic people to join our team by
-                representing each State. If this interests you, please contact
-                us.
-              </p>
-              {/* <button
-                className="btn btn-success border-0 mx-auto px-4 py-2 shadow-none btn-lg"
-                data-bs-toggle="modal"
-                data-bs-target="#exampleModal"
+              <div
+                className="text-center w-100 bg-dark"
+                style={{ display: "inline-flex" }}
               >
-                Register Now
-              </button> */}
-              <div className="mt-3">
-                <div
-                  className="text-start w-100"
-                  style={{ display: "inline-flex" }}
+                <button
+                  type="button"
+                  onClick={visionClicked}
+                  className="btn text-light text-center w-100 fw-bold border-0"
+                  style={
+                    currentTab === "vision"
+                      ? {
+                          fontSize: "24px",
+                          background: "#2da3e3",
+                        }
+                      : { fontSize: "24px" }
+                  }
                 >
-                  <button
-                    type="button"
-                    onClick={visionClicked}
-                    className="btn text-light text-start w-100 fw-bold border-0"
-                    style={
-                      currentTab === "vision"
-                        ? {
-                            fontSize: "24px",
-                            textDecoration: "underline",
-                            textDecorationColor: "#2da3e3",
-                          }
-                        : { fontSize: "24px" }
-                    }
-                  >
-                    Vision
-                  </button>
-                  &nbsp;&nbsp;
-                  <button
-                    type="button"
-                    onClick={missionClicked}
-                    className="btn text-light text-start w-100 fw-bold border-0"
-                    style={
-                      currentTab === "mission"
-                        ? {
-                            fontSize: "24px",
-                            textDecoration: "underline",
-                            textDecorationColor: "#2da3e3",
-                          }
-                        : { fontSize: "24px" }
-                    }
-                  >
-                    Mission
-                  </button>
-                  &nbsp;&nbsp;
-                  <button
-                    type="button"
-                    onClick={goalClicked}
-                    className="btn text-light text-start w-100 fw-bold border-0"
-                    style={
-                      currentTab === "goal"
-                        ? {
-                            fontSize: "24px",
-                            textDecoration: "underline",
-                            textDecorationColor: "#2da3e3",
-                          }
-                        : { fontSize: "24px" }
-                    }
-                  >
-                    Goal
-                  </button>
-                </div>
-                <div className="w-100 mt-3 text-light">
-                  {currentTab === "vision" ? (
-                    <p>
-                      To advance standard with Dental Technology for the benefit
-                      of the oral healthcare of the nation.
-                      <br />
-                      Providing advice guidance and support to members.
-                      <br />
-                      Raising awareness and promoting and exchange to view to
-                      key issues aff.
-                      <br />
-                      <p>
-                        The goal of the "Indian Dental Technician Association"
-                        is to upload and improve the standards of dental
-                        Technology providing state-of-the-art technological and
-                        managerial education, providing a format for
-                        professional and ethical growth, and creating lasting
-                        fraternal relationships.
+                  Vision
+                </button>
+                &nbsp;&nbsp;
+                <button
+                  type="button"
+                  onClick={missionClicked}
+                  className="btn text-light text-center w-100 fw-bold border-0"
+                  style={
+                    currentTab === "mission"
+                      ? {
+                          fontSize: "24px",
+                          background: "#2da3e3",
+                        }
+                      : { fontSize: "24px" }
+                  }
+                >
+                  Mission
+                </button>
+                &nbsp;&nbsp;
+                <button
+                  type="button"
+                  onClick={goalClicked}
+                  className="btn text-light text-center w-100 fw-bold border-0"
+                  style={
+                    currentTab === "goal"
+                      ? {
+                          fontSize: "24px",
+                          background: "#2da3e3",
+                        }
+                      : { fontSize: "24px" }
+                  }
+                >
+                  Goal
+                </button>
+              </div>
+              <div className="w-100 mt-3 text-light">
+                {currentTab === "vision" ? (
+                  <div className="row">
+                    <div className="col-md-6 col-lg-6 col-xl-6">
+                      <img
+                        className="img-fluid mx-auto w-100 h-100"
+                        src="https://images.pexels.com/photos/262438/pexels-photo-262438.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                        alt="logo"
+                        style={{
+                          maxWidth: "100%",
+                          maxHeight: "100%",
+                          objectFit: "cover",
+                          objectPosition: "center",
+                        }}
+                      />
+                    </div>
+                    <div className="col-md-6 col-lg-6 col-xl-6 d-flex align-items-center">
+                      <p style={{ fontSize: "22px" }}>
+                        To advance standard with Dental Technology for the
+                        benefit of the oral healthcare of the nation.
+                        <br />
+                        Providing advice guidance and support to members.
+                        <br />
+                        Raising awareness and promoting and exchange to view to
+                        key issues aff.
+                        <br />
+                        <p>
+                          The goal of the "Indian Dental Technician Association"
+                          is to upload and improve the standards of dental
+                          Technology providing state-of-the-art technological
+                          and managerial education, providing a format for
+                          professional and ethical growth, and creating lasting
+                          fraternal relationships.
+                        </p>
                       </p>
-                    </p>
-                  ) : (
-                    ""
-                  )}
-                  {currentTab === "mission" ? (
-                    <p>
-                      remaining essentially unchanged. It was popularised in the
-                      1960s with the release of Letraset sheets containing
-                      <br />
-                      Lorem Ipsum passages, and more recently with desktop
-                      <br />
-                      publishing software like Aldus PageMaker including
-                      versions of Lorem Ipsum.
-                      <br />
-                      <p>
+                    </div>
+                  </div>
+                ) : (
+                  ""
+                )}
+                {currentTab === "mission" ? (
+                  <div className="row">
+                    <div className="col-md-6 col-lg-6 col-xl-6">
+                      <img
+                        className="img-fluid mx-auto w-100 h-100"
+                        src="https://images.pexels.com/photos/15812/bull-center-bulls-eye-darts-15812.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                        alt="logo"
+                        style={{
+                          maxWidth: "100%",
+                          maxHeight: "100%",
+                          objectFit: "cover",
+                          objectPosition: "center",
+                        }}
+                      />
+                    </div>
+                    <div className="col-md-6 col-lg-6 col-xl-6 d-flex align-items-center">
+                      <p style={{ fontSize: "22px" }}>
                         remaining essentially unchanged. It was popularised in
                         the 1960s with the release of Letraset sheets containing
+                        <br />
                         Lorem Ipsum passages, and more recently with desktop
+                        <br />
                         publishing software like Aldus PageMaker including
-                        versions of Lorem Ipsum. It has survived not only five
-                        centuries
+                        versions of Lorem Ipsum.
+                        <br />
+                        <p>
+                          remaining essentially unchanged. It was popularised in
+                          the 1960s with the release of Letraset sheets
+                          containing Lorem Ipsum passages, and more recently
+                          with desktop publishing software like Aldus PageMaker
+                          including versions of Lorem Ipsum. It has survived not
+                          only five centuries
+                        </p>
                       </p>
-                    </p>
-                  ) : (
-                    ""
-                  )}
-                  {currentTab === "goal" ? (
-                    <p>
-                      Lorem Ipsum is simply dummy text of the printing and
-                      typesetting industry. Lorem Ipsum has been the
-                      <br />
-                      industry's standard dummy text ever since the 1500s, when
-                      <br />
-                      scrambled it to make a type specimen book. It has survived
-                      not only five centuries
-                      <br />
-                      <p>
+                    </div>
+                  </div>
+                ) : (
+                  ""
+                )}
+                {currentTab === "goal" ? (
+                  <div className="row">
+                    <div className="col-md-6 col-lg-6 col-xl-6">
+                      <img
+                        className="img-fluid mx-auto w-100 h-100"
+                        src="https://images.pexels.com/photos/1552617/pexels-photo-1552617.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                        alt="logo"
+                        style={{
+                          maxWidth: "100%",
+                          maxHeight: "100%",
+                          objectFit: "cover",
+                          objectPosition: "center",
+                        }}
+                      />
+                    </div>
+                    <div className="col-md-6 col-lg-6 col-xl-6 d-flex align-items-center">
+                      <p style={{ fontSize: "22px" }}>
                         Lorem Ipsum is simply dummy text of the printing and
                         typesetting industry. Lorem Ipsum has been the
+                        <br />
                         industry's standard dummy text ever since the 1500s,
-                        when an unknown printer took a galley of type and
+                        when
+                        <br />
                         scrambled it to make a type specimen book. It has
                         survived not only five centuries
+                        <br />
+                        <p>
+                          Lorem Ipsum is simply dummy text of the printing and
+                          typesetting industry. Lorem Ipsum has been the
+                          industry's standard dummy text ever since the 1500s,
+                          when an unknown printer took a galley of type and
+                          scrambled it to make a type specimen book. It has
+                          survived not only five centuries
+                        </p>
                       </p>
-                    </p>
-                  ) : (
-                    ""
-                  )}
-                </div>
+                    </div>
+                  </div>
+                ) : (
+                  ""
+                )}
               </div>
             </div>
-          </div>
-          <div
-            className="col-md-6 col-lg-6 col-xl-6 my-0 d-flex align-items-center p-0 my-0"
-            style={{
-              background: "#090909",
-            }}
-          >
-            <img
-              className="img-fluid w-100 h-100 py-0 my-0"
-              src="https://images.pexels.com/photos/1595391/pexels-photo-1595391.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-              alt="logo"
-              style={{
-                maxWidth: "100%",
-                maxHeight: "100%",
-                objectFit: "cover",
-                objectPosition: "center",
-              }}
-            />
           </div>
           <div
             className="col-md-6 col-lg-6 col-xl-6 my-0 p-0 my-0"

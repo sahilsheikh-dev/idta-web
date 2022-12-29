@@ -55,8 +55,8 @@ const Education = () => {
                     }}
                   >
                     <img
-                      className="img-fluid mx-auto w-100"
-                      src="https://icons.veryicon.com/png/o/object/industry-icon/industry-icon-education-and-training.png"
+                      className="img-fluid mx-auto w-100 mb-3"
+                      src="https://cdn-icons-png.flaticon.com/512/9107/9107938.png"
                       alt="logo"
                     />
                     <p className="my-0 text-start">
@@ -73,8 +73,8 @@ const Education = () => {
                     }}
                   >
                     <img
-                      className="img-fluid mx-auto w-100"
-                      src="https://icons.veryicon.com/png/o/object/industry-icon/industry-icon-education-and-training.png"
+                      className="img-fluid mx-auto w-100 mb-3"
+                      src="https://cdn-icons-png.flaticon.com/512/2232/2232688.png"
                       alt="logo"
                     />
                     <p className="my-0 text-start">

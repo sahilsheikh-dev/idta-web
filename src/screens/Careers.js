@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 // import { Container } from "react-bootstrap";
 import Footer from "../components/commons/Footer";
 import Navbar from "../components/commons/Navbar";
+import JobOpportunities from "../assets/jsonData/JobOpportunities.json";
 
 const Careers = () => {
+  const [jobTitle, setJobTitle] = useState("");
+
   return (
     <div>
       <Navbar />
@@ -164,13 +167,6 @@ const Careers = () => {
                 metal casting and polishing, wax modelling, ceramics, wire
                 bending, electroplating and sandblasting.
               </p>
-              <button
-                className="btn btn-success border-0 mx-auto px-4 shadow-none btn-lg fw-bold"
-                data-bs-toggle="modal"
-                data-bs-target="#exampleModal"
-              >
-                Contact Us Now
-              </button>
             </div>
           </div>
           <div
@@ -188,6 +184,52 @@ const Careers = () => {
                 objectPosition: "center",
               }}
             />
+          </div>
+          <div
+            className="col-12 d-flex align-items-center p-2 p-md-5 p-lg-5 p-xl-5"
+            style={{
+              background: "#090909",
+            }}
+          >
+            <div className="container py-5">
+              <h1 className="fw-bold text-center mb-3">
+                Available Opportunities
+              </h1>
+              <div className="row">
+                {JobOpportunities.length === 0 ? (
+                  <h4>No Course Available</h4>
+                ) : (
+                  JobOpportunities.map((jobItem, index) => (
+                    <div
+                      className="col-md-3 col-lg-3 col-xl-3 my-3"
+                      key={index}
+                    >
+                      <div className="card bg-dark">
+                        <img
+                          src={jobItem.imageURL}
+                          className="card-img-top"
+                          alt="logo"
+                        />
+                        <div className="card-body">
+                          <h5 className="card-title">{jobItem.title}</h5>
+                          <p className="card-text">
+                            {jobItem.shortDescription}
+                          </p>
+                          <button
+                            className="btn btn-primary w-100"
+                            data-bs-toggle="modal"
+                            data-bs-target="#exampleModal"
+                            onClick={() => setJobTitle(jobItem.title)}
+                          >
+                            Start Now
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  ))
+                )}
+              </div>
+            </div>
           </div>
         </div>
         <div
@@ -212,7 +254,7 @@ const Careers = () => {
                 }}
               >
                 <h1 className="modal-title fs-5" id="exampleModalLabel">
-                  Register With Us
+                  Apply Now
                 </h1>
                 <button
                   type="button"
@@ -222,7 +264,7 @@ const Careers = () => {
                 ></button>
               </div>
               <div className="modal-body">
-                <h5 className="text-secondary mb-3">Contact Now</h5>
+                <h5 className="text-light mb-3">Job: {jobTitle}</h5>
                 <div className="mb-3">
                   <input
                     type="text"

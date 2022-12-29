@@ -12,36 +12,98 @@ const Homepage = () => {
         // style={{ minHeight: "80vh" }}
       >
         <div className="row mt-5 m-0 pb-0 mb-0">
-          <div
-            className="col-md-6 col-lg-6 col-xl-6 mb-0 mb-md-0 mb-lg-0 mb-xl-0 d-flex align-items-center p-0"
-            style={{
-              backgroundImage: `url("https://images.pexels.com/photos/6101965/pexels-photo-6101965.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")`,
-              backgroundRepeat: "no-repeat",
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-            }}
-          >
+          <div className="col-md-6 col-lg-6 col-xl-6 mb-0 mb-md-0 mb-lg-0 mb-xl-0 d-flex align-items-center p-0">
             <div
-              className="text-center h-100 w-100 p-2 p-md-5 p-lg-5 p-xl-5 d-flex align-items-center"
-              style={{ background: "rgba(0, 0, 0, 0.6)" }}
+              id="carouselExampleControls"
+              class="carousel slide w-100 h-100"
+              data-bs-ride="carousel"
             >
-              <div className="container py-5">
-                <h3 className="fw-bold">
-                  Wishing You a Bright and Prosperous New Year
-                </h3>
-                <p
-                  className="mt-3"
+              <div class="carousel-inner w-100 h-100">
+                <div
+                  class="carousel-item active w-100 h-100"
                   style={{
-                    fontSize: "22px",
+                    backgroundImage: `url("https://images.pexels.com/photos/1303081/pexels-photo-1303081.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")`,
+                    backgroundRepeat: "no-repeat",
+                    backgroundSize: "cover",
+                    backgroundPosition: "center",
                   }}
                 >
-                  Happy New Year! As we close the door on the past and look
-                  forward to the future, we want to take a moment to wish you
-                  all the best in the coming year. May 2022 bring you joy,
-                  health, and prosperity. Here's to a bright and successful new
-                  year for all of us!
-                </p>
+                  <div
+                    className="text-center h-100 w-100 p-2 p-md-5 p-lg-5 p-xl-5 d-flex align-items-center"
+                    style={{ background: "rgba(0, 0, 0, 0.6)" }}
+                  >
+                    <div className="container py-5">
+                      <h3 className="fw-bold">Wishing You Merry Christmas</h3>
+                      <p
+                        className="mt-3"
+                        style={{
+                          fontSize: "22px",
+                        }}
+                      >
+                        Wishing you a joyous Christmas and a happy new year. May
+                        your holiday season be filled with love, light, and all
+                        your heart's desires.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="carousel-item w-100 h-100"
+                  style={{
+                    backgroundImage: `url("https://images.pexels.com/photos/6101965/pexels-photo-6101965.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")`,
+                    backgroundRepeat: "no-repeat",
+                    backgroundSize: "cover",
+                    backgroundPosition: "center",
+                  }}
+                >
+                  <div
+                    className="text-center h-100 w-100 p-2 p-md-5 p-lg-5 p-xl-5 d-flex align-items-center"
+                    style={{ background: "rgba(0, 0, 0, 0.6)" }}
+                  >
+                    <div className="container py-5">
+                      <h3 className="fw-bold">
+                        Wishing You a Bright and Prosperous New Year
+                      </h3>
+                      <p
+                        className="mt-3"
+                        style={{
+                          fontSize: "22px",
+                        }}
+                      >
+                        Happy New Year! As we close the door on the past and
+                        look forward to the future, we want to take a moment to
+                        wish you all the best in the coming year. May 2022 bring
+                        you joy, health, and prosperity. Here's to a bright and
+                        successful new year for all of us!
+                      </p>
+                    </div>
+                  </div>
+                </div>
               </div>
+              <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#carouselExampleControls"
+                data-bs-slide="prev"
+              >
+                <span
+                  class="carousel-control-prev-icon visually-hidden"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#carouselExampleControls"
+                data-bs-slide="next"
+              >
+                <span
+                  class="carousel-control-next-icon visually-hidden"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Next</span>
+              </button>
             </div>
           </div>
           <div
