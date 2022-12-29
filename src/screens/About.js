@@ -43,7 +43,7 @@ const About = () => {
           <div
             className="col-md-6 col-lg-6 col-xl-6 my-0 d-flex align-items-center p-2 p-md-5 p-lg-5 p-xl-5"
             style={{
-              background: "#193A67",
+              background: "#090909",
             }}
           >
             <div className="container py-5">
@@ -54,7 +54,7 @@ const About = () => {
           <div
             className="col-md-6 col-lg-6 col-xl-6 my-0 d-flex align-items-center p-2 p-md-5 p-lg-5 p-xl-5 my-0"
             style={{
-              background: "#193A67",
+              background: "#090909",
             }}
           >
             <div className="container py-0 my-0">
@@ -203,7 +203,7 @@ const About = () => {
           <div
             className="col-md-6 col-lg-6 col-xl-6 my-0 d-flex align-items-center p-0 my-0"
             style={{
-              background: "#193A67",
+              background: "#090909",
             }}
           >
             <img
@@ -221,7 +221,7 @@ const About = () => {
           <div
             className="col-md-6 col-lg-6 col-xl-6 my-0 p-0 my-0"
             style={{
-              background: "#193A67",
+              background: "#090909",
             }}
           >
             <div className="text-center">
@@ -241,7 +241,7 @@ const About = () => {
           <div
             className="col-md-6 col-lg-6 col-xl-6 my-0 d-flex align-items-center p-2 p-md-5 p-lg-5 p-xl-5"
             style={{
-              background: "#193A67",
+              background: "#090909",
             }}
           >
             <div className="container">
@@ -275,7 +275,7 @@ const About = () => {
           <div
             className="col-md-6 col-lg-6 col-xl-6 my-0 d-flex align-items-center p-2 p-md-5 p-lg-5 p-xl-5"
             style={{
-              background: "#193A67",
+              background: "#090909",
             }}
           >
             <div className="container">
@@ -302,7 +302,7 @@ const About = () => {
           <div
             className="col-md-6 col-lg-6 col-xl-6 my-0 p-0 my-0"
             style={{
-              background: "#193A67",
+              background: "#090909",
             }}
           >
             <div className="text-center">

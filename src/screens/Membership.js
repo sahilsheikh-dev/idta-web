@@ -14,7 +14,7 @@ const Membership = () => {
         <div className="row mt-5 m-0">
           <div
             className="col-md-4 col-lg-4 col-xl-4 my-0 d-flex align-items-center p-0"
-            style={{ background: "#193A67" }}
+            style={{ background: "#090909" }}
           >
             <img
               className="img-fluid mx-auto"
@@ -31,7 +31,7 @@ const Membership = () => {
           <div
             className="col-md-8 col-lg-8 col-xl-8 my-0 d-flex align-items-center p-2 p-md-5 p-lg-5 p-xl-5"
             style={{
-              background: "#193A67",
+              background: "#090909",
             }}
           >
             <div className="container py-5">
@@ -90,7 +90,7 @@ const Membership = () => {
           <div
             className="col-md-6 col-lg-6 col-xl-6 my-0 d-flex align-items-center p-2 p-md-5 p-lg-5 p-xl-5"
             style={{
-              background: "#193A67",
+              background: "#090909",
             }}
           >
             <div className="container mb-0 pb-0">
@@ -130,7 +130,7 @@ const Membership = () => {
           <div
             className="col-md-6 col-lg-6 col-xl-6 my-0 p-0 my-0"
             style={{
-              background: "#193A67",
+              background: "#090909",
             }}
           >
             <img

@@ -16,7 +16,7 @@ const Education = () => {
           <div
             className="col-md-6 col-lg-6 col-xl-6 mb-0 mb-md-0 mb-lg-0 mb-xl-0 d-flex align-items-center p-0"
             style={{
-              background: "#193A67",
+              background: "#090909",
             }}
           >
             <div className="h-100 w-100 p-2 p-md-5 p-lg-5 p-xl-5 d-flex align-items-center">
@@ -42,7 +42,7 @@ const Education = () => {
           <div
             className="col-md-6 col-lg-6 col-xl-6 d-flex align-items-center p-2 p-md-5 p-lg-5 p-xl-5"
             style={{
-              background: "#193A67",
+              background: "#090909",
             }}
           >
             <div className="container py-5">
@@ -89,7 +89,7 @@ const Education = () => {
           <div
             className="col-md-6 col-lg-6 col-xl-6 my-0 p-0 my-0"
             style={{
-              background: "#193A67",
+              background: "#090909",
             }}
           >
             <img

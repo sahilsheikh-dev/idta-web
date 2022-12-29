@@ -34,7 +34,7 @@ const JoinUs = () => {
           <div
             className="col-md-6 col-lg-6 col-xl-6 d-flex align-items-center p-2 p-md-5 p-lg-5 p-xl-5"
             style={{
-              background: "#193A67",
+              background: "#090909",
             }}
           >
             <div className="container py-5">
@@ -68,7 +68,7 @@ const JoinUs = () => {
           <div
             className="col-md-6 col-lg-6 col-xl-6 d-flex align-items-center p-2 p-md-5 p-lg-5 p-xl-5"
             style={{
-              background: "#193A67",
+              background: "#090909",
             }}
           >
             <div className="container py-5">

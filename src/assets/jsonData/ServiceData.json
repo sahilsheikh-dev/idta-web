@@ -1,42 +1,52 @@
 [
   {
     "logoImg": "https://icons.veryicon.com/png/o/object/industry-icon/industry-icon-education-and-training.png",
-    "title": "Education and Training"
+    "title": "Education and Training",
+    "url": "/education"
   },
   {
     "logoImg": "https://icons.veryicon.com/png/o/object/industry-icon/industry-icon-education-and-training.png",
-    "title": "CPD Programs"
+    "title": "CPD Programs",
+    "url": "/service"
   },
   {
     "logoImg": "https://icons.veryicon.com/png/o/object/industry-icon/industry-icon-education-and-training.png",
-    "title": "Career Information"
+    "title": "Career Information",
+    "url": "/career"
   },
   {
     "logoImg": "https://icons.veryicon.com/png/o/object/industry-icon/industry-icon-education-and-training.png",
-    "title": "Employment Opportunities (Jobs)"
+    "title": "Employment Opportunities (Jobs)",
+    "url": "/career"
   },
   {
     "logoImg": "https://icons.veryicon.com/png/o/object/industry-icon/industry-icon-education-and-training.png",
-    "title": "Advertisements"
+    "title": "Advertisements",
+    "url": "/commingsoon"
   },
   {
     "logoImg": "https://icons.veryicon.com/png/o/object/industry-icon/industry-icon-education-and-training.png",
-    "title": "Dental Marketing Expert Support"
+    "title": "Dental Marketing Expert Support",
+    "url": "/commingsoon"
   },
   {
     "logoImg": "https://icons.veryicon.com/png/o/object/industry-icon/industry-icon-education-and-training.png",
-    "title": "Community Support"
+    "title": "Community Support",
+    "url": "/commingsoon"
   },
   {
     "logoImg": "https://icons.veryicon.com/png/o/object/industry-icon/industry-icon-education-and-training.png",
-    "title": "Discounts"
+    "title": "Discounts",
+    "url": "/commingsoon"
   },
   {
     "logoImg": "https://icons.veryicon.com/png/o/object/industry-icon/industry-icon-education-and-training.png",
-    "title": "Membership and it's Benefits"
+    "title": "Membership and it's Benefits",
+    "url": "/membership"
   },
   {
     "logoImg": "https://icons.veryicon.com/png/o/object/industry-icon/industry-icon-education-and-training.png",
-    "title": "Membership Packages"
+    "title": "Membership Packages",
+    "url": "/membership"
   }
 ]

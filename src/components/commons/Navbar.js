@@ -84,7 +84,7 @@ const Navbar = () => {
                   }
                   href="/membership"
                 >
-                  Membership Benefits
+                  Membership
                 </a>
               </li>
               <li className="nav-item mx-3">
