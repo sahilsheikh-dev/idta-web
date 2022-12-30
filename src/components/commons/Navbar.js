@@ -90,7 +90,7 @@ const Navbar = () => {
               <li class="nav-item dropdown mx-3">
                 <a
                   class="nav-link dropdown-toggle text-light"
-                  href="#"
+                  href="/"
                   role="button"
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
