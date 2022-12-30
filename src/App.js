@@ -12,6 +12,7 @@ import Education from "./screens/Education";
 import Careers from "./screens/Careers";
 import JoinUs from "./screens/JoinUs";
 import MemberForm from "./screens/MemberForm";
+import Courses from "./screens/Courses";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
         <Route path="/joinus" element={<JoinUs />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<SignUp />} />
+        <Route path="/courses" element={<Courses />} />
         <Route path="/dashboard" element={<Dashboard />} />
         {/* <Route path="/dashboard/:userID" element={<Dashboard />} /> */}
         <Route path="/course/:courseID" element={<CourseInfo />} />

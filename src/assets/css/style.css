@@ -43,7 +43,8 @@ section {
 
 .service-card:hover {
   background-color: #2da3e3 !important;
-  color: #ffffff !important;
+  background: linear-gradient(to bottom, #2da3e3, #ffffff);
+  color: #000000 !important;
 }
 
 p {

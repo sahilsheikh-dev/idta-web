@@ -138,35 +138,45 @@ const Careers = () => {
           >
             <div className="container py-5">
               <h1 className="fw-bold">Career Information</h1>
-              <p className="mt-3">
-                Dental Technology is a growing sector that offer a wide range of
-                significant career opportunities both in India and
-                internationally.
-                <br />
-                A Dental Technologist "also known as Dental technician and
-                dental mechanic" is a highly skills professional who specialties
-                in the design, construction, repair and adjustment of a wide
-                range of dental technologies.
-                <br />
-                <br />
+              <ol className="mt-3">
+                <li>
+                  Dental Technology is a growing sector that offer a wide range
+                  of significant career opportunities both in India and
+                  internationally.
+                </li>
+                <li>
+                  A Dental Technologist "also known as Dental technician and
+                  dental mechanic" is a highly skills professional who
+                  specialties in the design, construction, repair and adjustment
+                  of a wide range of dental technologies.
+                </li>
+              </ol>
+
+              <br />
+              <h4 className="fw-bold">
                 Dental Technologist focus on five areas:-
-                <br />
-                Restoring natural teeth through the use of crown, inlays and
-                veneers.
-                <br />
-                Replacing teeth via bridges, dentures and implants. Oral
-                reconstruction.
-                <br />
-                Orthodontic correction via braces, trays and mouth guards.
-                <br />
-                Orthognathic adjustment, i.e. jaw realignment.
-                <br />
-                Dental technologist work loosely with practitioners such as
-                dentist and dental prosthetists, and apply a wide range of
-                techniques that include plaster casting, electro-spot welding,
-                metal casting and polishing, wax modelling, ceramics, wire
-                bending, electroplating and sandblasting.
-              </p>
+              </h4>
+              <ol>
+                <li>
+                  Restoring natural teeth through the use of crown, inlays and
+                  veneers.
+                </li>
+                <li>
+                  Replacing teeth via bridges, dentures and implants. Oral
+                  reconstruction.
+                </li>
+                <li>
+                  Orthodontic correction via braces, trays and mouth guards.
+                </li>
+                <li>Orthognathic adjustment, i.e. jaw realignment.</li>
+                <li>
+                  Dental technologist work loosely with practitioners such as
+                  dentist and dental prosthetists, and apply a wide range of
+                  techniques that include plaster casting, electro-spot welding,
+                  metal casting and polishing, wax modelling, ceramics, wire
+                  bending, electroplating and sandblasting.
+                </li>
+              </ol>
             </div>
           </div>
           <div

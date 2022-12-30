@@ -87,17 +87,44 @@ const Navbar = () => {
                   Membership
                 </a>
               </li>
-              <li className="nav-item mx-3">
+              <li class="nav-item dropdown mx-3">
                 <a
-                  className={
-                    pageName === "service"
-                      ? "nav-link nav-a-hover nav-item-active"
-                      : "nav-link nav-a-hover"
-                  }
-                  href="/service"
+                  class="nav-link dropdown-toggle text-light"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
                 >
                   Services
                 </a>
+                <ul class="dropdown-menu bg-dark">
+                  <li>
+                    <a
+                      className={
+                        pageName === "service"
+                          ? "nav-link nav-a-hover nav-item-active dropdown-item w-100"
+                          : "nav-link nav-a-hover dropdown-item w-100"
+                      }
+                      style={{ background: "none" }}
+                      href="/service"
+                    >
+                      Services
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      className={
+                        pageName === "courses"
+                          ? "nav-link nav-a-hover nav-item-active dropdown-item w-100"
+                          : "nav-link nav-a-hover dropdown-item w-100"
+                      }
+                      style={{ background: "none" }}
+                      href="/courses"
+                    >
+                      Courses
+                    </a>
+                  </li>
+                </ul>
               </li>
               <li className="nav-item mx-3">
                 <a

@@ -126,31 +126,35 @@ const Services = () => {
           >
             <div className="container py-5">
               <h1 className="fw-bold">Support</h1>
-              <p className="mt-3">
-                IDTA work with students to provide a seamless transaction from
-                Universities, Colleges & Institutes into the profession ensuring
-                a well trained fully supported work forces into the future.
-                <br />
-                Stay connected to those in the market to buy or sale practice
-                and equipments.
-                <br />
-                Mentoring programmes.
-                <br />
-                We connect with you the leader in the profession, so, you can
-                meet, learn and share ideas with them.
-                <br />
-                An open form for you to share your thoughts.
-                <br />
-                Group study, group study with other association.
-                <br />
-                Annual conferences. Our annual conference provide world class
-                CPD, great social events and the chance to connect with expert
-                with 1st Class Speakers and time to catch with colleagues.
-                <br />
-                Collected and shared, so, you can stay on top of the latest
-                research and news from across the profession, saving your time,
-                so, you can focus on what's important for your patient.
-              </p>
+              <ol className="mt-3">
+                <li>
+                  IDTA work with students to provide a seamless transaction from
+                  Universities, Colleges & Institutes into the profession
+                  ensuring a well trained fully supported work forces into the
+                  future.
+                </li>
+                <li>
+                  Stay connected to those in the market to buy or sale practice
+                  and equipments.
+                </li>
+                <li>Mentoring programmes.</li>
+                <li>
+                  We connect with you the leader in the profession, so, you can
+                  meet, learn and share ideas with them.
+                </li>
+                <li>An open form for you to share your thoughts.</li>
+                <li>Group study, group study with other association.</li>
+                <li>
+                  Annual conferences. Our annual conference provide world class
+                  CPD, great social events and the chance to connect with expert
+                  with 1st Class Speakers and time to catch with colleagues.
+                </li>
+                <li>
+                  Collected and shared, so, you can stay on top of the latest
+                  research and news from across the profession, saving your
+                  time, so, you can focus on what's important for your patient.
+                </li>
+              </ol>
             </div>
           </div>
           <div
@@ -205,14 +209,14 @@ const Services = () => {
               <h4 className="fw-bold">
                 IDTA Members enjoy a variety of discounts including:
               </h4>
-              <p className="mt-3">
-                Members get discounts on Dental Laboratory Products.
-                <br />
-                Members get discounts on CPD course, Hands on, and Online
-                Classes.
-                <br />
-                Members get descounts on Health Insurances.
-              </p>
+              <ol className="mt-3">
+                <li>Members get discounts on Dental Laboratory Products.</li>
+                <li>
+                  Members get discounts on CPD course, Hands on, and Online
+                  Classes.
+                </li>
+                <li>Members get descounts on Health Insurances.</li>
+              </ol>
             </div>
           </div>
         </div>

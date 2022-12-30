@@ -18,6 +18,22 @@ const Homepage = () => {
               class="carousel slide w-100 h-100"
               data-bs-ride="carousel"
             >
+              <div class="carousel-indicators">
+                <button
+                  type="button"
+                  data-bs-target="#carouselExampleCaptions"
+                  data-bs-slide-to="0"
+                  class="active"
+                  aria-current="true"
+                  aria-label="Slide 1"
+                ></button>
+                <button
+                  type="button"
+                  data-bs-target="#carouselExampleCaptions"
+                  data-bs-slide-to="1"
+                  aria-label="Slide 2"
+                ></button>
+              </div>
               <div class="carousel-inner w-100 h-100">
                 <div
                   class="carousel-item active w-100 h-100"
@@ -147,29 +163,35 @@ const Homepage = () => {
           >
             <div className="container py-5">
               <h1 className="fw-bold">What we do for you?</h1>
-              <p className="mt-3">
-                IDTA work with students to provide a seamless transaction from
-                Universities, Colleges & Institutes into the profession ensuring
-                a well trained fully supported work forces into the future.
-                <br />
-                Stay connected to those in the market to buy or sale practice
-                and equipments.
-                <br />
-                Mentoring programmes.
-                <br />
-                We connect with you the leader in the profession, so, you can
-                meet, learn and share ideas with them.
-                <br />
-                An open form for you to share your thoughts. Group study, group
-                study with other association. Annual conferences. Our annual
-                conference provide world class CPD, great social events and the
-                chance to connect with expert with 1st Class Speakers and time
-                to catch with colleagues.
-                <br />
-                Collected and shared, so, you can stay on top of the latest
-                research and news from across the profession, saving your time,
-                so, you can focus on what's important for your patient.
-              </p>
+              <ol className="mt-3">
+                <li>
+                  IDTA work with students to provide a seamless transaction from
+                  Universities, Colleges & Institutes into the profession
+                  ensuring a well trained fully supported work forces into the
+                  future.
+                </li>
+                <li>
+                  Stay connected to those in the market to buy or sale practice
+                  and equipments.
+                </li>
+                <li>Mentoring programmes.</li>
+                <li>
+                  We connect with you the leader in the profession, so, you can
+                  meet, learn and share ideas with them.
+                </li>
+                <li>
+                  An open form for you to share your thoughts. Group study,
+                  group study with other association. Annual conferences. Our
+                  annual conference provide world class CPD, great social events
+                  and the chance to connect with expert with 1st Class Speakers
+                  and time to catch with colleagues.
+                </li>
+                <li>
+                  Collected and shared, so, you can stay on top of the latest
+                  research and news from across the profession, saving your
+                  time, so, you can focus on what's important for your patient.
+                </li>
+              </ol>
             </div>
           </div>
           <div
@@ -216,39 +238,42 @@ const Homepage = () => {
           >
             <div className="container py-5">
               <h1 className="fw-bold">Reasons to join I.D.T.A</h1>
-              <p className="mt-3">
-                An Organisation dedicated to the interest of dental laboratory
-                owners and technicians.
-                <br />
-                Established and run by Dental Technicians for Dental Technician
-                and Laboratorys Owners.
-                <br />
-                Expert support and guidance for every aspect of your business,
-                from starting up and day-to-day operations to employment issues
-                and representing your view.
-                <br />
-                Committed to raising standards for the industry.
-                <br />
-                Actively promotes I.D.T.A Member Laboratories to the Indian
-                Dentists.
-                <br />
-                An annual exhibition dedicated to dental technology.
-                <br />
-                Regular journal and information bulletins give you briefings on
-                current events and product developments.
-                <br />
-                Specially negotiated money-saving deals designed to maximise
-                your budgets.
-                <br />
-                We provide an annual conference, significantly discounted for
-                members.
-                <br />
-                We Also provide a range of online CPD courses.
-                <br />
-                Members receive the IDTA newsletter.
-                <br />
-                We offer peer review advice and support.
-              </p>
+              <ol className="mt-3">
+                <li>
+                  An Organisation dedicated to the interest of dental laboratory
+                  owners and technicians.
+                </li>
+                <li>
+                  Established and run by Dental Technicians for Dental
+                  Technician and Laboratorys Owners.
+                </li>
+                <li>
+                  Expert support and guidance for every aspect of your business,
+                  from starting up and day-to-day operations to employment
+                  issues and representing your view.
+                </li>
+                <li>Committed to raising standards for the industry.</li>
+                <li>
+                  Actively promotes I.D.T.A Member Laboratories to the Indian
+                  Dentists.
+                </li>
+                <li>An annual exhibition dedicated to dental technology.</li>
+                <li>
+                  Regular journal and information bulletins give you liiefings
+                  on current events and product developments.
+                </li>
+                <li>
+                  Specially negotiated money-saving deals designed to maximise
+                  your budgets.
+                </li>
+                <li>
+                  We provide an annual conference, significantly discounted for
+                  members.
+                </li>
+                <li>We Also provide a range of online CPD courses.</li>
+                <li>Members receive the IDTA newsletter.</li>
+                <li>We offer peer review advice and support.</li>
+              </ol>
             </div>
           </div>
         </div>

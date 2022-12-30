@@ -49,14 +49,18 @@ const About = () => {
             <div className="container py-5">
               <h3 className="fw-bold text-success">WHO IS THE IDTA?</h3>
               <h1 className="fw-bold">MORE ABOUT US</h1>
-              <p className="text-light mt-0">
-                The IDTA is focused on advancing dental technology and ensuring
-                a prosperous future is secured for dental technicians.
-                <br />
-                We are seeking professional and enthusiastic people to join our
-                team by representing each State. If this interests you, please
-                contact us.
-              </p>
+              <ol className="text-light mt-0">
+                <li>
+                  The IDTA is focused on advancing dental technology and
+                  ensuring a prosperous future is secured for dental
+                  technicians.
+                </li>
+                <li>
+                  We are seeking professional and enthusiastic people to join
+                  our team by representing each State. If this interests you,
+                  please contact us.
+                </li>
+              </ol>
             </div>
           </div>
           <div
@@ -136,14 +140,19 @@ const About = () => {
                     </div>
                     <div className="col-md-6 col-lg-6 col-xl-6 d-flex align-items-center">
                       <p style={{ fontSize: "22px" }}>
-                        To advance standard with Dental Technology for the
-                        benefit of the oral healthcare of the nation.
-                        <br />
-                        Providing advice guidance and support to members.
-                        <br />
-                        Raising awareness and promoting and exchange to view to
-                        key issues aff.
-                        <br />
+                        <ol>
+                          <li>
+                            To advance standard with Dental Technology for the
+                            benefit of the oral healthcare of the nation.
+                          </li>
+                          <li>
+                            Providing advice guidance and support to members.
+                          </li>
+                          <li>
+                            Raising awareness and promoting and exchange to view
+                            to key issues aff.
+                          </li>
+                        </ol>
                         <p>
                           The goal of the "Indian Dental Technician Association"
                           is to upload and improve the standards of dental
@@ -175,14 +184,20 @@ const About = () => {
                     </div>
                     <div className="col-md-6 col-lg-6 col-xl-6 d-flex align-items-center">
                       <p style={{ fontSize: "22px" }}>
-                        remaining essentially unchanged. It was popularised in
-                        the 1960s with the release of Letraset sheets containing
-                        <br />
-                        Lorem Ipsum passages, and more recently with desktop
-                        <br />
-                        publishing software like Aldus PageMaker including
-                        versions of Lorem Ipsum.
-                        <br />
+                        <ol>
+                          <li>
+                            remaining essentially unchanged. It was popularised
+                            in the 1960s with the release of Letraset sheets
+                            containing
+                          </li>
+                          <li>
+                            Lorem Ipsum passages, and more recently with desktop
+                          </li>
+                          <li>
+                            publishing software like Aldus PageMaker including
+                            versions of Lorem Ipsum.
+                          </li>
+                        </ol>
                         <p>
                           remaining essentially unchanged. It was popularised in
                           the 1960s with the release of Letraset sheets
@@ -214,15 +229,20 @@ const About = () => {
                     </div>
                     <div className="col-md-6 col-lg-6 col-xl-6 d-flex align-items-center">
                       <p style={{ fontSize: "22px" }}>
-                        Lorem Ipsum is simply dummy text of the printing and
-                        typesetting industry. Lorem Ipsum has been the
-                        <br />
-                        industry's standard dummy text ever since the 1500s,
-                        when
-                        <br />
-                        scrambled it to make a type specimen book. It has
-                        survived not only five centuries
-                        <br />
+                        <ol>
+                          <li>
+                            Lorem Ipsum is simply dummy text of the printing and
+                            typesetting industry. Lorem Ipsum has been the
+                          </li>
+                          <li>
+                            industry's standard dummy text ever since the 1500s,
+                            when
+                          </li>
+                          <li>
+                            scrambled it to make a type specimen book. It has
+                            survived not only five centuries
+                          </li>
+                        </ol>
                         <p>
                           Lorem Ipsum is simply dummy text of the printing and
                           typesetting industry. Lorem Ipsum has been the
@@ -269,28 +289,35 @@ const About = () => {
             <div className="container">
               <div className="text-light">
                 <h1>IDTA Future Projects</h1>
-                <p>
-                  Our primary aim is to support the professional development of
-                  dental technician and students.
-                  <br />
-                  We are planning to open semi-autonomous branches in all over
-                  the india. Technician can access to technical knowledge in the
-                  form of exclusive online, resources, journals and
-                  master-classes.
-                  <br />
-                  I.D.T.A will support with career development, lifelong
-                  learning, CPD requirements and training.
-                  <br />
-                  Access to exclusive discounted packages plus free CPD and
-                  24-hour helpline for all members.
-                  <br />
-                  To mix and gain support from other experienced dental
-                  technologists. I.D.T.A. is going to run by Dental technician
-                  for dental technicians.
-                  <br />
-                  To promote your profession in society and raise awareness of
-                  key points.
-                </p>
+                <ol>
+                  <li>
+                    Our primary aim is to support the professional development
+                    of dental technician and students.
+                  </li>
+                  <li>
+                    We are planning to open semi-autonomous branches in all over
+                    the india. Technician can access to technical knowledge in
+                    the form of exclusive online, resources, journals and
+                    master-classes.
+                  </li>
+                  <li>
+                    I.D.T.A will support with career development, lifelong
+                    learning, CPD requirements and training.
+                  </li>
+                  <li>
+                    Access to exclusive discounted packages plus free CPD and
+                    24-hour helpline for all members.
+                  </li>
+                  <li>
+                    To mix and gain support from other experienced dental
+                    technologists. I.D.T.A. is going to run by Dental technician
+                    for dental technicians.
+                  </li>
+                  <li>
+                    To promote your profession in society and raise awareness of
+                    key points.
+                  </li>
+                </ol>
               </div>
             </div>
           </div>
@@ -303,21 +330,20 @@ const About = () => {
             <div className="container">
               <div className="mt-5 text-light">
                 <h1>Key Objectives</h1>
-                <p>
-                  Develop and support members, and the dental technology
-                  profession.
-                  <br />
-                  Encourage and promote education, including CPD.
-                  <br />
-                  Forge links with other organisations.
-                  <br />
-                  Promote views to relevant external organisation. Adopt and
-                  share best practice.
-                  <br />
-                  Provide benefits and employment opportunities.
-                  <br />
-                  Develop and maintain roles and reponsibilities.
-                </p>
+                <ol>
+                  <li>
+                    Develop and support members, and the dental technology
+                    profession.
+                  </li>
+                  <li>Encourage and promote education, including CPD.</li>
+                  <li>Forge links with other organisations.</li>
+                  <li>
+                    Promote views to relevant external organisation. Adopt and
+                    share best practice.
+                  </li>
+                  <li>Provide benefits and employment opportunities.</li>
+                  <li>Develop and maintain roles and reponsibilities.</li>
+                </ol>
               </div>
             </div>
           </div>

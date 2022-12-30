@@ -76,7 +76,7 @@ const Membership = () => {
                         <div className="text-start">
                           <h4 className="text-light">{membershipItem.title}</h4>
                           <h6 className="text-light">
-                            Rs {membershipItem.amount} +GST
+                            Rs {membershipItem.amount} + Inclusive GST
                           </h6>
                           <p className="my-0">{membershipItem.description}</p>
                         </div>
@@ -96,34 +96,39 @@ const Membership = () => {
             <div className="container mb-0 pb-0">
               <div className="text-light mb-0 pb-0">
                 <h1>Membership Benefits</h1>
-                <p>
-                  Members gets discounts on Dental Laboratory Products.
-                  <br />
-                  Members gets discounts on CPD Courses, Hands on, and Online
-                  Classes.
-                  <br />
-                  Members get discounts on health insurances.
-                </p>
+                <ol>
+                  <li>Members gets discounts on Dental Laboratory Products.</li>
+                  <li>
+                    Members gets discounts on CPD Courses, Hands on, and Online
+                    Classes.
+                  </li>
+                  <li>Members get discounts on health insurances.</li>
+                </ol>
                 <h1>Terms and Conditions</h1>
-                <p className="mb-0 pb-0">
-                  All members of the I.D.T.A agree to the I.D.T.A Membership
-                  Terms and Conditions.
-                  <br />
-                  Membership is only open to individuals based in india only.
-                  <br />
-                  Membership payments are non-refundable. The subscription is
-                  valid for 12 months from the date of registration. Members can
-                  manage their membership subscription including annual fee
-                  payments in their membership account by logging in.
-                  <br />
-                  Professional indemnity insurance, exclusive to I.D.T.A.
-                  members only, is an optional opportunity to apply for
-                  professional indemnity at a special discounted premium rate
-                  through a third-party partner. The indemnity is not included
-                  in the price of the I.D.T.A membership. If your I.D.T.A.
-                  membership expires your professional indemnity insurance will
-                  no longer be valid and a claim cannot be made.
-                </p>
+                <ol className="mb-0 pb-0">
+                  <li>
+                    All members of the I.D.T.A agree to the I.D.T.A Membership
+                    Terms and Conditions.
+                  </li>
+                  <li>
+                    Membership is only open to individuals based in india only.
+                  </li>
+                  <li>
+                    Membership payments are non-refundable. The subscription is
+                    valid for 12 months from the date of registration. Members
+                    can manage their membership subscription including annual
+                    fee payments in their membership account by logging in.
+                  </li>
+                  <li>
+                    Professional indemnity insurance, exclusive to I.D.T.A.
+                    members only, is an optional opportunity to apply for
+                    professional indemnity at a special discounted premium rate
+                    through a third-party partner. The indemnity is not included
+                    in the price of the I.D.T.A membership. If your I.D.T.A.
+                    membership expires your professional indemnity insurance
+                    will no longer be valid and a claim cannot be made.
+                  </li>
+                </ol>
               </div>
             </div>
           </div>

@@ -22,20 +22,23 @@ const Education = () => {
             <div className="h-100 w-100 p-2 p-md-5 p-lg-5 p-xl-5 d-flex align-items-center">
               <div className="container py-5">
                 <h1 className="fw-bold">Education Benefits</h1>
-                <p
+                <ol
                   className="mt-3"
                   style={{
-                    fontSize: "22px",
+                    fontSize: "18px",
                   }}
                 >
-                  IDTA is your resources to education and training from our
-                  annual In depth convention and hands on workshops to lectures
-                  and convenient online learning sessions.
-                  <br />
-                  IDTA gives you access to the brightest minds in the
-                  profession. You can advertise jobs or your own skills via the
-                  IDTA job advertising facility.
-                </p>
+                  <li>
+                    IDTA is your resources to education and training from our
+                    annual In depth convention and hands on workshops to
+                    lectures and convenient online learning sessions.
+                  </li>
+                  <li>
+                    IDTA gives you access to the brightest minds in the
+                    profession. You can advertise jobs or your own skills via
+                    the IDTA job advertising facility.
+                  </li>
+                </ol>
               </div>
             </div>
           </div>
@@ -112,25 +115,31 @@ const Education = () => {
           >
             <div className="container py-5 text-dark">
               <h1 className="fw-bold">Continuing Professional Development</h1>
-              <p className="mt-3">
-                CPD can involve either formal and structured or informal and
-                self-directed learning.
-                <br />
-                Verifiable CPD is a learning and development programme thats
-                been approved by the IDTA.
-                <br />
-                The Organisers of the learning programme or course will
-                generally seek this approval, and provide you with a
-                verification number and a Certificate of Attendance.
-                <br />
-                Learning and development programme providers Eg. Dental firms,
-                dental supply companies, advertise their courses as being CPD
-                verified, however the number of hours should be allocated and
-                confirmed prior to undertaking the course.
-                <br />
-                Following the learning programme or course, You will receive a
-                Certificate of Attendance which contains the CPD number.
-              </p>
+              <ol className="mt-3">
+                <li>
+                  CPD can involve either formal and structured or informal and
+                  self-directed learning.
+                </li>
+                <li>
+                  Verifiable CPD is a learning and development programme thats
+                  been approved by the IDTA.
+                </li>
+                <li>
+                  The Organisers of the learning programme or course will
+                  generally seek this approval, and provide you with a
+                  verification number and a Certificate of Attendance.
+                </li>
+                <li>
+                  Learning and development programme providers Eg. Dental firms,
+                  dental supply companies, advertise their courses as being CPD
+                  verified, however the number of hours should be allocated and
+                  confirmed prior to undertaking the course.
+                </li>
+                <li>
+                  Following the learning programme or course, You will receive a
+                  Certificate of Attendance which contains the CPD number.
+                </li>
+              </ol>
             </div>
           </div>
         </div>

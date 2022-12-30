@@ -73,39 +73,42 @@ const JoinUs = () => {
           >
             <div className="container py-5">
               <h1 className="fw-bold">Reasons to join I.D.T.A</h1>
-              <p className="mt-3">
-                An Organisation dedicated to the interest of dental laboratory
-                owners and technicians.
-                <br />
-                Established and run by Dental Technicians for Dental Technician
-                and Laboratorys Owners.
-                <br />
-                Expert support and guidance for every aspect of your business,
-                from starting up and day-to-day operations to employment issues
-                and representing your view.
-                <br />
-                Committed to raising standards for the industry.
-                <br />
-                Actively promotes I.D.T.A Member Laboratories to the Indian
-                Dentists.
-                <br />
-                An annual exhibition dedicated to dental technology.
-                <br />
-                Regular journal and information bulletins give you briefings on
-                current events and product developments.
-                <br />
-                Specially negotiated money-saving deals designed to maximise
-                your budgets.
-                <br />
-                We provide an annual conference, significantly discounted for
-                members.
-                <br />
-                We Also provide a range of online CPD courses.
-                <br />
-                Members receive the IDTA newsletter.
-                <br />
-                We offer peer review advice and support.
-              </p>
+              <ol className="mt-3">
+                <li>
+                  An Organisation dedicated to the interest of dental laboratory
+                  owners and technicians.
+                </li>
+                <li>
+                  Established and run by Dental Technicians for Dental
+                  Technician and Laboratorys Owners.
+                </li>
+                <li>
+                  Expert support and guidance for every aspect of your business,
+                  from starting up and day-to-day operations to employment
+                  issues and representing your view.
+                </li>
+                <li>Committed to raising standards for the industry.</li>
+                <li>
+                  Actively promotes I.D.T.A Member Laboratories to the Indian
+                  Dentists.
+                </li>
+                <li>An annual exhibition dedicated to dental technology.</li>
+                <li>
+                  Regular journal and information bulletins give you briefings
+                  on current events and product developments.
+                </li>
+                <li>
+                  Specially negotiated money-saving deals designed to maximise
+                  your budgets.
+                </li>
+                <li>
+                  We provide an annual conference, significantly discounted for
+                  members.
+                </li>
+                <li>We Also provide a range of online CPD courses.</li>
+                <li>Members receive the IDTA newsletter.</li>
+                <li>We offer peer review advice and support.</li>
+              </ol>
             </div>
           </div>
           <div
