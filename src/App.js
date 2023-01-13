@@ -29,10 +29,9 @@ function App() {
         <Route path="/signup" element={<SignUp />} />
         <Route path="/courses" element={<Courses />} />
         <Route path="/dashboard" element={<Dashboard />} />
-        {/* <Route path="/dashboard/:userID" element={<Dashboard />} /> */}
         <Route path="/course/:courseID" element={<CourseInfo />} />
         <Route
-          path="/membershipform/:membershipIndex"
+          path="/membershipform/:membershipPackagePrimaryKey"
           element={<MemberForm />}
         />
       </Routes>

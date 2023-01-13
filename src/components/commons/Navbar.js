@@ -1,21 +1,26 @@
 import React, { useEffect, useState } from "react";
 import { Container } from "react-bootstrap";
 import { List } from "react-bootstrap-icons";
+import { useNavigate } from "react-router-dom";
 import "../../assets/js/navbar.js";
 
 const Navbar = () => {
+  const navigate = useNavigate();
+
   const currentUrl = window.location.href;
   const pageName = currentUrl.substring(currentUrl.lastIndexOf("/") + 1);
   const [userID, setUserID] = useState("");
 
   const logout = () => {
     localStorage.clear("currentUser");
+    navigate("/login");
   };
 
   useEffect(() => {
     if (
       localStorage.getItem("currentUser") === null ||
-      localStorage.getItem("currentUser") === ""
+      localStorage.getItem("currentUser") === "" ||
+      localStorage.getItem("currentUser") === undefined
     ) {
       setUserID("");
     } else {
@@ -87,28 +92,40 @@ const Navbar = () => {
                   Membership
                 </a>
               </li>
-              <li class="nav-item dropdown mx-3">
+              <li className="nav-item mx-3">
                 <a
-                  class="nav-link dropdown-toggle text-light"
+                  className={
+                    pageName === "service"
+                      ? "nav-link nav-a-hover nav-item-active"
+                      : "nav-link nav-a-hover"
+                  }
+                  href="/service"
+                >
+                  Services
+                </a>
+              </li>
+              <li className="nav-item dropdown mx-3">
+                <a
+                  className="nav-link dropdown-toggle text-light"
                   href="/"
                   role="button"
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
                 >
-                  Services
+                  Education
                 </a>
-                <ul class="dropdown-menu bg-dark">
+                <ul className="dropdown-menu bg-dark">
                   <li>
                     <a
                       className={
-                        pageName === "service"
+                        pageName === "education"
                           ? "nav-link nav-a-hover nav-item-active dropdown-item w-100"
                           : "nav-link nav-a-hover dropdown-item w-100"
                       }
                       style={{ background: "none" }}
-                      href="/service"
+                      href="/education"
                     >
-                      Services
+                      Education
                     </a>
                   </li>
                   <li>
@@ -125,18 +142,6 @@ const Navbar = () => {
                     </a>
                   </li>
                 </ul>
-              </li>
-              <li className="nav-item mx-3">
-                <a
-                  className={
-                    pageName === "education"
-                      ? "nav-link nav-a-hover nav-item-active"
-                      : "nav-link nav-a-hover"
-                  }
-                  href="/education"
-                >
-                  Education
-                </a>
               </li>
               <li className="nav-item mx-3">
                 <a
@@ -178,16 +183,15 @@ const Navbar = () => {
                 </li>
               ) : (
                 <li className="nav-item mx-3">
-                  <a
+                  <button
                     className={
                       "btn border-0 mx-auto px-4 shadow-none btn-lg fw-bold nav-link text-decoration-none text-light"
                     }
                     style={{ background: "#193A67" }}
-                    href="/"
-                    onClick={logout()}
+                    onClick={() => logout()}
                   >
                     Logout
-                  </a>
+                  </button>
                 </li>
               )}
             </ul>

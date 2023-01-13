@@ -47,18 +47,21 @@ const About = () => {
             }}
           >
             <div className="container py-5">
-              <h3 className="fw-bold text-success">WHO IS THE IDTA?</h3>
-              <h1 className="fw-bold">MORE ABOUT US</h1>
+              <h3 className="fw-bold text-success">About Dental Technology</h3>
+              {/* <h1 className="fw-bold">About Dental Technology</h1> */}
               <ol className="text-light mt-0">
                 <li>
-                  The IDTA is focused on advancing dental technology and
-                  ensuring a prosperous future is secured for dental
-                  technicians.
+                  A Dental Technologist (or Dental Technician, Dental Mechanic)
+                  is a member of the Dental oral healthcare team who, upon
+                  prescription from a Dental clinician,construct custom-made
+                  restorative an dental appliance such as Dentures,Crowns,
+                  Bridges and Dental braces for individual patients.
                 </li>
+                <li>Dental Technologist unsung heroes.</li>
                 <li>
-                  We are seeking professional and enthusiastic people to join
-                  our team by representing each State. If this interests you,
-                  please contact us.
+                  Their work requires a high level of manual dexterity,
+                  attention to details and an application of applied aesthetic
+                  values.
                 </li>
               </ol>
             </div>

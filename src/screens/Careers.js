@@ -207,7 +207,7 @@ const Careers = () => {
               </h1>
               <div className="row">
                 {JobOpportunities.length === 0 ? (
-                  <h4>No Course Available</h4>
+                  <h4>No Jobs Available</h4>
                 ) : (
                   JobOpportunities.map((jobItem, index) => (
                     <div
@@ -231,7 +231,7 @@ const Careers = () => {
                             data-bs-target="#exampleModal"
                             onClick={() => setJobTitle(jobItem.title)}
                           >
-                            Start Now
+                            Apply Now
                           </button>
                         </div>
                       </div>

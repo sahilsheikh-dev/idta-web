@@ -1,6 +1,59 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
+import Users from "../lib/Users";
 
 const SignUp = () => {
+  const navigate = useNavigate();
+
+  const [fullname, setFullname] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  const signUp = async () => {
+    if (
+      fullname === "" ||
+      fullname === null ||
+      fullname === undefined ||
+      email === "" ||
+      email === null ||
+      email === undefined ||
+      password === "" ||
+      password === null ||
+      password === undefined
+    ) {
+      alert("Empty Input Fields");
+    } else {
+      const userInfo = {
+        fullname: fullname,
+        email: email,
+        password: password,
+      };
+      Users.signup(userInfo)
+        .then((response) => {
+          console.log("Registration in successfully");
+          console.log(response.data.fullname);
+          localStorage.setItem("userRegistered", "registered");
+          navigate("/login");
+        })
+        .catch((error) => {
+          console.log("Error logging in:", error);
+          alert("Error logging in:" + error);
+        });
+    }
+  };
+
+  useEffect(() => {
+    if (
+      localStorage.getItem("currentUser") === null ||
+      localStorage.getItem("currentUser") === "" ||
+      localStorage.getItem("currentUser") === undefined
+    ) {
+      console.log("login to continue");
+    } else {
+      navigate("/dashboard");
+    }
+  }, [navigate]);
+
   return (
     <div
       className="container d-flex align-items-center"
@@ -16,24 +69,27 @@ const SignUp = () => {
           <div className="mb-3">
             <input
               type="text"
-              className="form-control bg-transparent shadow-none border-top-0 border-start-0 border-end-0 p-2"
+              className="form-control bg-transparent shadow-none border-top-0 border-start-0 border-end-0 p-2 text-light"
               placeholder="Name"
+              onChange={(e) => setFullname(e.target.value)}
               required
             />
           </div>
           <div className="mb-3">
             <input
               type="text"
-              className="form-control bg-transparent shadow-none border-top-0 border-start-0 border-end-0 p-2"
-              placeholder="Username"
+              className="form-control bg-transparent shadow-none border-top-0 border-start-0 border-end-0 p-2 text-light"
+              placeholder="Email"
+              onChange={(e) => setEmail(e.target.value)}
               required
             />
           </div>
           <div className="mb-3">
             <input
               type="password"
-              className="form-control bg-transparent shadow-none border-top-0 border-start-0 border-end-0 p-2"
+              className="form-control bg-transparent shadow-none border-top-0 border-start-0 border-end-0 p-2 text-light"
               placeholder="Password"
+              onChange={(e) => setPassword(e.target.value)}
               required
             />
           </div>
@@ -50,6 +106,7 @@ const SignUp = () => {
             <button
               type="button"
               className="btn bg-custom-primary text-light fw-bold w-100"
+              onClick={() => signUp()}
             >
               Register
             </button>

@@ -1,12 +1,30 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 // import { Container } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import MembershipLogo from "../assets/img/membership.png";
 import Footer from "../components/commons/Footer";
 import Navbar from "../components/commons/Navbar";
-import MembershipData from "../assets/jsonData/MembershipData.json";
+// import MembershipData from "../assets/jsonData/MembershipData.json";
+import MembershipPackage from "../lib/MembershipPackage";
 
 const Membership = () => {
+  const [membershipData, setMembershipData] = useState();
+
+  const getMembershipPackages = async () => {
+    MembershipPackage.getAllMembershipPackages()
+      .then((response) => {
+        setMembershipData(response.data);
+      })
+      .catch((error) => {
+        console.log("Error:", error);
+        alert("Error:" + error);
+      });
+  };
+
+  useEffect(() => {
+    getMembershipPackages();
+  }, []);
+
   return (
     <div>
       <Navbar />
@@ -58,27 +76,43 @@ const Membership = () => {
           >
             <h1 className="fw-bold text-dark my-3">Membership Packages</h1>
             <div className="row">
-              {MembershipData.map((membershipItem, index) => (
+              {membershipData?.map((membershipItem) => (
                 <div className="col-md-6 col-lg-6 col-xl-6 p-2 m-0">
                   <Link
                     className="text-decoration-none text-light"
-                    to={"/membershipform/" + index}
+                    to={
+                      "/membershipform/" +
+                      membershipItem.membershipPackagePrimaryKey
+                    }
                   >
                     <div
                       className="card card-body"
                       style={{
-                        background: membershipItem.color,
+                        background:
+                          membershipItem.id === 1
+                            ? "#DE8333"
+                            : membershipItem.id === 2
+                            ? "#525BC2"
+                            : membershipItem.id === 3
+                            ? "#FF0080"
+                            : membershipItem.id === 4
+                            ? "#37BD6E"
+                            : "#090909",
                         minHeight: "170px",
                         borderRadius: "0",
                       }}
                     >
                       <div className="my-0 d-flex align-items-center">
                         <div className="text-start">
-                          <h4 className="text-light">{membershipItem.title}</h4>
+                          <h4 className="text-light">
+                            {membershipItem.membershipTitle}
+                          </h4>
                           <h6 className="text-light">
-                            Rs {membershipItem.amount} + Inclusive GST
+                            Rs {membershipItem.membershipPrice} + Inclusive GST
                           </h6>
-                          <p className="my-0">{membershipItem.description}</p>
+                          <p className="my-0">
+                            {membershipItem.membershipDescription}
+                          </p>
                         </div>
                       </div>
                     </div>

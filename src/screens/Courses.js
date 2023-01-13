@@ -1,12 +1,29 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Container } from "react-bootstrap";
 import Footer from "../components/commons/Footer";
 import Navbar from "../components/commons/Navbar";
-import CourseData from "../assets/jsonData/CourseData.json";
 import { Link } from "react-router-dom";
 import { BoxArrowUpRight } from "react-bootstrap-icons";
+import CoursesAvailable from "../lib/CoursesAvailable";
 
 const Courses = () => {
+  const [courseData, setCourseData] = useState([]);
+  const getCoursesDetails = async () => {
+    CoursesAvailable.getAllCourses()
+      .then((response) => {
+        console.log(response.data);
+        setCourseData(response.data);
+      })
+      .catch((error) => {
+        console.log("Error: " + error);
+        alert("Error: " + error);
+      });
+  };
+
+  useEffect(() => {
+    getCoursesDetails();
+  }, []);
+
   return (
     <div>
       <Navbar />
@@ -23,31 +40,38 @@ const Courses = () => {
             </a>
             <hr />
             <div className="row">
-              {CourseData.length === 0 ? (
+              {courseData.length === 0 ? (
                 <h4>No Course Available</h4>
               ) : (
-                CourseData.map((courseItem, index) => (
-                  <div className="col-md-3 col-lg-3 col-xl-3 my-3" key={index}>
-                    <div className="card bg-dark">
-                      <img
-                        src={courseItem.imageURL}
-                        className="card-img-top"
-                        alt="logo"
-                      />
-                      <div className="card-body">
-                        <h5 className="card-title">{courseItem.title}</h5>
-                        <p className="card-text">
-                          {courseItem.shortDescription}
-                        </p>
-                        <Link
-                          to={"/course/" + index}
-                          // to={"/course/" + courseItem.courseID}
-                          className="btn btn-primary w-100"
-                        >
-                          Start Now
-                        </Link>
+                courseData.map((courseItem, index) => (
+                  <div className="col-md-4 col-lg-4 col-xl-4 my-3" key={index}>
+                    <Link
+                      // to={"/course/" + index}
+                      to={"/course/" + courseItem.coursePrimaryKey}
+                      className="text-decoration-none text-dark"
+                    >
+                      <div className="card bg-dark">
+                        <img
+                          src={courseItem.courseImageUrl}
+                          className="card-img-top"
+                          alt="logo"
+                        />
+                        <div className="card-body bg-light text-dark">
+                          <h4 className="card-title text-danger">
+                            Now Available
+                          </h4>
+                          <h6 className="card-title text-danger">
+                            {courseItem.courseStartDate}
+                          </h6>
+                          <p className="card-text">
+                            {courseItem.courseShortDescription}
+                          </p>
+                          <p className="text-decoration-none text-dark text-center">
+                            Book Your Place Now!
+                          </p>
+                        </div>
                       </div>
-                    </div>
+                    </Link>
                   </div>
                 ))
               )}

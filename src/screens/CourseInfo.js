@@ -1,22 +1,158 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Container } from "react-bootstrap";
+import useRazorpay from "react-razorpay";
 import { useParams } from "react-router-dom";
 import Footer from "../components/commons/Footer";
-import CourseData from "../assets/jsonData/CourseData.json";
 import Navbar from "../components/commons/Navbar";
-import TempVideo from "../assets/videos/temp-video.mp4";
+import CoursesAvailable from "../lib/CoursesAvailable";
+import Payment from "../lib/Payment";
 
 const CourseInfo = () => {
   const { courseID } = useParams({});
-  const courseSrc = CourseData[courseID];
-  const courseContent = CourseData[courseID].content;
-  const [currentVideoSrc, setCurrentVideoSrc] = useState(
-    courseContent[0].videoURL
-  );
-  const setVideo = (index) => {
-    setCurrentVideoSrc(courseContent[index].videoURL);
-    console.log(currentVideoSrc);
+  const Razorpay = useRazorpay();
+  const [courseSrc, setCourseSrc] = useState([]);
+
+  const updatePaymentStatus = async (paymentInfo) => {
+    Payment.savePayment(paymentInfo)
+      .then((response) => {
+        console.log(response.data);
+        if (paymentInfo.paymentStatus === "paid") {
+          const coursePurchaseInfo = {
+            userPrimaryKey: localStorage.getItem("currentUser"),
+            coursePrimaryKey: courseSrc.coursePrimaryKey,
+          };
+          console.log(coursePurchaseInfo);
+          saveCoursePurchase(coursePurchaseInfo);
+        } else {
+          console.log("Payment Failed");
+          alert("Payment Failed");
+        }
+      })
+      .catch((error) => {
+        console.log("Error:" + error);
+        alert("Error:" + error);
+      });
   };
+
+  const saveCoursePurchase = async (coursePurchaseInfo) => {
+    CoursesAvailable.saveCoursePurchase(coursePurchaseInfo)
+      .then((response) => {
+        console.log(response.data);
+      })
+      .catch((error) => {
+        console.log("Error: " + error);
+        alert("Error: " + error);
+      });
+  };
+
+  const generateOrder = async () => {
+    Payment.generateOrder(
+      localStorage.getItem("currentUser"),
+      courseSrc.coursePrice
+    )
+      .then((response) => {
+        const paymentResponse = response.data;
+        console.log(paymentResponse);
+        if (response.data.paymentStatus === "created") {
+          var options = {
+            key: "rzp_test_MhgWsGqXzdSuX0",
+            amount: response.data.amount * 100, // amount in paisa
+            currency: "INR",
+            name: "IDTA Course: " + courseSrc.courseTitle,
+            description: "Course Purchase: " + courseSrc.courseShortDescription,
+            image:
+              "https://idta.netlify.app/static/media/idta-logo.6a40b0502a7e0ad8f73c.png",
+            order_id: response.data.orderId,
+
+            handler: function (response) {
+              console.log(response.razorpay_payment_id);
+              console.log(response.razorpay_order_id);
+              console.log(response.razorpay_signature);
+              const paymentInfo = {
+                id: paymentResponse.id,
+                amount: paymentResponse.amount,
+                currency: paymentResponse.currency,
+                receipt: paymentResponse.receipt,
+                orderId: paymentResponse.orderId,
+                userPrimaryKey: paymentResponse.userPrimaryKey,
+                paymentStatus: "paid",
+              };
+              updatePaymentStatus(paymentInfo);
+              alert("Congrats Payment Successful");
+            },
+
+            prefill: {
+              name: "",
+              email: "",
+              contact: "",
+            },
+            notes: {
+              address: "IDTA Corporate Office",
+            },
+            theme: {
+              color: "#3399cc",
+            },
+          };
+
+          var rzp1 = new Razorpay(options);
+
+          rzp1.on("payment.failed", function (response) {
+            console.log(response.error.code);
+            console.log(response.error.description);
+            console.log(response.error.source);
+            console.log(response.error.step);
+            console.log(response.error.reason);
+            console.log(response.error.metadata.order_id);
+            console.log(response.error.metadata.payment_id);
+            const paymentInfo = {
+              id: paymentResponse.id,
+              amount: paymentResponse.amount,
+              currency: paymentResponse.currency,
+              receipt: paymentResponse.receipt,
+              orderId: paymentResponse.orderId,
+              userPrimaryKey: paymentResponse.userPrimaryKey,
+              paymentStatus: "failed",
+            };
+            updatePaymentStatus(paymentInfo);
+            alert("Payment Failure");
+          });
+
+          rzp1.open();
+        } else {
+          console.log("Order is Not Created");
+          const paymentInfo = {
+            id: response.data.id,
+            amount: response.data.amount,
+            currency: response.data.currency,
+            receipt: response.data.receipt,
+            orderId: response.data.orderId,
+            userPrimaryKey: response.data.userPrimaryKey,
+            paymentStatus: "failed",
+          };
+          updatePaymentStatus(paymentInfo);
+          alert("Order is Not Created");
+        }
+      })
+      .catch((error) => {
+        console.log("Error: " + error);
+        alert("Error: " + error);
+      });
+  };
+
+  useEffect(() => {
+    const getCourseDetail = async () => {
+      CoursesAvailable.getCourseById(courseID)
+        .then((response) => {
+          setCourseSrc(response.data);
+        })
+        .catch((error) => {
+          console.log("Error: " + error);
+          alert("Error: " + error);
+        });
+    };
+
+    getCourseDetail();
+  }, [courseID]);
 
   return (
     <div>
@@ -24,38 +160,31 @@ const CourseInfo = () => {
       <Container>
         <section className="about pt-5 mt-5 section" id="about">
           <div className="row mt-5">
-            <h1 className="fw-bold">{courseSrc.title}</h1>
-            <p>{courseSrc.description}</p>
+            <h1 className="fw-bold">{courseSrc.courseTitle}</h1>
+            <h4>{courseSrc.courseStartDate}</h4>
+            <h4>Price: {courseSrc.coursePrice}/-</h4>
+            <p>{courseSrc.courseShortDescription}</p>
             <hr />
             <div className="row">
-              <div className="col-md-8 col-lg-8 col-xl-8">
-                {/* <img src={currentVideoSrc} className="img-fluid" /> */}
-                <video className="w-100" controls controlsList="nodownload">
-                  <source src={TempVideo} type="video/mp4" />
-                  {/* <source src={currentVideoSrc} type="video/mp4" /> */}
-                  Your browser does not support HTML video.
-                </video>
+              <div className="col-md-6 col-lg-6 col-xl-6">
+                <img
+                  className="img-fluid w-100"
+                  src={courseSrc.courseImageUrl}
+                  alt="logo"
+                  style={{
+                    maxWidth: "700px",
+                  }}
+                />
               </div>
-              <div
-                className="col-md-4 col-lg-4 col-xl-4 border-start"
-                style={{ height: "100%", overflowY: "auto" }}
-              >
-                <h4 className="mx-2">Index</h4>
-                <hr />
-                <ul>
-                  {courseContent.map((courseContentItem, index) => (
-                    <div key={index}>
-                      <li>
-                        <button
-                          className="btn shadow-none border-0 text-light"
-                          onClick={() => setVideo(index)}
-                        >
-                          {courseContentItem.videoTitle}
-                        </button>
-                      </li>
-                    </div>
-                  ))}
-                </ul>
+              <div className="col-md-6 col-lg-6 col-xl-6">
+                <h4 className="fw-bold">Description,</h4>
+                <p>{courseSrc.courseDescription}</p>
+                <button
+                  className="btn btn-success mb-3"
+                  onClick={() => generateOrder()}
+                >
+                  Purchase Now!
+                </button>
               </div>
             </div>
           </div>

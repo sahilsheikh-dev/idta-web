@@ -15,15 +15,15 @@ const Homepage = () => {
           <div className="col-md-6 col-lg-6 col-xl-6 mb-0 mb-md-0 mb-lg-0 mb-xl-0 d-flex align-items-center p-0">
             <div
               id="carouselExampleControls"
-              class="carousel slide w-100 h-100"
+              className="carousel slide w-100 h-100"
               data-bs-ride="carousel"
             >
-              <div class="carousel-indicators">
+              <div className="carousel-indicators">
                 <button
                   type="button"
                   data-bs-target="#carouselExampleCaptions"
                   data-bs-slide-to="0"
-                  class="active"
+                  className="active"
                   aria-current="true"
                   aria-label="Slide 1"
                 ></button>
@@ -34,9 +34,9 @@ const Homepage = () => {
                   aria-label="Slide 2"
                 ></button>
               </div>
-              <div class="carousel-inner w-100 h-100">
+              <div className="carousel-inner w-100 h-100">
                 <div
-                  class="carousel-item active w-100 h-100"
+                  className="carousel-item active w-100 h-100"
                   style={{
                     backgroundImage: `url("https://images.pexels.com/photos/1303081/pexels-photo-1303081.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")`,
                     backgroundRepeat: "no-repeat",
@@ -64,7 +64,7 @@ const Homepage = () => {
                   </div>
                 </div>
                 <div
-                  class="carousel-item w-100 h-100"
+                  className="carousel-item w-100 h-100"
                   style={{
                     backgroundImage: `url("https://images.pexels.com/photos/6101965/pexels-photo-6101965.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")`,
                     backgroundRepeat: "no-repeat",
@@ -97,28 +97,28 @@ const Homepage = () => {
                 </div>
               </div>
               <button
-                class="carousel-control-prev"
+                className="carousel-control-prev"
                 type="button"
                 data-bs-target="#carouselExampleControls"
                 data-bs-slide="prev"
               >
                 <span
-                  class="carousel-control-prev-icon visually-hidden"
+                  className="carousel-control-prev-icon visually-hidden"
                   aria-hidden="true"
                 ></span>
-                <span class="visually-hidden">Previous</span>
+                <span className="visually-hidden">Previous</span>
               </button>
               <button
-                class="carousel-control-next"
+                className="carousel-control-next"
                 type="button"
                 data-bs-target="#carouselExampleControls"
                 data-bs-slide="next"
               >
                 <span
-                  class="carousel-control-next-icon visually-hidden"
+                  className="carousel-control-next-icon visually-hidden"
                   aria-hidden="true"
                 ></span>
-                <span class="visually-hidden">Next</span>
+                <span className="visually-hidden">Next</span>
               </button>
             </div>
           </div>

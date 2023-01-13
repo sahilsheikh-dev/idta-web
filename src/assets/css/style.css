@@ -14,6 +14,12 @@ body {
   text-decoration: none !important;
 }
 
+.nav-item .nav-a-hover {
+  padding-bottom: 5px;
+  border-bottom: 2px solid transparent;
+  width: fit-content;
+}
+
 .nav-item .nav-a-hover:hover {
   padding-bottom: 5px;
   border-bottom: 2px solid #2da3e3;
@@ -31,6 +37,10 @@ section {
 
 .text-custom-primary {
   color: #2da3e3 !important;
+}
+
+.text-custom-orange {
+  color: "ED7014" !important;
 }
 
 .bg-custom-primary {
