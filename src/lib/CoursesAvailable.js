@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const COURSES_BASE_URL = "http://localhost:9000/courses/";
+const COURSES_BASE_URL = "http://3.6.167.45:9000/courses/";
 
 class CoursesAvailable {
   async getAllCourses() {
