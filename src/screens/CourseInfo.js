@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Container } from "react-bootstrap";
 import useRazorpay from "react-razorpay";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import Footer from "../components/commons/Footer";
 import Navbar from "../components/commons/Navbar";
 import CoursesAvailable from "../lib/CoursesAvailable";
@@ -10,6 +10,7 @@ import Payment from "../lib/Payment";
 const CourseInfo = () => {
   const { courseID } = useParams({});
   const Razorpay = useRazorpay();
+  const navigate = useNavigate();
   const [courseSrc, setCourseSrc] = useState([]);
   const [purchased, setPurchased] = useState(false);
 
@@ -156,6 +157,19 @@ const CourseInfo = () => {
       });
   };
 
+  const purchaseCourse = () => {
+    if (
+      localStorage.getItem("currentUser") === "" ||
+      localStorage.getItem("currentUser") === null ||
+      localStorage.getItem("currentUser") === undefined
+    ) {
+      alert("Please Login to Continue");
+      navigate("/login");
+    } else {
+      generateOrder();
+    }
+  };
+
   useEffect(() => {
     const getCourseDetail = async () => {
       CoursesAvailable.getCourseById(courseID)
@@ -205,7 +219,7 @@ const CourseInfo = () => {
                 ) : (
                   <button
                     className="btn btn-success mb-3"
-                    onClick={() => generateOrder()}
+                    onClick={() => purchaseCourse()}
                   >
                     Purchase Now!
                   </button>

@@ -11,10 +11,19 @@ const Membership = () => {
   const navigate = useNavigate();
 
   const navigateMembership = (membershipPackagePrimaryKey) => {
-    if (membershipPurchased) {
-      alert("You already have purchased the membership");
+    if (
+      localStorage.getItem("currentUser") === "" ||
+      localStorage.getItem("currentUser") === null ||
+      localStorage.getItem("currentUser") === undefined
+    ) {
+      alert("Please Login to Continue");
+      navigate("/login");
     } else {
-      navigate("/membershipform/" + membershipPackagePrimaryKey);
+      if (membershipPurchased) {
+        alert("You already have purchased the membership");
+      } else {
+        navigate("/membershipform/" + membershipPackagePrimaryKey);
+      }
     }
   };
 
