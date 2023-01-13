@@ -11,6 +11,7 @@ const CourseInfo = () => {
   const { courseID } = useParams({});
   const Razorpay = useRazorpay();
   const [courseSrc, setCourseSrc] = useState([]);
+  const [purchased, setPurchased] = useState(false);
 
   const updatePaymentStatus = async (paymentInfo) => {
     Payment.savePayment(paymentInfo)
@@ -38,6 +39,22 @@ const CourseInfo = () => {
     CoursesAvailable.saveCoursePurchase(coursePurchaseInfo)
       .then((response) => {
         console.log(response.data);
+      })
+      .catch((error) => {
+        console.log("Error: " + error);
+        alert("Error: " + error);
+      });
+  };
+
+  const getCourseByUserId = async (userPrimaryKey) => {
+    CoursesAvailable.getCourseByUserId(userPrimaryKey)
+      .then((response) => {
+        // eslint-disable-next-line
+        response.data?.map((coursesPurchased) => {
+          if (coursesPurchased.coursePrimaryKey === courseID) {
+            setPurchased(true);
+          }
+        });
       })
       .catch((error) => {
         console.log("Error: " + error);
@@ -152,6 +169,8 @@ const CourseInfo = () => {
     };
 
     getCourseDetail();
+    getCourseByUserId(localStorage.getItem("currentUser"));
+    // eslint-disable-next-line
   }, [courseID]);
 
   return (
@@ -179,12 +198,18 @@ const CourseInfo = () => {
               <div className="col-md-6 col-lg-6 col-xl-6">
                 <h4 className="fw-bold">Description,</h4>
                 <p>{courseSrc.courseDescription}</p>
-                <button
-                  className="btn btn-success mb-3"
-                  onClick={() => generateOrder()}
-                >
-                  Purchase Now!
-                </button>
+                {purchased ? (
+                  <button className="btn btn-success mb-3">
+                    Wow!! You already have Purchased this Course
+                  </button>
+                ) : (
+                  <button
+                    className="btn btn-success mb-3"
+                    onClick={() => generateOrder()}
+                  >
+                    Purchase Now!
+                  </button>
+                )}
               </div>
             </div>
           </div>

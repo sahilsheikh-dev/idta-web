@@ -3,6 +3,7 @@ import { Container } from "react-bootstrap";
 import Footer from "../components/commons/Footer";
 import Navbar from "../components/commons/Navbar";
 import Users from "../lib/Users";
+import MembershipPackage from "../lib/MembershipPackage";
 import CoursesAvailable from "../lib/CoursesAvailable";
 import { Link } from "react-router-dom";
 
@@ -10,6 +11,7 @@ const Dashboard = () => {
   const [currentUser, setCurrentUser] = useState("");
   const [userInfo, setUserInfo] = useState([]);
   const [courseData, setCourseData] = useState([]);
+  const [membershipData, setMembershipData] = useState([]);
 
   const getUser = async (currentUserPrimaryKey) => {
     Users.getUser(currentUserPrimaryKey)
@@ -26,6 +28,55 @@ const Dashboard = () => {
     window.location.replace("login");
   };
 
+  const countMembershipExpire = (date, availableTill) => {
+    let dateResult = new Date(date);
+    dateResult.setDate(dateResult.getDate() + availableTill);
+    let finalExpire = "";
+
+    if (dateResult.getMonth() == 1) {
+      finalExpire = finalExpire + "Jan " + (dateResult.getDate() + 1);
+    } else if (dateResult.getMonth() == 2) {
+      finalExpire = finalExpire + "Feb " + (dateResult.getDate() + 1);
+    } else if (dateResult.getMonth() == 3) {
+      finalExpire = finalExpire + "Mar " + (dateResult.getDate() + 1);
+    } else if (dateResult.getMonth() == 4) {
+      finalExpire = finalExpire + "Apr " + (dateResult.getDate() + 1);
+    } else if (dateResult.getMonth() == 5) {
+      finalExpire = finalExpire + "May " + (dateResult.getDate() + 1);
+    } else if (dateResult.getMonth() == 6) {
+      finalExpire = finalExpire + "Jun " + (dateResult.getDate() + 1);
+    } else if (dateResult.getMonth() == 7) {
+      finalExpire = finalExpire + "Jul " + (dateResult.getDate() + 1);
+    } else if (dateResult.getMonth() == 8) {
+      finalExpire = finalExpire + "Aug " + (dateResult.getDate() + 1);
+    } else if (dateResult.getMonth() == 9) {
+      finalExpire = finalExpire + "Sep " + (dateResult.getDate() + 1);
+    } else if (dateResult.getMonth() == 10) {
+      finalExpire = finalExpire + "Oct " + (dateResult.getDate() + 1);
+    } else if (dateResult.getMonth() == 11) {
+      finalExpire = finalExpire + "Nov " + (dateResult.getDate() + 1);
+    } else if (dateResult.getMonth() == 12) {
+      finalExpire = finalExpire + "Dec " + (dateResult.getDate() + 1);
+    } else {
+      finalExpire = finalExpire + "None " + (dateResult.getDate() + 1);
+    }
+
+    finalExpire = finalExpire + ", " + dateResult.getFullYear();
+
+    return finalExpire;
+  };
+
+  const getMembershipPackageInfo = async (userPrimaryKey) => {
+    MembershipPackage.getMembershipPackageByUser(userPrimaryKey)
+      .then((response) => {
+        setMembershipData(response.data);
+      })
+      .catch((error) => {
+        console.log("Error: " + error);
+        alert("Error: " + error);
+      });
+  };
+
   useEffect(() => {
     setCurrentUser(localStorage.getItem("currentUser"));
     if (
@@ -40,7 +91,6 @@ const Dashboard = () => {
       const getPurchasedCoursesDetails = async (currentUser) => {
         CoursesAvailable.getPurchasedCoursesByUserPrimaryKey(currentUser)
           .then((response) => {
-            console.log(response.data);
             setCourseData(response.data);
           })
           .catch((error) => {
@@ -50,6 +100,7 @@ const Dashboard = () => {
       };
 
       getPurchasedCoursesDetails(currentUser);
+      getMembershipPackageInfo(currentUser);
     }
     // eslint-disable-next-line
   }, [currentUser]);
@@ -73,7 +124,13 @@ const Dashboard = () => {
             >
               <div className="row mt-5">
                 <h1 className="fw-bold">Welcome, {userInfo.name}</h1>
-                <h6>Membership Expires On: 19/08/2023</h6>
+                <h6>
+                  Membership Expires On: &nbsp;
+                  {countMembershipExpire(
+                    membershipData.date,
+                    membershipData.availableTill
+                  )}
+                </h6>
                 <hr />
                 <h4 className="mt-4 fw-bold">Current Available Courses</h4>
                 <div className="row">

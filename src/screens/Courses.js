@@ -8,10 +8,10 @@ import CoursesAvailable from "../lib/CoursesAvailable";
 
 const Courses = () => {
   const [courseData, setCourseData] = useState([]);
+
   const getCoursesDetails = async () => {
     CoursesAvailable.getAllCourses()
       .then((response) => {
-        console.log(response.data);
         setCourseData(response.data);
       })
       .catch((error) => {

@@ -517,6 +517,7 @@ const MemberForm = () => {
                     />
                   </div>
                   <div className="mb-3">
+                    <label className="mb-2">Registration Date:</label>
                     <input
                       type="date"
                       className="form-control bg-transparent text-light shadow-none p-2"

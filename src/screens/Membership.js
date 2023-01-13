@@ -1,14 +1,22 @@
 import React, { useEffect, useState } from "react";
-// import { Container } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import MembershipLogo from "../assets/img/membership.png";
 import Footer from "../components/commons/Footer";
 import Navbar from "../components/commons/Navbar";
-// import MembershipData from "../assets/jsonData/MembershipData.json";
 import MembershipPackage from "../lib/MembershipPackage";
 
 const Membership = () => {
   const [membershipData, setMembershipData] = useState();
+  const [membershipPurchased, setMembershipPurchased] = useState(false);
+  const navigate = useNavigate();
+
+  const navigateMembership = (membershipPackagePrimaryKey) => {
+    if (membershipPurchased) {
+      alert("You already have purchased the membership");
+    } else {
+      navigate("/membershipform/" + membershipPackagePrimaryKey);
+    }
+  };
 
   const getMembershipPackages = async () => {
     MembershipPackage.getAllMembershipPackages()
@@ -21,8 +29,26 @@ const Membership = () => {
       });
   };
 
+  const checkMembershipPackages = async (userPrimaryKey) => {
+    MembershipPackage.getMembershipPackageByUser(userPrimaryKey)
+      .then((response) => {
+        console.log(response.data);
+        if (response.data === "" || response.data === null) {
+          setMembershipPurchased(false);
+        } else {
+          setMembershipPurchased(true);
+        }
+      })
+      .catch((error) => {
+        setMembershipPurchased(false);
+        console.log("Error: " + error);
+        alert("Error: " + error);
+      });
+  };
+
   useEffect(() => {
     getMembershipPackages();
+    checkMembershipPackages(localStorage.getItem("currentUser"));
   }, []);
 
   return (
@@ -76,14 +102,15 @@ const Membership = () => {
           >
             <h1 className="fw-bold text-dark my-3">Membership Packages</h1>
             <div className="row">
-              {membershipData?.map((membershipItem) => (
-                <div className="col-md-6 col-lg-6 col-xl-6 p-2 m-0">
-                  <Link
-                    className="text-decoration-none text-light"
-                    to={
-                      "/membershipform/" +
-                      membershipItem.membershipPackagePrimaryKey
-                    }
+              {membershipData?.map((membershipItem, index) => (
+                <div className="col-md-6 col-lg-6 col-xl-6 p-2 m-0" key={index}>
+                  <button
+                    className="btn text-decoration-none text-light p-0 w-100"
+                    onClick={() => {
+                      navigateMembership(
+                        membershipItem.membershipPackagePrimaryKey
+                      );
+                    }}
                   >
                     <div
                       className="card card-body"
@@ -116,7 +143,7 @@ const Membership = () => {
                         </div>
                       </div>
                     </div>
-                  </Link>
+                  </button>
                 </div>
               ))}
             </div>
