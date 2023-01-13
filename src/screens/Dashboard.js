@@ -33,29 +33,29 @@ const Dashboard = () => {
     dateResult.setDate(dateResult.getDate() + availableTill);
     let finalExpire = "";
 
-    if (dateResult.getMonth() == 1) {
+    if (dateResult.getMonth() === 1) {
       finalExpire = finalExpire + "Jan " + (dateResult.getDate() + 1);
-    } else if (dateResult.getMonth() == 2) {
+    } else if (dateResult.getMonth() === 2) {
       finalExpire = finalExpire + "Feb " + (dateResult.getDate() + 1);
-    } else if (dateResult.getMonth() == 3) {
+    } else if (dateResult.getMonth() === 3) {
       finalExpire = finalExpire + "Mar " + (dateResult.getDate() + 1);
-    } else if (dateResult.getMonth() == 4) {
+    } else if (dateResult.getMonth() === 4) {
       finalExpire = finalExpire + "Apr " + (dateResult.getDate() + 1);
-    } else if (dateResult.getMonth() == 5) {
+    } else if (dateResult.getMonth() === 5) {
       finalExpire = finalExpire + "May " + (dateResult.getDate() + 1);
-    } else if (dateResult.getMonth() == 6) {
+    } else if (dateResult.getMonth() === 6) {
       finalExpire = finalExpire + "Jun " + (dateResult.getDate() + 1);
-    } else if (dateResult.getMonth() == 7) {
+    } else if (dateResult.getMonth() === 7) {
       finalExpire = finalExpire + "Jul " + (dateResult.getDate() + 1);
-    } else if (dateResult.getMonth() == 8) {
+    } else if (dateResult.getMonth() === 8) {
       finalExpire = finalExpire + "Aug " + (dateResult.getDate() + 1);
-    } else if (dateResult.getMonth() == 9) {
+    } else if (dateResult.getMonth() === 9) {
       finalExpire = finalExpire + "Sep " + (dateResult.getDate() + 1);
-    } else if (dateResult.getMonth() == 10) {
+    } else if (dateResult.getMonth() === 10) {
       finalExpire = finalExpire + "Oct " + (dateResult.getDate() + 1);
-    } else if (dateResult.getMonth() == 11) {
+    } else if (dateResult.getMonth() === 11) {
       finalExpire = finalExpire + "Nov " + (dateResult.getDate() + 1);
-    } else if (dateResult.getMonth() == 12) {
+    } else if (dateResult.getMonth() === 12) {
       finalExpire = finalExpire + "Dec " + (dateResult.getDate() + 1);
     } else {
       finalExpire = finalExpire + "None " + (dateResult.getDate() + 1);
