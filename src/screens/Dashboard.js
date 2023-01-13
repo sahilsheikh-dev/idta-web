@@ -77,7 +77,7 @@ const Dashboard = () => {
                 <hr />
                 <h4 className="mt-4 fw-bold">Current Available Courses</h4>
                 <div className="row">
-                  {courseData === "" ? (
+                  {courseData.length === 0 ? (
                     <>
                       <h4 className="text-center">
                         You haven't Purchased any Courses
