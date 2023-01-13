@@ -1,8 +1,8 @@
 import axios from "axios";
 
-const MEMBERSHIP_PACKAGE_BASE_URL = "http://localhost:9000/membership/";
+const MEMBERSHIP_PACKAGE_BASE_URL = "http://3.6.167.45:9000/membership/";
 const MEMBERSHIP_PACKAGE_PURCHASE_BASE_URL =
-  "http://localhost:9000/membershipPackagePurchase/";
+  "http://3.6.167.45:9000/membershipPackagePurchase/";
 
 class MembershipPackage {
   async getAllMembershipPackages() {

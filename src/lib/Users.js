@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const USER_BASE_URL = "http://localhost:9000/user/";
+const USER_BASE_URL = "http://3.6.167.45:9000/user/";
 
 class Users {
   async login(userInfo) {
