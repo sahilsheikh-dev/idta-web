@@ -13,6 +13,9 @@ import Careers from "./screens/Careers";
 import JoinUs from "./screens/JoinUs";
 import MemberForm from "./screens/MemberForm";
 import Courses from "./screens/Courses";
+import AdminLogin from "./screens/admin/AdminLogin";
+import JobsApplications from "./screens/admin/JobsApplications";
+import ContactForms from "./screens/admin/ContactForms";
 
 function App() {
   return (
@@ -30,10 +33,10 @@ function App() {
         <Route path="/courses" element={<Courses />} />
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/course/:courseID" element={<CourseInfo />} />
-        <Route
-          path="/membershipform/:membershipPackagePrimaryKey"
-          element={<MemberForm />}
-        />
+        <Route path="/membershipform/:membershipPackagePrimaryKey" element={<MemberForm />} />
+        <Route path="/adminLogin" element={<AdminLogin />} />
+        <Route path="/jobapplications" element={<JobsApplications />} />
+        <Route path="/contactforms" element={<ContactForms />} />
       </Routes>
     </BrowserRouter>
   );

@@ -3,9 +3,53 @@ import React, { useState } from "react";
 import Footer from "../components/commons/Footer";
 import Navbar from "../components/commons/Navbar";
 import JobOpportunities from "../assets/jsonData/JobOpportunities.json";
+import Jobs from "../lib/Jobs";
 
 const Careers = () => {
   const [jobTitle, setJobTitle] = useState("");
+
+  const [name, setName] = useState("");
+  const [number, setNumber] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+
+  const saveJobInfo = async (jobInfo) => {
+    Jobs.saveJobs(jobInfo)
+      .then((response) => {
+        console.log(response.data);
+        alert("Applied");
+      })
+      .catch((error) => {
+        console.log("Error: " + error);
+        alert("Error: " + error);
+      });
+  };
+
+  const saveJobForm = () => {
+    if (
+      name === "" ||
+      name === null ||
+      number === "" ||
+      number === null ||
+      email === "" ||
+      email === null ||
+      message === "" ||
+      message === null ||
+      jobTitle === "" ||
+      jobTitle === null
+    ) {
+      alert("Please fill the input fields");
+    } else {
+      const jobInfo = {
+        name: name,
+        number: number,
+        email: email,
+        message: message,
+        jobTitle: jobTitle,
+      };
+      saveJobInfo(jobInfo);
+    }
+  };
 
   return (
     <div>
@@ -278,29 +322,33 @@ const Careers = () => {
                 <div className="mb-3">
                   <input
                     type="text"
-                    className="form-control bg-transparent shadow-none border-top-0 border-start-0 border-end-0 p-2"
+                    className="form-control bg-transparent shadow-none border-top-0 border-start-0 border-end-0 p-2 text-light"
                     placeholder="Name"
+                    onChange={(e) => setName(e.target.value)}
                   />
                 </div>
                 <div className="mb-3">
                   <input
-                    type="tel"
-                    className="form-control bg-transparent shadow-none border-top-0 border-start-0 border-end-0 p-2"
+                    type="number"
+                    className="form-control bg-transparent shadow-none border-top-0 border-start-0 border-end-0 p-2 text-light"
                     placeholder="Contact Number"
+                    onChange={(e) => setNumber(e.target.value)}
                   />
                 </div>
                 <div className="mb-3">
                   <input
                     type="email"
-                    className="form-control bg-transparent shadow-none border-top-0 border-start-0 border-end-0 p-2"
+                    className="form-control bg-transparent shadow-none border-top-0 border-start-0 border-end-0 p-2 text-light"
                     placeholder="Email"
+                    onChange={(e) => setEmail(e.target.value)}
                   />
                 </div>
                 <div className="mb-3">
                   <input
                     type="text"
-                    className="form-control bg-transparent shadow-none border-top-0 border-start-0 border-end-0 p-2"
+                    className="form-control bg-transparent shadow-none border-top-0 border-start-0 border-end-0 p-2 text-light"
                     placeholder="Message"
+                    onChange={(e) => setMessage(e.target.value)}
                   />
                 </div>
               </div>
@@ -317,7 +365,11 @@ const Careers = () => {
                 >
                   Close
                 </button>
-                <button type="button" className="btn btn-primary btn-sm">
+                <button
+                  type="button"
+                  className="btn btn-primary btn-sm"
+                  onClick={() => saveJobForm()}
+                >
                   Submit
                 </button>
               </div>

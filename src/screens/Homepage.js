@@ -1,8 +1,53 @@
-import React from "react";
+import React, { useState } from "react";
 import Navbar from "../components/commons/Navbar";
 import Footer from "../components/commons/Footer";
+import ContactForm from "../lib/ContactForm";
 
 const Homepage = () => {
+  const [labName, setLabName] = useState("");
+  const [number, setNumber] = useState("");
+  const [labEmail, setLabEmail] = useState("");
+  const [website, setWebsite] = useState("");
+  const [ownerFullName, setOwnerFullName] = useState("");
+
+  const saveContactInfo = async (contactInfo) => {
+    ContactForm.saveContact(contactInfo)
+      .then((response) => {
+        console.log(response.data);
+        alert("Contact Info Saved");
+      })
+      .catch((error) => {
+        console.log("Error: " + error);
+        alert("Error: " + error);
+      });
+  };
+
+  const saveContactForm = () => {
+    if (
+      labName === "" ||
+      labName === null ||
+      number === "" ||
+      number === null ||
+      labEmail === "" ||
+      labEmail === null ||
+      website === "" ||
+      website === null ||
+      ownerFullName === "" ||
+      ownerFullName === null
+    ) {
+      alert("Please fill the input fields");
+    } else {
+      const contactInfo = {
+        labName: labName,
+        number: number,
+        email: labEmail,
+        website: website,
+        ownerFullName: ownerFullName,
+      };
+      saveContactInfo(contactInfo);
+    }
+  };
+
   return (
     <div>
       <Navbar />
@@ -300,7 +345,7 @@ const Homepage = () => {
                 }}
               >
                 <h1 className="modal-title fs-5" id="exampleModalLabel">
-                  Register With Us
+                  Contact Us
                 </h1>
                 <button
                   type="button"
@@ -314,36 +359,41 @@ const Homepage = () => {
                 <div className="mb-3">
                   <input
                     type="text"
-                    className="form-control bg-transparent shadow-none border-top-0 border-start-0 border-end-0 p-2"
+                    className="form-control bg-transparent shadow-none border-top-0 border-start-0 border-end-0 p-2 text-light"
                     placeholder="Lab Name"
+                    onChange={(e) => setLabName(e.target.value)}
                   />
                 </div>
                 <div className="mb-3">
                   <input
-                    type="tel"
-                    className="form-control bg-transparent shadow-none border-top-0 border-start-0 border-end-0 p-2"
+                    type="number"
+                    className="form-control bg-transparent shadow-none border-top-0 border-start-0 border-end-0 p-2 text-light"
                     placeholder="Contact Number"
+                    onChange={(e) => setNumber(e.target.value)}
                   />
                 </div>
                 <div className="mb-3">
                   <input
                     type="email"
-                    className="form-control bg-transparent shadow-none border-top-0 border-start-0 border-end-0 p-2"
+                    className="form-control bg-transparent shadow-none border-top-0 border-start-0 border-end-0 p-2 text-light"
                     placeholder="Email"
+                    onChange={(e) => setLabEmail(e.target.value)}
                   />
                 </div>
                 <div className="mb-3">
                   <input
                     type="text"
-                    className="form-control bg-transparent shadow-none border-top-0 border-start-0 border-end-0 p-2"
+                    className="form-control bg-transparent shadow-none border-top-0 border-start-0 border-end-0 p-2 text-light"
                     placeholder="Website"
+                    onChange={(e) => setWebsite(e.target.value)}
                   />
                 </div>
                 <div className="mb-3">
                   <input
                     type="text"
-                    className="form-control bg-transparent shadow-none border-top-0 border-start-0 border-end-0 p-2"
+                    className="form-control bg-transparent shadow-none border-top-0 border-start-0 border-end-0 p-2 text-light"
                     placeholder="Full Name of Lab Owner(s)"
+                    onChange={(e) => setOwnerFullName(e.target.value)}
                   />
                 </div>
               </div>
@@ -360,7 +410,11 @@ const Homepage = () => {
                 >
                   Close
                 </button>
-                <button type="button" className="btn btn-primary btn-sm">
+                <button
+                  type="button"
+                  className="btn btn-primary btn-sm"
+                  onClick={() => saveContactForm()}
+                >
                   Submit
                 </button>
               </div>
