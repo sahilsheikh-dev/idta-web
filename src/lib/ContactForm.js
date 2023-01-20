@@ -1,6 +1,7 @@
 import axios from "axios";
 
-const BASE_URL = "http://3.6.167.45:9000/contact/";
+const BASE_URL = "http://idtaapi.up.railway.app/contact/";
+// const BASE_URL = "http://localhost:9000/contact/";
 
 class ContactForm {
   async getAllContacts() {

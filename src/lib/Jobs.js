@@ -1,6 +1,7 @@
 import axios from "axios";
 
-const BASE_URL = "http://3.6.167.45:9000/jobs/";
+const BASE_URL = "http://idtaapi.up.railway.app/jobs/";
+// const BASE_URL = "http://localhost:9000/jobs/";
 
 class Jobs {
   async getAllJobs() {

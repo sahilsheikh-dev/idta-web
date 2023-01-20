@@ -1,5 +1,5 @@
 # pull the official base image
-FROM node: alpine
+FROM node
 # set working direction
 WORKDIR /idta-web
 # add `/idta-web/node_modules/.bin` to $PATH
@@ -11,4 +11,6 @@ RUN npm i
 # add idta-web
 COPY . ./
 # start idta-web
-CMD ["npm", "start"]
+RUN npm run build
+RUN npm install -g serve
+CMD ["serve", "-s", "build"]
