@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const USER_BASE_URL = "http://idtaapi.up.railway.app/user/";
+const USER_BASE_URL = "https://idtaapi.up.railway.app/user/";
 // const USER_BASE_URL = "http://localhost:9000/user/";
 
 class Users {

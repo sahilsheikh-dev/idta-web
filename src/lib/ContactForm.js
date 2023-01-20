@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const BASE_URL = "http://idtaapi.up.railway.app/contact/";
+const BASE_URL = "https://idtaapi.up.railway.app/contact/";
 // const BASE_URL = "http://localhost:9000/contact/";
 
 class ContactForm {

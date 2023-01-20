@@ -1,4 +1,4 @@
-const BASE_URL = "http://idtaapi.up.railway.app/";
+const BASE_URL = "https://idtaapi.up.railway.app/";
 
 const USER_BASE_URL = BASE_URL + "user/";
 const MEMBERSHIP_PACKAGE_BASE_URL = BASE_URL + "membership/";

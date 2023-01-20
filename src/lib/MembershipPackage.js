@@ -1,8 +1,8 @@
 import axios from "axios";
 
-const MEMBERSHIP_PACKAGE_BASE_URL = "http://idtaapi.up.railway.app/membership/";
+const MEMBERSHIP_PACKAGE_BASE_URL = "https://idtaapi.up.railway.app/membership/";
 const MEMBERSHIP_PACKAGE_PURCHASE_BASE_URL =
-  "http://idtaapi.up.railway.app/membershipPackagePurchase/";
+  "https://idtaapi.up.railway.app/membershipPackagePurchase/";
 // const MEMBERSHIP_PACKAGE_BASE_URL = "http://localhost:9000/membership/";
 // const MEMBERSHIP_PACKAGE_PURCHASE_BASE_URL =
 //   "http://localhost:9000/membershipPackagePurchase/";
