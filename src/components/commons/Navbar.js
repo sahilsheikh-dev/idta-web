@@ -8,6 +8,8 @@ const Navbar = () => {
   const navigate = useNavigate();
 
   const currentUrl = window.location.href;
+  localStorage.setItem("currentPage", currentUrl);
+  console.log(localStorage.getItem("currentPage"));
   const pageName = currentUrl.substring(currentUrl.lastIndexOf("/") + 1);
   const [userID, setUserID] = useState("");
 
@@ -68,17 +70,44 @@ const Navbar = () => {
                   Home
                 </a>
               </li>
-              <li className="nav-item mx-3">
+              <li className="nav-item dropdown mx-3">
                 <a
-                  className={
-                    pageName === "about"
-                      ? "nav-link nav-a-hover nav-item-active"
-                      : "nav-link nav-a-hover"
-                  }
-                  href="/about"
+                  className="nav-link dropdown-toggle text-light"
+                  href="/"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
                 >
                   About
                 </a>
+                <ul className="dropdown-menu bg-dark">
+                  <li>
+                    <a
+                      className={
+                        pageName === "about"
+                          ? "nav-link nav-a-hover nav-item-active dropdown-item w-100"
+                          : "nav-link nav-a-hover dropdown-item w-100"
+                      }
+                      style={{ background: "none" }}
+                      href="/about"
+                    >
+                      About
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      className={
+                        pageName === "aboutTeam"
+                          ? "nav-link nav-a-hover nav-item-active dropdown-item w-100"
+                          : "nav-link nav-a-hover dropdown-item w-100"
+                      }
+                      style={{ background: "none" }}
+                      href="/aboutTeam"
+                    >
+                      About Team
+                    </a>
+                  </li>
+                </ul>
               </li>
               <li className="nav-item mx-3">
                 <a

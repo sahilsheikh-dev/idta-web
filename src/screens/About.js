@@ -48,22 +48,22 @@ const About = () => {
           >
             <div className="container py-5">
               <h3 className="fw-bold text-success">About Dental Technology</h3>
+
               {/* <h1 className="fw-bold">About Dental Technology</h1> */}
-              <ol className="text-light mt-0">
-                <li>
-                  A Dental Technologist (or Dental Technician, Dental Mechanic)
-                  is a member of the Dental oral healthcare team who, upon
-                  prescription from a Dental clinician,construct custom-made
-                  restorative an dental appliance such as Dentures,Crowns,
-                  Bridges and Dental braces for individual patients.
-                </li>
-                <li>Dental Technologist unsung heroes.</li>
-                <li>
-                  Their work requires a high level of manual dexterity,
-                  attention to details and an application of applied aesthetic
-                  values.
-                </li>
-              </ol>
+              <p
+                className="mt-3"
+                style={{
+                  fontSize: "22px",
+                }}
+              >
+                The Indian Dental Technician Association is a Pvt.Organization
+                for Dental Laboratory's and Dental Technicians in India and we
+                are committed to keeping member in touch with what is going in
+                Dental Technology and the wider dental arena as well as
+                facilitating our members with the tools they need to stay
+                educated and compliant. Currently the I.D.T.A has 200+ Members
+                and 500+ Socially connected Members
+              </p>
             </div>
           </div>
           <div

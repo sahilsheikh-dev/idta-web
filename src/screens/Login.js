@@ -26,7 +26,15 @@ const Login = () => {
         .then((response) => {
           console.log("Logged in successfully");
           localStorage.setItem("currentUser", response.data.userPrimaryKey);
-          navigate("/dashboard");
+          const lastPage = localStorage.getItem("currentPage");
+          if (lastPage.includes("course")) {
+            const pageId = lastPage.substring(lastPage.lastIndexOf("/") + 1);
+            navigate("/course/" + pageId);
+          } else if (lastPage.includes("membership")) {
+            navigate("/membership");
+          } else {
+            navigate("/dashboard");
+          }
         })
         .catch((error) => {
           console.log("Error logging in:", error);

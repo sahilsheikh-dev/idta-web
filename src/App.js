@@ -6,6 +6,7 @@ import SignUp from "./screens/SignUp";
 import Dashboard from "./screens/Dashboard";
 import CourseInfo from "./screens/CourseInfo";
 import About from "./screens/About";
+import AboutTeam from "./screens/AboutTeam";
 import Membership from "./screens/Membership";
 import Services from "./screens/Services";
 import Education from "./screens/Education";
@@ -23,6 +24,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Homepage />} />
         <Route path="/about" element={<About />} />
+        <Route path="/aboutTeam" element={<AboutTeam />} />
         <Route path="/membership" element={<Membership />} />
         <Route path="/service" element={<Services />} />
         <Route path="/education" element={<Education />} />
