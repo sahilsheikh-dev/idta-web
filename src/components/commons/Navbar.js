@@ -118,7 +118,7 @@ const Navbar = () => {
                   }
                   href="/membership"
                 >
-                  Membership
+                  Registration
                 </a>
               </li>
               <li className="nav-item mx-3">

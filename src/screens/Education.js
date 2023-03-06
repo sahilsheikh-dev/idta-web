@@ -2,6 +2,7 @@ import React from "react";
 // import { Container } from "react-bootstrap";
 import Footer from "../components/commons/Footer";
 import Navbar from "../components/commons/Navbar";
+import Img5 from "../assets/img/img (5).jpg";
 
 const Education = () => {
   return (
@@ -97,7 +98,7 @@ const Education = () => {
           >
             <img
               className="img-fluid w-100 h-100 py-0 my-0"
-              src="https://images.pexels.com/photos/2467506/pexels-photo-2467506.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+              src={Img5}
               alt="logo"
               style={{
                 maxWidth: "100%",

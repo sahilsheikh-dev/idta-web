@@ -3,6 +3,8 @@ import React, { useState } from "react";
 import Footer from "../components/commons/Footer";
 import Navbar from "../components/commons/Navbar";
 import ContactForm from "../lib/ContactForm";
+import Img3 from "../assets/img/img (3).jpg";
+import Img4 from "../assets/img/img (4).jpg";
 
 const JoinUs = () => {
   const [labName, setLabName] = useState("");
@@ -66,7 +68,7 @@ const JoinUs = () => {
           >
             <img
               className="img-fluid mx-auto w-100 h-100"
-              src="https://images.pexels.com/photos/3865557/pexels-photo-3865557.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+              src={Img3}
               alt="logo"
               style={{
                 maxWidth: "100%",
@@ -164,7 +166,7 @@ const JoinUs = () => {
           >
             <img
               className="img-fluid mx-auto w-100 h-100"
-              src="https://images.pexels.com/photos/3845653/pexels-photo-3845653.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+              src={Img4}
               alt="logo"
               style={{
                 maxWidth: "100%",

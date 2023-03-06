@@ -125,7 +125,7 @@ const Dashboard = () => {
               <div className="row mt-5">
                 <h1 className="fw-bold">Welcome, {userInfo.name}</h1>
                 <h6>
-                  Membership Expires On: &nbsp;
+                  Registration Expires On: &nbsp;
                   {countMembershipExpire(
                     membershipData.date,
                     membershipData.availableTill

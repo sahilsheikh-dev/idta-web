@@ -42,6 +42,13 @@ const SignUp = () => {
     }
   };
 
+  const keyDownHandler = (event) => {
+    if (event.keyCode === 13) {
+      console.log("enter");
+      signUp();
+    }
+  };
+
   useEffect(() => {
     if (
       localStorage.getItem("currentUser") === null ||
@@ -64,53 +71,58 @@ const SignUp = () => {
         style={{ maxWidth: "500px" }}
       >
         <div className="card-body">
-          <h1 className="text-center">Sign Up</h1>
-          <hr />
-          <div className="mb-3">
-            <input
-              type="text"
-              className="form-control bg-transparent shadow-none border-top-0 border-start-0 border-end-0 p-2 text-light"
-              placeholder="Name"
-              onChange={(e) => setFullname(e.target.value)}
-              required
-            />
-          </div>
-          <div className="mb-3">
-            <input
-              type="text"
-              className="form-control bg-transparent shadow-none border-top-0 border-start-0 border-end-0 p-2 text-light"
-              placeholder="Email"
-              onChange={(e) => setEmail(e.target.value)}
-              required
-            />
-          </div>
-          <div className="mb-3">
-            <input
-              type="password"
-              className="form-control bg-transparent shadow-none border-top-0 border-start-0 border-end-0 p-2 text-light"
-              placeholder="Password"
-              onChange={(e) => setPassword(e.target.value)}
-              required
-            />
-          </div>
-          <p className="mb-3">
-            Already have an account? &nbsp;
-            <a
-              className="text-decoration-none text-custom-primary"
-              href="/login"
-            >
-              Login
-            </a>
-          </p>
-          <div className="text-center">
-            <button
-              type="button"
-              className="btn bg-custom-primary text-light fw-bold w-100"
-              onClick={() => signUp()}
-            >
-              Register
-            </button>
-          </div>
+          <form>
+            <h1 className="text-center">Sign Up</h1>
+            <hr />
+            <div className="mb-3">
+              <input
+                type="text"
+                className="form-control bg-transparent shadow-none border-top-0 border-start-0 border-end-0 p-2 text-light"
+                placeholder="Name"
+                onKeyDown={(e) => keyDownHandler(e)}
+                onChange={(e) => setFullname(e.target.value)}
+                required
+              />
+            </div>
+            <div className="mb-3">
+              <input
+                type="text"
+                className="form-control bg-transparent shadow-none border-top-0 border-start-0 border-end-0 p-2 text-light"
+                placeholder="Email"
+                onKeyDown={(e) => keyDownHandler(e)}
+                onChange={(e) => setEmail(e.target.value)}
+                required
+              />
+            </div>
+            <div className="mb-3">
+              <input
+                type="password"
+                className="form-control bg-transparent shadow-none border-top-0 border-start-0 border-end-0 p-2 text-light"
+                placeholder="Password"
+                onKeyDown={(e) => keyDownHandler(e)}
+                onChange={(e) => setPassword(e.target.value)}
+                required
+              />
+            </div>
+            <p className="mb-3">
+              Already have an account? &nbsp;
+              <a
+                className="text-decoration-none text-custom-primary"
+                href="/login"
+              >
+                Login
+              </a>
+            </p>
+            <div className="text-center">
+              <button
+                type="button"
+                className="btn bg-custom-primary text-light fw-bold w-100"
+                onClick={() => signUp()}
+              >
+                Register
+              </button>
+            </div>
+          </form>
         </div>
       </div>
     </div>

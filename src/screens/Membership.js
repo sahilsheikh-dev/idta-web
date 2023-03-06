@@ -20,7 +20,7 @@ const Membership = () => {
       navigate("/login");
     } else {
       if (membershipPurchased) {
-        alert("You already have purchased the membership");
+        alert("You already have purchased the registration");
       } else {
         navigate("/membershipform/" + membershipPackagePrimaryKey);
       }
@@ -88,7 +88,7 @@ const Membership = () => {
             }}
           >
             <div className="container py-5">
-              <h1 className="fw-bold text-success">Membership</h1>
+              <h1 className="fw-bold text-success">Registration</h1>
               <p className="">
                 The IDTA represent the best Interest of all Indian Dental
                 technicians with one voice whether qualified or in training and
@@ -109,7 +109,7 @@ const Membership = () => {
               background: "#ffffff",
             }}
           >
-            <h1 className="fw-bold text-dark my-3">Membership Packages</h1>
+            <h1 className="fw-bold text-dark my-3">Registration Packages</h1>
             <div className="row">
               {membershipData?.map((membershipItem, index) => (
                 <div className="col-md-6 col-lg-6 col-xl-6 p-2 m-0" key={index}>
@@ -165,7 +165,7 @@ const Membership = () => {
           >
             <div className="container mb-0 pb-0">
               <div className="text-light mb-0 pb-0">
-                <h1>Membership Benefits</h1>
+                <h1>Registration Benefits</h1>
                 <ol>
                   <li>Members gets discounts on Dental Laboratory Products.</li>
                   <li>
@@ -177,25 +177,25 @@ const Membership = () => {
                 <h1>Terms and Conditions</h1>
                 <ol className="mb-0 pb-0">
                   <li>
-                    All members of the I.D.T.A agree to the I.D.T.A Membership
+                    All members of the I.D.T.A agree to the I.D.T.A Registration
                     Terms and Conditions.
                   </li>
                   <li>
-                    Membership is only open to individuals based in india only.
+                  Registration is only open to individuals based in india only.
                   </li>
                   <li>
-                    Membership payments are non-refundable. The subscription is
+                  Registration payments are non-refundable. The subscription is
                     valid for 12 months from the date of registration. Members
-                    can manage their membership subscription including annual
-                    fee payments in their membership account by logging in.
+                    can manage their registration subscription including annual
+                    fee payments in their registration account by logging in.
                   </li>
                   <li>
                     Professional indemnity insurance, exclusive to I.D.T.A.
                     members only, is an optional opportunity to apply for
                     professional indemnity at a special discounted premium rate
                     through a third-party partner. The indemnity is not included
-                    in the price of the I.D.T.A membership. If your I.D.T.A.
-                    membership expires your professional indemnity insurance
+                    in the price of the I.D.T.A registration. If your I.D.T.A.
+                    registration expires your professional indemnity insurance
                     will no longer be valid and a claim cannot be made.
                   </li>
                 </ol>

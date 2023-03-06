@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import Footer from "../components/commons/Footer";
 import Navbar from "../components/commons/Navbar";
+import AboutTeamImg1 from "../assets/img/about-img-1.png";
+import AboutTeamImg2 from "../assets/img/about-img-2.png";
+import AboutTeamImg3 from "../assets/img/about-img-3.png";
 
 const About = () => {
   const [currentTab, setCurrentTab] = useState("vision");
@@ -28,7 +31,7 @@ const About = () => {
           <div className="col-md-6 col-lg-6 col-xl-6 my-0 d-flex align-items-center p-0">
             <img
               className="img-fluid w-100"
-              src="https://images.pexels.com/photos/1181438/pexels-photo-1181438.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+              src={AboutTeamImg1}
               alt="logo"
               style={{
                 maxWidth: "100%",
@@ -256,7 +259,7 @@ const About = () => {
             <div className="text-center">
               <img
                 className="img-fluid w-100 h-100 py-0 my-0"
-                src="https://images.pexels.com/photos/1181622/pexels-photo-1181622.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                src={AboutTeamImg2}
                 alt="logo"
                 style={{
                   maxWidth: "100%",
@@ -343,7 +346,7 @@ const About = () => {
             <div className="text-center">
               <img
                 className="img-fluid w-100 h-100 py-0 my-0"
-                src="https://images.pexels.com/photos/2467506/pexels-photo-2467506.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                src={AboutTeamImg3}
                 alt="logo"
                 style={{
                   maxWidth: "100%",

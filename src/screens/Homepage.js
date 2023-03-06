@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import Navbar from "../components/commons/Navbar";
 import Footer from "../components/commons/Footer";
 import ContactForm from "../lib/ContactForm";
+import Img1 from "../assets/img/img (1).jpg";
+import Img2 from "../assets/img/img (2).jpg";
 
 const Homepage = () => {
   const [labName, setLabName] = useState("");
@@ -238,6 +240,12 @@ const Homepage = () => {
                   time, so, you can focus on what's important for your patient.
                 </li>
               </ol>
+              <a
+                className="btn btn-success border-0 mx-auto px-4 shadow-none btn-lg fw-bold"
+                href="/membership"
+              >
+                Register Now
+              </a>
             </div>
           </div>
           <div
@@ -248,7 +256,7 @@ const Homepage = () => {
           >
             <img
               className="img-fluid w-100 h-100 py-0 my-0"
-              src="https://images.pexels.com/photos/52527/dentist-pain-borowac-cure-52527.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+              src={Img1}
               alt="logo"
               style={{
                 maxWidth: "100%",
@@ -266,7 +274,7 @@ const Homepage = () => {
           >
             <img
               className="img-fluid w-100 h-100 py-0 my-0"
-              src="https://images.pexels.com/photos/3779709/pexels-photo-3779709.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+              src={Img2}
               alt="logo"
               style={{
                 maxWidth: "100%",

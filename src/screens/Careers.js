@@ -1,55 +1,59 @@
-import React, { useState } from "react";
+import React from "react";
 // import { Container } from "react-bootstrap";
 import Footer from "../components/commons/Footer";
 import Navbar from "../components/commons/Navbar";
 import JobOpportunities from "../assets/jsonData/JobOpportunities.json";
-import Jobs from "../lib/Jobs";
+// import Jobs from "../lib/Jobs";
+import Img6 from "../assets/img/img (6).jpg";
+import Img7 from "../assets/img/img (7).jpg";
+import Img8 from "../assets/img/img (8).jpg";
+import Img1 from "../assets/img/img (1).jpg";
 
 const Careers = () => {
-  const [jobTitle, setJobTitle] = useState("");
+  // const [jobTitle, setJobTitle] = useState("");
 
-  const [name, setName] = useState("");
-  const [number, setNumber] = useState("");
-  const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
+  // const [name, setName] = useState("");
+  // const [number, setNumber] = useState("");
+  // const [email, setEmail] = useState("");
+  // const [message, setMessage] = useState("");
 
-  const saveJobInfo = async (jobInfo) => {
-    Jobs.saveJobs(jobInfo)
-      .then((response) => {
-        console.log(response.data);
-        alert("Applied");
-      })
-      .catch((error) => {
-        console.log("Error: " + error);
-        alert("Error: " + error);
-      });
-  };
+  // const saveJobInfo = async (jobInfo) => {
+  //   Jobs.saveJobs(jobInfo)
+  //     .then((response) => {
+  //       console.log(response.data);
+  //       alert("Applied");
+  //     })
+  //     .catch((error) => {
+  //       console.log("Error: " + error);
+  //       alert("Error: " + error);
+  //     });
+  // };
 
-  const saveJobForm = () => {
-    if (
-      name === "" ||
-      name === null ||
-      number === "" ||
-      number === null ||
-      email === "" ||
-      email === null ||
-      message === "" ||
-      message === null ||
-      jobTitle === "" ||
-      jobTitle === null
-    ) {
-      alert("Please fill the input fields");
-    } else {
-      const jobInfo = {
-        name: name,
-        number: number,
-        email: email,
-        message: message,
-        jobTitle: jobTitle,
-      };
-      saveJobInfo(jobInfo);
-    }
-  };
+  // const saveJobForm = () => {
+  //   if (
+  //     name === "" ||
+  //     name === null ||
+  //     number === "" ||
+  //     number === null ||
+  //     email === "" ||
+  //     email === null ||
+  //     message === "" ||
+  //     message === null ||
+  //     jobTitle === "" ||
+  //     jobTitle === null
+  //   ) {
+  //     alert("Please fill the input fields");
+  //   } else {
+  //     const jobInfo = {
+  //       name: name,
+  //       number: number,
+  //       email: email,
+  //       message: message,
+  //       jobTitle: jobTitle,
+  //     };
+  //     saveJobInfo(jobInfo);
+  //   }
+  // };
 
   return (
     <div>
@@ -66,7 +70,7 @@ const Careers = () => {
           >
             <img
               className="img-fluid mx-auto w-100 h-100"
-              src="https://images.pexels.com/photos/5673488/pexels-photo-5673488.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+              src={Img6}
               alt="logo"
               style={{
                 maxWidth: "100%",
@@ -126,7 +130,7 @@ const Careers = () => {
           >
             <img
               className="img-fluid mx-auto w-100 h-100"
-              src="https://images.pexels.com/photos/7788506/pexels-photo-7788506.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+              src={Img7}
               alt="logo"
               style={{
                 maxWidth: "100%",
@@ -142,7 +146,7 @@ const Careers = () => {
           >
             <img
               className="img-fluid mx-auto w-100 h-100"
-              src="https://images.pexels.com/photos/6627536/pexels-photo-6627536.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+              src={Img8}
               alt="logo"
               style={{
                 maxWidth: "100%",
@@ -229,7 +233,7 @@ const Careers = () => {
           >
             <img
               className="img-fluid mx-auto w-100 h-100"
-              src="https://images.pexels.com/photos/3779697/pexels-photo-3779697.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+              src={Img1}
               alt="logo"
               style={{
                 maxWidth: "100%",
@@ -273,7 +277,7 @@ const Careers = () => {
                             className="btn btn-primary w-100"
                             data-bs-toggle="modal"
                             data-bs-target="#exampleModal"
-                            onClick={() => setJobTitle(jobItem.title)}
+                            // onClick={() => setJobTitle(jobItem.title)}
                           >
                             Apply Now
                           </button>
@@ -307,7 +311,7 @@ const Careers = () => {
                   borderBottom: "none",
                 }}
               >
-                <h1 className="modal-title fs-5" id="exampleModalLabel">
+                {/* <h1 className="modal-title fs-5" id="exampleModalLabel">
                   Apply Now
                 </h1>
                 <button
@@ -315,10 +319,13 @@ const Careers = () => {
                   className="btn-close"
                   data-bs-dismiss="modal"
                   aria-label="Close"
-                ></button>
+                ></button> */}
               </div>
               <div className="modal-body">
-                <h5 className="text-light mb-3">Job: {jobTitle}</h5>
+                <h5 className="text-light mt-0 mb-4 mx-auto text-center">
+                  Comming Soon
+                </h5>
+                {/* <h5 className="text-light mb-3">Job: {jobTitle}</h5>
                 <div className="mb-3">
                   <input
                     type="text"
@@ -350,9 +357,9 @@ const Careers = () => {
                     placeholder="Message"
                     onChange={(e) => setMessage(e.target.value)}
                   />
-                </div>
+                </div> */}
               </div>
-              <div
+              {/* <div
                 className="modal-footer"
                 style={{
                   borderTop: "none",
@@ -372,7 +379,7 @@ const Careers = () => {
                 >
                   Submit
                 </button>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>

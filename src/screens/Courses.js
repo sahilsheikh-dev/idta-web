@@ -47,7 +47,7 @@ const Courses = () => {
                   <div className="col-md-4 col-lg-4 col-xl-4 my-3" key={index}>
                     <Link
                       // to={"/course/" + index}
-                      to={"/course/" + courseItem.coursePrimaryKey}
+                      // to={"/course/" + courseItem.coursePrimaryKey}
                       className="text-decoration-none text-dark"
                     >
                       <div className="card bg-dark">
@@ -66,8 +66,11 @@ const Courses = () => {
                           <p className="card-text">
                             {courseItem.courseShortDescription}
                           </p>
-                          <p className="text-decoration-none text-dark text-center">
+                          {/* <p className="text-decoration-none text-dark text-center">
                             Book Your Place Now!
+                          </p> */}
+                          <p className="text-decoration-none text-dark text-center">
+                            Comming Soon
                           </p>
                         </div>
                       </div>

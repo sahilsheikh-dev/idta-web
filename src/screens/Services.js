@@ -4,6 +4,8 @@ import { Link } from "react-router-dom";
 import serviceJson from "../assets/jsonData/ServiceData.json";
 import Footer from "../components/commons/Footer";
 import Navbar from "../components/commons/Navbar";
+import Img3 from "../assets/img/img (3).jpg";
+import Img4 from "../assets/img/img (4).jpg";
 
 const Services = () => {
   const serviceData = serviceJson;
@@ -35,16 +37,19 @@ const Services = () => {
                           data-bs-toggle="modal"
                           data-bs-target="#exampleModal"
                         >
-                          <div
-                            className="card card-body bg-light text-dark text-center service-card h-100 d-flex align-items-center"
-                            style={{
-                              minHeight: "50px",
-                              borderRadius: "0",
-                            }}
-                          >
-                            <p className="my-0 fw-bold text-center">
-                              {serviceItem.title}
-                            </p>
+                          <div className="col-md-3 col-lg-3 col-xl-3 my-3 w-100">
+                            <div className="card service-card">
+                              <img
+                                src={serviceItem.logoImg}
+                                className="card-img-top"
+                                alt="logo"
+                              />
+                              <div className="card-body">
+                                <h5 className="card-title">
+                                  {serviceItem.title}
+                                </h5>
+                              </div>
+                            </div>
                           </div>
                         </Link>
                       ) : (
@@ -52,16 +57,19 @@ const Services = () => {
                           className="text-decoration-none"
                           to={serviceItem.url}
                         >
-                          <div
-                            className="card card-body bg-light text-dark text-center service-card h-100 d-flex align-items-center"
-                            style={{
-                              minHeight: "50px",
-                              borderRadius: "0",
-                            }}
-                          >
-                            <p className="my-0 fw-bold text-center">
-                              {serviceItem.title}
-                            </p>
+                          <div className="col-md-3 col-lg-3 col-xl-3 my-3 w-100">
+                            <div className="card service-card">
+                              <img
+                                src={serviceItem.logoImg}
+                                className="card-img-top"
+                                alt="logo"
+                              />
+                              <div className="card-body">
+                                <h5 className="card-title">
+                                  {serviceItem.title}
+                                </h5>
+                              </div>
+                            </div>
                           </div>
                         </Link>
                       )}
@@ -87,7 +95,7 @@ const Services = () => {
               >
                 Dental Technology is in exciting times with the rapid
                 developments of digital dental technology. We regularly
-                communicate to the I.D.T.A membership through our E-mail
+                communicate to the I.D.T.A registration through our E-mail
                 newsletter, social media and the I.D.T.A. website (Launching
                 soon) to highlight important information and keep members up to
                 date with what is going on in dental technology.
@@ -165,7 +173,7 @@ const Services = () => {
           >
             <img
               className="img-fluid w-100 h-100 py-0 my-0"
-              src="https://images.pexels.com/photos/2467506/pexels-photo-2467506.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+              src={Img3}
               alt="logo"
               style={{
                 maxWidth: "100%",
@@ -183,7 +191,7 @@ const Services = () => {
           >
             <img
               className="img-fluid w-100 h-100 py-0 my-0"
-              src="https://images.pexels.com/photos/262470/pexels-photo-262470.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+              src={Img4}
               alt="logo"
               style={{
                 maxWidth: "100%",

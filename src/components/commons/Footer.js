@@ -15,53 +15,53 @@ const Footer = () => {
                 style={{ maxWidth: "120px" }}
                 alt="logo"
               />
-              <div className="row">
-                <div className="col-1">
+              <div className="d-flex align-item-center">
+                <div className="">
                   <a
                     href="https://facebook.com"
                     className="text-decoration-none"
                   >
                     <img
-                      className="img-thumbnail bg-transparent mx-1 border-0"
+                      className="img-thumbnail bg-transparent mx-0 border-0"
                       src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Facebook_Logo_%282019%29.png/600px-Facebook_Logo_%282019%29.png"
                       alt="logo"
                       style={{ maxWidth: "30px" }}
                     />
                   </a>
                 </div>
-                <div className="col-1">
+                <div className="">
                   <a
                     href="https://instagram.com"
                     className="text-decoration-none"
                   >
                     <img
-                      className="img-thumbnail bg-transparent mx-1 border-0"
+                      className="img-thumbnail bg-transparent mx-0 border-0"
                       src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/640px-Instagram_icon.png"
                       alt="logo"
                       style={{ maxWidth: "30px" }}
                     />
                   </a>
                 </div>
-                <div className="col-1">
+                <div className="">
                   <a
                     href="https://twitter.com"
                     className="text-decoration-none"
                   >
                     <img
-                      className="img-thumbnail bg-transparent mx-1 border-0"
+                      className="img-thumbnail bg-transparent mx-0 border-0"
                       src="https://www.pngkey.com/png/full/2-27646_twitter-logo-png-transparent-background-logo-twitter-png.png"
                       alt="logo"
                       style={{ maxWidth: "30px" }}
                     />
                   </a>
                 </div>
-                <div className="col-1">
+                <div className="">
                   <a
                     href="https://linkedin.com"
                     className="text-decoration-none"
                   >
                     <img
-                      className="img-thumbnail bg-transparent mx-1 border-0"
+                      className="img-thumbnail bg-transparent mx-0 border-0"
                       src="https://cdn-icons-png.flaticon.com/512/174/174857.png"
                       alt="logo"
                       style={{ maxWidth: "30px" }}
@@ -74,42 +74,42 @@ const Footer = () => {
               <h4 className="fw-bold">Quick Links</h4>
               <a
                 className="text-decoration-none text-secondary footer-link a-hover"
-                href="#about"
+                href="/about"
               >
                 About
               </a>{" "}
               <br />
               <a
                 className="text-decoration-none text-secondary footer-link a-hover"
-                href="#services"
+                href="/service"
               >
                 Services
               </a>{" "}
               <br />
               <a
                 className="text-decoration-none text-secondary footer-link a-hover"
-                href="#membership"
+                href="/membership"
               >
-                Membership Benefits
+                registration Benefits
               </a>{" "}
               <br />
               <a
                 className="text-decoration-none text-secondary footer-link a-hover"
-                href="#education"
+                href="/education"
               >
                 Education
               </a>{" "}
               <br />
               <a
                 className="text-decoration-none text-secondary footer-link a-hover"
-                href="#careers"
+                href="/career"
               >
                 Careers
               </a>{" "}
               <br />
               <a
                 className="text-decoration-none text-secondary footer-link a-hover"
-                href="#joinus"
+                href="/joinus"
               >
                 Join Us
               </a>{" "}
@@ -131,15 +131,15 @@ const Footer = () => {
                 href="tel:+91 0123456789"
               >
                 <TelephoneFill />
-                &nbsp;+91 0123456789
+                &nbsp;+91 9779367672
               </a>
               <br />
               <a
                 className="text-decoration-none text-secondary footer-link a-hover"
-                href="mailto:contactus@idta.com"
+                href="mailto:infoidtapvt@gmail.com"
               >
                 <span className="text-secondary fw-bold">@</span>
-                &nbsp;contactus@idta.com
+                &nbsp;infoidtapvt@gmail.com
               </a>
             </div>
           </div>

@@ -27,19 +27,30 @@ const Login = () => {
           console.log("Logged in successfully");
           localStorage.setItem("currentUser", response.data.userPrimaryKey);
           const lastPage = localStorage.getItem("currentPage");
-          if (lastPage.includes("course")) {
-            const pageId = lastPage.substring(lastPage.lastIndexOf("/") + 1);
-            navigate("/course/" + pageId);
-          } else if (lastPage.includes("membership")) {
-            navigate("/membership");
-          } else {
+          if (lastPage === null || lastPage === undefined || lastPage === "") {
             navigate("/dashboard");
+          } else {
+            if (lastPage.includes("course")) {
+              const pageId = lastPage.substring(lastPage.lastIndexOf("/") + 1);
+              navigate("/course/" + pageId);
+            } else if (lastPage.includes("membership")) {
+              navigate("/membership");
+            } else {
+              navigate("/dashboard");
+            }
           }
         })
         .catch((error) => {
           console.log("Error logging in:", error);
           alert("Error logging in:" + error);
         });
+    }
+  };
+
+  const keyDownHandler = (event) => {
+    if (event.keyCode === 13) {
+      console.log("enter");
+      login();
     }
   };
 
@@ -65,51 +76,55 @@ const Login = () => {
         style={{ maxWidth: "500px" }}
       >
         <div className="card-body">
-          <h1 className="text-center">Login</h1>
-          <hr />
-          {localStorage.getItem("userRegistered") === null ||
-          localStorage.getItem("userRegistered") === "" ||
-          localStorage.getItem("userRegistered") === undefined ? (
-            ""
-          ) : (
-            <p>Registration Successful</p>
-          )}
-          <div className="mb-3">
-            <input
-              type="text"
-              className="form-control bg-transparent shadow-none border-top-0 border-start-0 border-end-0 p-2 text-light"
-              placeholder="Email"
-              onChange={(e) => setEmail(e.target.value)}
-              required
-            />
-          </div>
-          <div className="mb-3">
-            <input
-              type="password"
-              className="form-control bg-transparent shadow-none border-top-0 border-start-0 border-end-0 p-2 text-light"
-              placeholder="Password"
-              onChange={(e) => setPassword(e.target.value)}
-              required
-            />
-          </div>
-          <p className="mb-3">
-            Don't have an account? &nbsp;
-            <a
-              className="text-decoration-none text-custom-primary"
-              href="/signup"
-            >
-              Sign Up
-            </a>
-          </p>
-          <div className="text-center">
-            <button
-              type="button"
-              className="btn bg-custom-primary text-light fw-bold w-100"
-              onClick={() => login()}
-            >
-              Login
-            </button>
-          </div>
+          <form>
+            <h1 className="text-center">Login</h1>
+            <hr />
+            {localStorage.getItem("userRegistered") === null ||
+            localStorage.getItem("userRegistered") === "" ||
+            localStorage.getItem("userRegistered") === undefined ? (
+              ""
+            ) : (
+              <p>Registration Successful</p>
+            )}
+            <div className="mb-3">
+              <input
+                type="text"
+                className="form-control bg-transparent shadow-none border-top-0 border-start-0 border-end-0 p-2 text-light"
+                placeholder="Email"
+                onKeyDown={(e) => keyDownHandler(e)}
+                onChange={(e) => setEmail(e.target.value)}
+                required
+              />
+            </div>
+            <div className="mb-3">
+              <input
+                type="password"
+                className="form-control bg-transparent shadow-none border-top-0 border-start-0 border-end-0 p-2 text-light"
+                placeholder="Password"
+                onKeyDown={(e) => keyDownHandler(e)}
+                onChange={(e) => setPassword(e.target.value)}
+                required
+              />
+            </div>
+            <p className="mb-3">
+              Don't have an account? &nbsp;
+              <a
+                className="text-decoration-none text-custom-primary"
+                href="/signup"
+              >
+                Sign Up
+              </a>
+            </p>
+            <div className="text-center">
+              <button
+                type="button"
+                className="btn bg-custom-primary text-light fw-bold w-100"
+                onClick={() => login()}
+              >
+                Login
+              </button>
+            </div>
+          </form>
         </div>
       </div>
     </div>

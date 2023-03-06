@@ -119,9 +119,9 @@ const MemberForm = () => {
             key: "rzp_test_MhgWsGqXzdSuX0",
             amount: response.data.amount * 100, // amount in paisa
             currency: "INR",
-            name: "IDTA Membership: " + membershipPlan.membershipTitle,
+            name: "IDTA Registration: " + membershipPlan.membershipTitle,
             description:
-              "Membership Purchase: " + membershipPlan.membershipDescription,
+              "Registration Purchase: " + membershipPlan.membershipDescription,
             image:
               "https://idta.netlify.app/static/media/idta-logo.6a40b0502a7e0ad8f73c.png",
             order_id: response.data.orderId,
@@ -286,7 +286,7 @@ const MemberForm = () => {
       <Container>
         <section className="about pt-5 mt-5 section" id="about">
           <div className="row mt-5">
-            <h1 className="fw-bold">Purchase Membership</h1>
+            <h1 className="fw-bold">Purchase Registration</h1>
             <hr />
             <div className="card card-body bg-dark mb-3">
               <h5>Plan: {membershipPlan.membershipTitle}/-</h5>
@@ -297,7 +297,60 @@ const MemberForm = () => {
             <div className="card card-body bg-dark">
               <div className="row">
                 <div className="col-md-6 col-lg-6 col-xl-6">
-                  <h6>Laboratory Details:</h6>
+                  <h6>Personal Details:</h6>
+                  <div className="row mb-3">
+                    <div className="col-3">
+                      <select className="form-select bg-transparent text-light">
+                        <option
+                          defaultValue
+                          disabled
+                          style={{ background: "#000000" }}
+                        >
+                          Title
+                        </option>
+                        <option
+                          style={{ background: "#000000" }}
+                          value="Implants"
+                        >
+                          Mr
+                        </option>
+                        <option
+                          style={{ background: "#000000" }}
+                          value="Mouthguards Crown"
+                        >
+                          Mrs
+                        </option>
+                        <option
+                          style={{ background: "#000000" }}
+                          value="Mouthguards Crown"
+                        >
+                          Miss
+                        </option>
+                      </select>
+                    </div>
+                    <div className="col-9">
+                      <input
+                        type="text"
+                        className="form-control bg-transparent text-light shadow-none p-2"
+                        placeholder="First Name"
+                      />
+                    </div>
+                  </div>
+                  <div className="mb-3">
+                    <input
+                      type="text"
+                      className="form-control bg-transparent text-light shadow-none p-2"
+                      placeholder="Last Name"
+                    />
+                  </div>
+                  <div className="mb-3">
+                    <input
+                      type="text"
+                      className="form-control bg-transparent text-light shadow-none p-2"
+                      placeholder="Lab./Organization Name"
+                    />
+                  </div>
+                  <h6>Contact Details:</h6>
                   <div className="mb-3">
                     <input
                       type="number"
@@ -354,16 +407,38 @@ const MemberForm = () => {
                     />
                     <label htmlFor="not-registered">NO</label>
                   </div>
-                </div>
-                <div className="col-md-6 col-lg-6 col-xl-6">
+                  <h6>Lookup Address:</h6>
                   <div className="mb-3">
-                    <label className="mb-2">Date Lab Established:</label>
                     <input
-                      type="date"
+                      type="text"
                       className="form-control bg-transparent text-light shadow-none p-2"
-                      onChange={(e) => setLabEstablishedDate(e.target.value)}
+                      placeholder="Address 1"
                     />
                   </div>
+                  <div className="mb-3">
+                    <input
+                      type="text"
+                      className="form-control bg-transparent text-light shadow-none p-2"
+                      placeholder="Address 2"
+                    />
+                  </div>
+                  <div className="mb-3">
+                    <input
+                      type="text"
+                      className="form-control bg-transparent text-light shadow-none p-2"
+                      placeholder="Town/city"
+                    />
+                  </div>
+                  <div className="mb-3">
+                    <input
+                      type="number"
+                      className="form-control bg-transparent text-light shadow-none p-2"
+                      placeholder="Pin code"
+                    />
+                  </div>
+                </div>
+                <div className="col-md-6 col-lg-6 col-xl-6">
+                  <h6>About you:</h6>
                   <div className="mb-3">
                     <input
                       type="text"
@@ -373,66 +448,91 @@ const MemberForm = () => {
                     />
                   </div>
                   <div className="mb-3">
-                    <select
-                      className="form-select bg-transparent text-light"
-                      onChange={(e) => setWorkType(e.target.value)}
-                    >
-                      <option
-                        defaultValue
-                        disabled
-                        style={{ background: "#000000" }}
+                    <input
+                      type="text"
+                      className="form-control bg-transparent text-light shadow-none p-2"
+                      placeholder="Dental Technician"
+                    />
+                  </div>
+                  <div className="mb-3">
+                    <input
+                      type="text"
+                      className="form-control bg-transparent text-light shadow-none p-2"
+                      placeholder="Master Dental Technician"
+                    />
+                  </div>
+                  <div className="mb-3">
+                    <input
+                      type="text"
+                      className="form-control bg-transparent text-light shadow-none p-2"
+                      placeholder="Dental Laboratory Assistant"
+                    />
+                  </div>
+                  <div className="mb-3">
+                    <input
+                      type="text"
+                      className="form-control bg-transparent text-light shadow-none p-2"
+                      placeholder="Student Dental Technician"
+                    />
+                  </div>
+                  <div className="mb-3">
+                    <input
+                      type="text"
+                      className="form-control bg-transparent text-light shadow-none p-2"
+                      placeholder="Trade Professional"
+                    />
+                  </div>
+                  <div className="mb-3">
+                    <label className="mb-2">
+                      What services do you offer in your lab ?
+                    </label>
+                    <div className="mb-3">
+                      <select
+                        className="form-select bg-transparent text-light"
+                        onChange={(e) => setWorkType(e.target.value)}
                       >
-                        Type of Work Carried Out On Premises
-                      </option>
-                      <option
-                        style={{ background: "#000000" }}
-                        value="Implants"
-                      >
-                        Implants
-                      </option>
-                      <option
-                        style={{ background: "#000000" }}
-                        value="Mouthguards Crown"
-                      >
-                        Mouthguards Crown
-                      </option>
-                      <option
-                        style={{ background: "#000000" }}
-                        value="Orthodontics"
-                      >
-                        Orthodontics
-                      </option>
-                      <option
-                        style={{ background: "#000000" }}
-                        value="Prosthetics"
-                      >
-                        Prosthetics
-                      </option>
-                      <option
-                        style={{ background: "#000000" }}
-                        value="Implants"
-                      >
-                        Chromes
-                      </option>
-                      <option
-                        style={{ background: "#000000" }}
-                        value="Maxillofacial"
-                      >
-                        Maxillofacial
-                      </option>
-                      <option
-                        style={{ background: "#000000" }}
-                        value="& Bridge Other"
-                      >
-                        & Bridge Other
-                      </option>
-                      <option
-                        style={{ background: "#000000" }}
-                        value="Please Specify"
-                      >
-                        Please Specify
-                      </option>
-                    </select>
+                        <option
+                          defaultValue
+                          disabled
+                          style={{ background: "#000000" }}
+                        >
+                          Type of Work Carried Out On Premises
+                        </option>
+                        <option
+                          style={{ background: "#000000" }}
+                          value="Implants"
+                        >
+                          Chromes & Bridge
+                        </option>
+                        <option
+                          style={{ background: "#000000" }}
+                          value="Implants"
+                        >
+                          Implants
+                        </option>
+                        <option
+                          style={{ background: "#000000" }}
+                          value="Orthodontics"
+                        >
+                          Orthodontics
+                        </option>
+                        <option
+                          style={{ background: "#000000" }}
+                          value="Acrylic"
+                        >
+                          Acrylic
+                        </option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div className="mb-3">
+                    <label className="mb-2">Date Lab Established:</label>
+                    <input
+                      type="date"
+                      className="form-control bg-transparent text-light shadow-none p-2"
+                      onChange={(e) => setLabEstablishedDate(e.target.value)}
+                    />
                   </div>
                   <div className="mb-3">
                     <select
@@ -525,6 +625,12 @@ const MemberForm = () => {
                       onChange={(e) => setRegistrationDate(e.target.value)}
                     />
                   </div>
+                  <div className="mb-3">
+                    <input id="terms" type={"checkbox"} />
+                    <label for="terms" className="mb-2">
+                      Are you registered with the IDTA?
+                    </label>
+                  </div>
                 </div>
               </div>
             </div>
@@ -533,7 +639,7 @@ const MemberForm = () => {
               className="btn btn-primary text-decoration-none"
               onClick={() => payment()}
             >
-              Purchase
+              Register
             </button>
           </div>
         </section>
