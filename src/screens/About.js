@@ -1,6 +1,4 @@
 import React, { useState } from "react";
-// import { Container } from "react-bootstrap";
-// import IDTALogo from "../assets/img/idta-logo.png";
 import Footer from "../components/commons/Footer";
 import Navbar from "../components/commons/Navbar";
 
@@ -232,27 +230,13 @@ const About = () => {
                     </div>
                     <div className="col-md-6 col-lg-6 col-xl-6 d-flex align-items-center">
                       <p style={{ fontSize: "22px" }}>
-                        <ol>
-                          <li>
-                            Lorem Ipsum is simply dummy text of the printing and
-                            typesetting industry. Lorem Ipsum has been the
-                          </li>
-                          <li>
-                            industry's standard dummy text ever since the 1500s,
-                            when
-                          </li>
-                          <li>
-                            scrambled it to make a type specimen book. It has
-                            survived not only five centuries
-                          </li>
-                        </ol>
                         <p>
-                          Lorem Ipsum is simply dummy text of the printing and
-                          typesetting industry. Lorem Ipsum has been the
-                          industry's standard dummy text ever since the 1500s,
-                          when an unknown printer took a galley of type and
-                          scrambled it to make a type specimen book. It has
-                          survived not only five centuries
+                          The I.D.T.A. goal for Dental Laboratory professionals
+                          was created to advance the profession of Dental
+                          Laboratory Technology by developing a body of
+                          knowledge and Skills Development programs that will be
+                          relevant and accessible to Dental Technicians and
+                          other members of the Dental Team.
                         </p>
                       </p>
                     </div>
