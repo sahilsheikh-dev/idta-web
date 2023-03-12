@@ -85,7 +85,7 @@ const Homepage = () => {
                 <div
                   className="carousel-item active w-100 h-100"
                   style={{
-                    backgroundImage: `url("https://images.pexels.com/photos/1303081/pexels-photo-1303081.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")`,
+                    backgroundImage: `url("https://maryj.in/banner.jpeg")`,
                     backgroundRepeat: "no-repeat",
                     backgroundSize: "cover",
                     backgroundPosition: "center",
@@ -96,16 +96,14 @@ const Homepage = () => {
                     style={{ background: "rgba(0, 0, 0, 0.6)" }}
                   >
                     <div className="container py-5">
-                      <h3 className="fw-bold">Wishing You Merry Christmas</h3>
+                      <h3 className="fw-bold"></h3>
                       <p
                         className="mt-3"
                         style={{
                           fontSize: "22px",
                         }}
                       >
-                        Wishing you a joyous Christmas and a happy new year. May
-                        your holiday season be filled with love, light, and all
-                        your heart's desires.
+                        
                       </p>
                     </div>
                   </div>
@@ -113,7 +111,7 @@ const Homepage = () => {
                 <div
                   className="carousel-item w-100 h-100"
                   style={{
-                    backgroundImage: `url("https://images.pexels.com/photos/6101965/pexels-photo-6101965.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")`,
+                    backgroundImage: `url("https://www.midtowndentalcareassociates.com/wp-content/uploads/tech-800-Dec2018-920x613.jpg")`,
                     backgroundRepeat: "no-repeat",
                     backgroundSize: "cover",
                     backgroundPosition: "center",
@@ -125,7 +123,7 @@ const Homepage = () => {
                   >
                     <div className="container py-5">
                       <h3 className="fw-bold">
-                        Wishing You a Bright and Prosperous New Year
+                        
                       </h3>
                       <p
                         className="mt-3"
@@ -133,11 +131,7 @@ const Homepage = () => {
                           fontSize: "22px",
                         }}
                       >
-                        Happy New Year! As we close the door on the past and
-                        look forward to the future, we want to take a moment to
-                        wish you all the best in the coming year. May 2022 bring
-                        you joy, health, and prosperity. Here's to a bright and
-                        successful new year for all of us!
+                        
                       </p>
                     </div>
                   </div>
@@ -176,22 +170,12 @@ const Homepage = () => {
             }}
           >
             <div className="container py-5">
-              <h1 className="fw-bold">Welcome to IDTA,</h1>
-              <ol className="text-light mt-0">
-                <li>
-                  A Dental Technologist (or Dental Technician, Dental Mechanic)
-                  is a member of the Dental oral healthcare team who, upon
-                  prescription from a Dental clinician,construct custom-made
-                  restorative an dental appliance such as Dentures,Crowns,
-                  Bridges and Dental braces for individual patients.
-                </li>
-                <li>Dental Technologist unsung heroes.</li>
-                <li>
-                  Their work requires a high level of manual dexterity,
-                  attention to details and an application of applied aesthetic
-                  values.
-                </li>
-              </ol>
+              <h1 className="fw-bold">About IDTA</h1>
+              
+                <p>
+                The Indian Dental Technician Association is the unified voice of the Dental Laboratory professionals supporting dentistry and serving the public interest by promoting high standards. I.D.T.A. accomplished this by providing Programs, services and networking opportunities to meet the evolving technical, Educational, professional and business needs of dental laboratories.
+                </p>
+                
               <button
                 className="btn btn-success border-0 mx-auto px-4 shadow-none btn-lg fw-bold"
                 data-bs-toggle="modal"

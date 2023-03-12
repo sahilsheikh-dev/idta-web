@@ -132,7 +132,7 @@ const About = () => {
                     <div className="col-md-6 col-lg-6 col-xl-6">
                       <img
                         className="img-fluid mx-auto w-100 h-100"
-                        src="https://images.pexels.com/photos/262438/pexels-photo-262438.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                        src="https://thumbs.dreamstime.com/b/vision-bulb-word-cloud-business-concept-60193290.jpg"
                         alt="logo"
                         style={{
                           maxWidth: "100%",
@@ -176,7 +176,7 @@ const About = () => {
                     <div className="col-md-6 col-lg-6 col-xl-6">
                       <img
                         className="img-fluid mx-auto w-100 h-100"
-                        src="https://images.pexels.com/photos/15812/bull-center-bulls-eye-darts-15812.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                        src="https://life.futuregenerali.in/Content/images/about/mission.jpg"
                         alt="logo"
                         style={{
                           maxWidth: "100%",
@@ -188,28 +188,12 @@ const About = () => {
                     </div>
                     <div className="col-md-6 col-lg-6 col-xl-6 d-flex align-items-center">
                       <p style={{ fontSize: "22px" }}>
-                        <ol>
-                          <li>
-                            remaining essentially unchanged. It was popularised
-                            in the 1960s with the release of Letraset sheets
-                            containing
-                          </li>
-                          <li>
-                            Lorem Ipsum passages, and more recently with desktop
-                          </li>
-                          <li>
-                            publishing software like Aldus PageMaker including
-                            versions of Lorem Ipsum.
-                          </li>
-                        </ol>
+                        
                         <p>
-                          remaining essentially unchanged. It was popularised in
-                          the 1960s with the release of Letraset sheets
-                          containing Lorem Ipsum passages, and more recently
-                          with desktop publishing software like Aldus PageMaker
-                          including versions of Lorem Ipsum. It has survived not
-                          only five centuries
-                        </p>
+                          
+                        Indian Dental Technician
+Associations integrated education and communication for Dental Technician's and Laboratories to successfully operate with a competitive edge
+                          </p>
                       </p>
                     </div>
                   </div>
@@ -221,7 +205,7 @@ const About = () => {
                     <div className="col-md-6 col-lg-6 col-xl-6">
                       <img
                         className="img-fluid mx-auto w-100 h-100"
-                        src="https://images.pexels.com/photos/1552617/pexels-photo-1552617.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                        src="https://www.incimages.com/uploaded_files/image/1920x1080/shutterstock_318915104_360067.jpg"
                         alt="logo"
                         style={{
                           maxWidth: "100%",

@@ -126,13 +126,13 @@ const Membership = () => {
                       style={{
                         background:
                           membershipItem.id === 1
-                            ? "#DE8333"
+                            ? "#102847"
                             : membershipItem.id === 2
-                            ? "#525BC2"
+                            ? "#69A29D"
                             : membershipItem.id === 3
-                            ? "#FF0080"
+                            ? "#52555E"
                             : membershipItem.id === 4
-                            ? "#37BD6E"
+                            ? "#C5955C"
                             : "#090909",
                         minHeight: "170px",
                         borderRadius: "0",
@@ -210,7 +210,7 @@ const Membership = () => {
           >
             <img
               className="img-fluid w-100 h-100 py-0 my-0"
-              src="https://images.pexels.com/photos/4065405/pexels-photo-4065405.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+              src="https://media.npr.org/assets/img/2020/03/04/accept_terms_wide-d65e4c6e4c775f09d49a6bf8b299cebe037f4459-s800-c85.jpg"
               alt="logo"
               style={{
                 maxWidth: "100%",

@@ -122,8 +122,8 @@ const Footer = () => {
                 href="https://goo.gl/maps/zvJd7KM1Uv5oyqB38"
               >
                 <GeoAltFill />
-                &nbsp;Industrial Digital Twin Association e. V. Lyoner Straße 18
-                60528 Frankfurt am Main Germany
+                &nbsp;SHOP: SCO 34, Street Adjoining Hotel V5, Opp. The Nurtuary Pre-School, Peer Muchalla, Zirakpur- 160104
+                Registration No :- PB-20-0009453
               </a>
               <br />
               <a
@@ -131,7 +131,7 @@ const Footer = () => {
                 href="tel:+91 0123456789"
               >
                 <TelephoneFill />
-                &nbsp;+91 9779367672
+                &nbsp;+44 7754 489702
               </a>
               <br />
               <a
