@@ -256,8 +256,15 @@ const Services = () => {
                   aria-label="Close"
                 ></button>
               </div>
-              <div className="modal-body">
-                <h5 className="text-light text-center mb-3">Comming Soon</h5>
+              <div className="modal-body text-center">
+                Form Link:{" "}
+                <a
+                  className="text-light text-center mb-3 mx-auto text-decoration-none"
+                  href="https:google.com"
+                  alt="link"
+                >
+                  Click Here!
+                </a>
               </div>
               <div
                 className="modal-footer"

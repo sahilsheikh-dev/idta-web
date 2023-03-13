@@ -158,12 +158,30 @@ const Membership = () => {
             </div>
           </div>
           <div
+            className="col-md-6 col-lg-6 col-xl-6 my-0 p-0 my-0 d-block d-md-none d-lg-none d-xl-none"
+            style={{
+              background: "#090909",
+            }}
+          >
+            <img
+              className="img-fluid w-100 h-100 py-0 my-0"
+              src="https://media.npr.org/assets/img/2020/03/04/accept_terms_wide-d65e4c6e4c775f09d49a6bf8b299cebe037f4459-s800-c85.jpg"
+              alt="logo"
+              style={{
+                maxWidth: "100%",
+                maxHeight: "100%",
+                objectFit: "cover",
+                objectPosition: "center",
+              }}
+            />
+          </div>
+          <div
             className="col-md-6 col-lg-6 col-xl-6 my-0 d-flex align-items-center p-2 p-md-5 p-lg-5 p-xl-5"
             style={{
               background: "#090909",
             }}
           >
-            <div className="container mb-0 pb-0">
+            <div className="container mb-0 pb-0 mt-3">
               <div className="text-light mb-0 pb-0">
                 <h1>Registration Benefits</h1>
                 <ol>
@@ -203,7 +221,7 @@ const Membership = () => {
             </div>
           </div>
           <div
-            className="col-md-6 col-lg-6 col-xl-6 my-0 p-0 my-0"
+            className="col-md-6 col-lg-6 col-xl-6 my-0 p-0 my-0 d-none d-md-block d-lg-block d-xl-block"
             style={{
               background: "#090909",
             }}

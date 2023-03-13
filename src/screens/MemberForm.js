@@ -254,6 +254,7 @@ const MemberForm = () => {
 
   useEffect(() => {
     window.scrollTo(0, 0);
+    console.log(membershipPackagePrimaryKey);
     const getMembershipPackages = async () => {
       MembershipPackage.getMembershipPackageById(membershipPackagePrimaryKey)
         .then((response) => {

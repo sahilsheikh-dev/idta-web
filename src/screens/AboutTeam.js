@@ -10,113 +10,70 @@ const AboutTeam = () => {
     <div>
       <Navbar />
       <section className="pt-4 section pb-0" id="about">
-        <div className="row mt-5 m-0">
-          <div className="col-md-6 col-lg-6 col-xl-6 my-0 d-flex align-items-center p-0">
-            <img
-              className="img-fluid w-100"
-              src="https://images.pexels.com/photos/1181438/pexels-photo-1181438.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-              alt="logo"
-              style={{
-                maxWidth: "100%",
-                maxHeight: "330px",
-                objectFit: "cover",
-                objectPosition: "center",
-              }}
-            />
-          </div>
-          <div
-            className="col-md-6 col-lg-6 col-xl-6 my-0 d-flex align-items-center p-2 p-md-5 p-lg-5 p-xl-5"
-            style={{
-              background: "#090909",
-            }}
-          >
-            <div className="container py-5">
-              <h3 className="fw-bold text-success">AWARD WINNING</h3>
-              <h1 className="fw-bold">MEET THE TEAM</h1>
+        {TeamData?.map((teamItem, index) => (
+          <div className="row mt-5 m-0" key={index}>
+            <div className="col-md-6 col-lg-6 col-xl-6 my-0 d-flex align-items-center p-0">
+              <img
+                className="img-fluid w-100"
+                src={teamItem.categoryImg}
+                alt="logo"
+                style={{
+                  maxWidth: "100%",
+                  maxHeight: "330px",
+                  objectFit: "cover",
+                  objectPosition: "center",
+                }}
+              />
             </div>
+            <div
+              className="col-md-6 col-lg-6 col-xl-6 my-0 d-flex align-items-center p-2 p-md-5 p-lg-5 p-xl-5"
+              style={{
+                background: "#090909",
+              }}
+            >
+              <div className="container py-5">
+                {/* <h3 className="fw-bold text-success">AWARD WINNING</h3> */}
+                <h1 className="fw-bold">{teamItem.category}</h1>
+              </div>
+            </div>
+            {teamItem.teamInfo?.map((teamInfoItem, index) => (
+              <div
+                className="col-md-6 col-lg-6 col-xl-6 my-0 p-0 my-0"
+                key={index}
+                style={{
+                  background: "#090909",
+                }}
+              >
+                <div className="row mx-0 px-0">
+                  <div className="col-md-6 col-lg-6 col-xl-6 text-center mx-0 px-0">
+                    <img
+                      className="img-fluid h-100 py-0 my-0 mx-0 px-0"
+                      src={teamInfoItem.profile}
+                      alt="logo"
+                      style={{
+                        maxWidth: "100%",
+                        maxHeight: "100%",
+                        objectFit: "cover",
+                        objectPosition: "center",
+                      }}
+                    />
+                  </div>
+                  <div className="col-md-6 col-lg-6 col-xl-6 mx-0 px-0">
+                    <div className="py-5 px-3">
+                      <div className="text-light">
+                        <h1>{teamInfoItem.name}</h1>
+                        <h3 className="fw-bold text-success">
+                          {teamInfoItem.position}
+                        </h3>
+                        <p>{teamInfoItem.info}</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
-          {TeamData?.map((teamItem, index) =>
-            index % 2 === 0 ? (
-              <>
-                <div
-                  className="col-md-6 col-lg-6 col-xl-6 my-0 d-flex align-items-center p-2 p-md-5 p-lg-5 p-xl-5"
-                  style={{
-                    background: "#090909",
-                  }}
-                >
-                  <div className="container">
-                    <div className="text-light">
-                      <h1>{teamItem.name}</h1>
-                      <h3 className="fw-bold text-success">
-                        {teamItem.position}
-                      </h3>
-                      <p>{teamItem.info}</p>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  className="col-md-6 col-lg-6 col-xl-6 my-0 p-0 my-0"
-                  style={{
-                    background: "#090909",
-                  }}
-                >
-                  <div className="text-center">
-                    <img
-                      className="img-fluid h-100 py-0 my-0"
-                      src={teamItem.profile}
-                      alt="logo"
-                      style={{
-                        maxWidth: "100%",
-                        maxHeight: "100%",
-                        objectFit: "cover",
-                        objectPosition: "center",
-                      }}
-                    />
-                  </div>
-                </div>
-              </>
-            ) : (
-              <>
-                <div
-                  className="col-md-6 col-lg-6 col-xl-6 my-0 p-0 my-0"
-                  style={{
-                    background: "#090909",
-                  }}
-                >
-                  <div className="text-center">
-                    <img
-                      className="img-fluid h-100 py-0 my-0"
-                      src={teamItem.profile}
-                      alt="logo"
-                      style={{
-                        maxWidth: "100%",
-                        maxHeight: "100%",
-                        objectFit: "cover",
-                        objectPosition: "center",
-                      }}
-                    />
-                  </div>
-                </div>
-                <div
-                  className="col-md-6 col-lg-6 col-xl-6 my-0 d-flex align-items-center p-2 p-md-5 p-lg-5 p-xl-5"
-                  style={{
-                    background: "#090909",
-                  }}
-                >
-                  <div className="container">
-                    <div className="text-light">
-                      <h1>{teamItem.name}</h1>
-                      <h3 className="fw-bold text-success">
-                        {teamItem.position}
-                      </h3>
-                      <p>{teamItem.info}</p>
-                    </div>
-                  </div>
-                </div>
-              </>
-            )
-          )}
-        </div>
+        ))}
       </section>
       <Footer />
     </div>

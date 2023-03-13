@@ -96,15 +96,12 @@ const Homepage = () => {
                     style={{ background: "rgba(0, 0, 0, 0.6)" }}
                   >
                     <div className="container py-5">
-                      <h3 className="fw-bold"></h3>
                       <p
                         className="mt-3"
                         style={{
                           fontSize: "22px",
                         }}
-                      >
-                        
-                      </p>
+                      ></p>
                     </div>
                   </div>
                 </div>
@@ -122,17 +119,12 @@ const Homepage = () => {
                     style={{ background: "rgba(0, 0, 0, 0.6)" }}
                   >
                     <div className="container py-5">
-                      <h3 className="fw-bold">
-                        
-                      </h3>
                       <p
                         className="mt-3"
                         style={{
                           fontSize: "22px",
                         }}
-                      >
-                        
-                      </p>
+                      ></p>
                     </div>
                   </div>
                 </div>
@@ -171,11 +163,17 @@ const Homepage = () => {
           >
             <div className="container py-5">
               <h1 className="fw-bold">About IDTA</h1>
-              
-                <p>
-                The Indian Dental Technician Association is the unified voice of the Dental Laboratory professionals supporting dentistry and serving the public interest by promoting high standards. I.D.T.A. accomplished this by providing Programs, services and networking opportunities to meet the evolving technical, Educational, professional and business needs of dental laboratories.
-                </p>
-                
+
+              <p>
+                The Indian Dental Technician Association is the unified voice of
+                the Dental Laboratory professionals supporting dentistry and
+                serving the public interest by promoting high standards.
+                I.D.T.A. accomplished this by providing Programs, services and
+                networking opportunities to meet the evolving technical,
+                Educational, professional and business needs of dental
+                laboratories.
+              </p>
+
               <button
                 className="btn btn-success border-0 mx-auto px-4 shadow-none btn-lg fw-bold"
                 data-bs-toggle="modal"
@@ -353,8 +351,8 @@ const Homepage = () => {
                   <input
                     type="text"
                     className="form-control bg-transparent shadow-none border-top-0 border-start-0 border-end-0 p-2 text-light"
-                    placeholder="Lab Name"
-                    onChange={(e) => setLabName(e.target.value)}
+                    placeholder="Full Name of Lab Owner(s)"
+                    onChange={(e) => setOwnerFullName(e.target.value)}
                   />
                 </div>
                 <div className="mb-3">
@@ -385,8 +383,8 @@ const Homepage = () => {
                   <input
                     type="text"
                     className="form-control bg-transparent shadow-none border-top-0 border-start-0 border-end-0 p-2 text-light"
-                    placeholder="Full Name of Lab Owner(s)"
-                    onChange={(e) => setOwnerFullName(e.target.value)}
+                    placeholder="Lab Name"
+                    onChange={(e) => setLabName(e.target.value)}
                   />
                 </div>
               </div>

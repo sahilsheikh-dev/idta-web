@@ -122,8 +122,15 @@ const Footer = () => {
                 href="https://goo.gl/maps/zvJd7KM1Uv5oyqB38"
               >
                 <GeoAltFill />
-                &nbsp;SHOP: SCO 34, Street Adjoining Hotel V5, Opp. The Nurtuary Pre-School, Peer Muchalla, Zirakpur- 160104
-                Registration No :- PB-20-0009453
+                &nbsp;SHOP: SCO 34, Street Adjoining Hotel V5, Opp. The Nurtuary
+                Pre-School, Peer Muchalla, Zirakpur- 160104
+              </a>
+              <br />
+              <a
+                className="text-decoration-none text-secondary footer-link a-hover"
+                href="tel:PB-20-0009453"
+              >
+                Registration No :- &nbsp;PB-20-0009453
               </a>
               <br />
               <a

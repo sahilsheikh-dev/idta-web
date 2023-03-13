@@ -33,6 +33,7 @@ const SignUp = () => {
           console.log("Registration in successfully");
           console.log(response.data.fullname);
           localStorage.setItem("userRegistered", "registered");
+          alert("Registration in successfully");
           navigate("/login");
         })
         .catch((error) => {
