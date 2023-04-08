@@ -6,6 +6,7 @@ import Users from "../lib/Users";
 import MembershipPackage from "../lib/MembershipPackage";
 import CoursesAvailable from "../lib/CoursesAvailable";
 import { Link } from "react-router-dom";
+import QrCode from "../assets/img/phonepay-qr-code.png";
 
 const Dashboard = () => {
   const [currentUser, setCurrentUser] = useState("");
@@ -124,13 +125,29 @@ const Dashboard = () => {
             >
               <div className="row mt-5">
                 <h1 className="fw-bold">Welcome, {userInfo.name}</h1>
-                <h6>
-                  Registration Expires On: &nbsp;
-                  {countMembershipExpire(
-                    membershipData.date,
-                    membershipData.availableTill
-                  )}
-                </h6>
+                {membershipData.date === undefined ||
+                membershipData.date === null ||
+                membershipData.date === "" ? (
+                  <h6>
+                    Click <a href="/membership">here</a> to register
+                  </h6>
+                ) : (
+                  <h6>
+                    Registration Expires On: &nbsp;
+                    {countMembershipExpire(
+                      membershipData.date,
+                      membershipData.availableTill
+                    )}
+                  </h6>
+                )}
+                <button
+                  className="btn btn-primary mx-auto mx-md-0 mx-lg-0 mx-xl-0 mb-3"
+                  data-bs-toggle="modal"
+                  data-bs-target="#exampleModal"
+                  style={{ maxWidth: "300px" }}
+                >
+                  Payment
+                </button>
                 <hr />
                 <h4 className="mt-4 fw-bold">Current Available Courses</h4>
                 <div className="row">
@@ -186,6 +203,58 @@ const Dashboard = () => {
             </section>
           </>
         )}
+        <div
+          class="modal fade"
+          id="exampleModal"
+          tabindex="-1"
+          aria-labelledby="exampleModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog">
+            <div class="modal-content bg-dark">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">
+                  Payment
+                </h1>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body text-center">
+                <img
+                  className="img-fluid w-100 mx-auto"
+                  src={QrCode}
+                  style={{ maxWidth: "300px" }}
+                  alt="logo"
+                />
+                <h6 className="my-3">
+                  Please contact the admin adter payment is done!
+                </h6>
+                <a
+                  href="https://api.whatsapp.com/send?phone=8626053944"
+                  className="btn btn-success"
+                >
+                  Contact Admin
+                </a>
+              </div>
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  data-bs-dismiss="modal"
+                >
+                  Close
+                </button>
+                <button type="button" class="btn btn-primary">
+                  Save changes
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
       </Container>
       <Footer />
     </div>

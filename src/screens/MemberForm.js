@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Container } from "react-bootstrap";
-import useRazorpay from "react-razorpay";
+// import useRazorpay from "react-razorpay";
 import { useNavigate, useParams } from "react-router-dom";
 import Footer from "../components/commons/Footer";
 import Navbar from "../components/commons/Navbar";
@@ -10,7 +10,7 @@ import Users from "../lib/Users";
 
 const MemberForm = () => {
   const { membershipPackagePrimaryKey } = useParams({});
-  const Razorpay = useRazorpay();
+  // const Razorpay = useRazorpay();
   const navigate = useNavigate();
   const [membershipPlan, setMembershipPlan] = useState([]);
   const [currentUser, setCurrentUser] = useState([]);
@@ -115,71 +115,71 @@ const MemberForm = () => {
       .then((response) => {
         const paymentResponse = response.data;
         if (response.data.paymentStatus === "created") {
-          var options = {
-            key: "rzp_test_MhgWsGqXzdSuX0",
-            amount: response.data.amount * 100, // amount in paisa
-            currency: "INR",
-            name: "IDTA Registration: " + membershipPlan.membershipTitle,
-            description:
-              "Registration Purchase: " + membershipPlan.membershipDescription,
-            image:
-              "https://idta.netlify.app/static/media/idta-logo.6a40b0502a7e0ad8f73c.png",
-            order_id: response.data.orderId,
+          // var options = {
+          //   key: "rzp_test_MhgWsGqXzdSuX0",
+          //   amount: response.data.amount * 100, // amount in paisa
+          //   currency: "INR",
+          //   name: "IDTA Registration: " + membershipPlan.membershipTitle,
+          //   description:
+          //     "Registration Purchase: " + membershipPlan.membershipDescription,
+          //   image:
+          //     "https://idta.netlify.app/static/media/idta-logo.6a40b0502a7e0ad8f73c.png",
+          //   order_id: response.data.orderId,
 
-            handler: function (response) {
-              console.log(response.razorpay_payment_id);
-              console.log(response.razorpay_order_id);
-              console.log(response.razorpay_signature);
-              const paymentInfo = {
-                id: paymentResponse.id,
-                amount: paymentResponse.amount,
-                currency: paymentResponse.currency,
-                receipt: paymentResponse.receipt,
-                orderId: paymentResponse.orderId,
-                userPrimaryKey: paymentResponse.userPrimaryKey,
-                paymentStatus: "paid",
-              };
-              updatePaymentStatus(paymentInfo);
-              alert("Congrats Payment Successful");
-            },
-
-            prefill: {
-              name: "",
-              email: "",
-              contact: "",
-            },
-            notes: {
-              address: "IDTA Corporate Office",
-            },
-            theme: {
-              color: "#3399cc",
-            },
+          //   handler: function (response) {
+          //     console.log(response.razorpay_payment_id);
+          //     console.log(response.razorpay_order_id);
+          //     console.log(response.razorpay_signature);
+          const paymentInfo = {
+            id: paymentResponse.id,
+            amount: paymentResponse.amount,
+            currency: paymentResponse.currency,
+            receipt: paymentResponse.receipt,
+            orderId: paymentResponse.orderId,
+            userPrimaryKey: paymentResponse.userPrimaryKey,
+            paymentStatus: "paid",
           };
+          updatePaymentStatus(paymentInfo);
+          //     alert("Congrats Payment Successful");
+          //   },
 
-          var rzp1 = new Razorpay(options);
+          //   prefill: {
+          //     name: "",
+          //     email: "",
+          //     contact: "",
+          //   },
+          //   notes: {
+          //     address: "IDTA Corporate Office",
+          //   },
+          //   theme: {
+          //     color: "#3399cc",
+          //   },
+          // };
 
-          rzp1.on("payment.failed", function (response) {
-            console.log(response.error.code);
-            console.log(response.error.description);
-            console.log(response.error.source);
-            console.log(response.error.step);
-            console.log(response.error.reason);
-            console.log(response.error.metadata.order_id);
-            console.log(response.error.metadata.payment_id);
-            const paymentInfo = {
-              id: paymentResponse.id,
-              amount: paymentResponse.amount,
-              currency: paymentResponse.currency,
-              receipt: paymentResponse.receipt,
-              orderId: paymentResponse.orderId,
-              userPrimaryKey: paymentResponse.userPrimaryKey,
-              paymentStatus: "failed",
-            };
-            updatePaymentStatus(paymentInfo);
-            alert("Payment Failure");
-          });
+          // var rzp1 = new Razorpay(options);
 
-          rzp1.open();
+          // rzp1.on("payment.failed", function (response) {
+          //   console.log(response.error.code);
+          //   console.log(response.error.description);
+          //   console.log(response.error.source);
+          //   console.log(response.error.step);
+          //   console.log(response.error.reason);
+          //   console.log(response.error.metadata.order_id);
+          //   console.log(response.error.metadata.payment_id);
+          //   const paymentInfo = {
+          //     id: paymentResponse.id,
+          //     amount: paymentResponse.amount,
+          //     currency: paymentResponse.currency,
+          //     receipt: paymentResponse.receipt,
+          //     orderId: paymentResponse.orderId,
+          //     userPrimaryKey: paymentResponse.userPrimaryKey,
+          //     paymentStatus: "failed",
+          //   };
+          //   updatePaymentStatus(paymentInfo);
+          //   alert("Payment Failure");
+          // });
+
+          // rzp1.open();
         } else {
           console.log("Order is Not Created");
           const paymentInfo = {
