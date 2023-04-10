@@ -492,16 +492,12 @@ const MemberForm = () => {
                         className="form-select bg-transparent text-light"
                         onChange={(e) => setWorkType(e.target.value)}
                       >
-                        <option
-                          defaultValue
-                          disabled
-                          style={{ background: "#000000" }}
-                        >
+                        <option style={{ background: "#000000" }}>
                           Type of Work Carried Out On Premises
                         </option>
                         <option
                           style={{ background: "#000000" }}
-                          value="Implants"
+                          value="Chromes & Bridge"
                         >
                           Chromes & Bridge
                         </option>
@@ -540,11 +536,7 @@ const MemberForm = () => {
                       className="form-select bg-transparent text-light"
                       onChange={(e) => setServiceType(e.target.value)}
                     >
-                      <option
-                        defaultValue
-                        disabled
-                        style={{ background: "#000000" }}
-                      >
+                      <option style={{ background: "#000000" }}>
                         Types of Services
                       </option>
                       <option
@@ -569,11 +561,7 @@ const MemberForm = () => {
                       className="form-select bg-transparent text-light"
                       onChange={(e) => setStaffProfile(e.target.value)}
                     >
-                      <option
-                        defaultValue
-                        disabled
-                        style={{ background: "#000000" }}
-                      >
+                      <option style={{ background: "#000000" }}>
                         Staff Profile Please Specify the Number of
                       </option>
                       <option
