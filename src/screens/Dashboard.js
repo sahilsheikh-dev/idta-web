@@ -234,7 +234,7 @@ const Dashboard = () => {
                   Please contact the admin adter payment is done!
                 </h6>
                 <a
-                  href="https://api.whatsapp.com/send?phone=8626053944"
+                  href="https://api.whatsapp.com/send?phone=+919472003529"
                   className="btn btn-success"
                 >
                   Contact Admin
